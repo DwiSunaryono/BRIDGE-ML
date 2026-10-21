@@ -488,7 +488,7 @@ def main():
     for ds_idx, (stratum, dataset, data_id, cluster) in enumerate(load_datasets()):
         if only is not None and dataset != only:
             continue
-        for rep in range(reps[stratum]):  # seed UNIK per dataset (audit GPT exp41 #2)
+        for rep in range(reps[stratum]):  # seed unik per dataset (exp41 #2)
             jobs.append((stratum, dataset, data_id, cluster, rep,
                          trial_seed(stratum, ds_idx, rep)))
     mine = [j for k, j in enumerate(jobs) if k % n_workers == worker_id]

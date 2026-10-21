@@ -1,5 +1,5 @@
-"""Verifier exp41 (fail-closed). SPEK_EXP41 §5-§6. Turunan verify_exp40.py (diaudit
-Kimi+GPT). Batas risiko PRIMER (v3) = rasio Chernoff-KL (U_W/L_A, alpha .025+.025), skala 8 pooled
+"""Verifier exp41 (fail-closed). SPEK_EXP41 §5-§6. Turunan verify_exp40.py.
+Batas risiko PRIMER (v3) = rasio Chernoff-KL (U_W/L_A, alpha .025+.025), skala 8 pooled
 dan skala 1 per sel. CPMAX, CPCLUS, CP naif, bootstrap trial HANYA pembanding TANPA
 jaminan umum (CPMAX/CPCLUS punya counterexample; bootstrap anti-konservatif).
 
@@ -87,7 +87,7 @@ def kl_lower(xbar, N, a=ALPHA_HALF):
 
 
 def kl_ratio_up(k, n, N, b):
-    """Batas atas rasio E[W]/E[A] (audit GPT #1): U_W / L_A, union bound alpha .05."""
+    """Batas atas rasio E[W]/E[A]: U_W / L_A, union bound alpha .05."""
     la = kl_lower(n / (b * N), N)
     return 1.0 if la <= 0 else min(1.0, kl_upper(k / (b * N), N) / la)
 
@@ -99,7 +99,7 @@ def kl_ratio_lo(k, n, N, b):
 
 def cpmax_up(acc_rows, n_trial):
     """PEMBANDING saja: min(1, 8*CP(ceil(k/8), N)*N/n). TIDAK valid secara umum
-    (counterexample audit GPT exp41 §1)."""
+    (counterexample untuk CPMAX pada exp41 §1)."""
     n = len(acc_rows)
     if n == 0:
         return None
@@ -203,7 +203,7 @@ def validate(df, manifest, cfg):
             ok[col] = ok[col].astype(float)
         except ValueError:
             raise Invalid(f"{col} bukan angka")
-        if not np.isfinite(ok[col]).all():  # NaN dan +-inf (audit Kimi B1/B2)
+        if not np.isfinite(ok[col]).all():  # NaN dan +-inf
             raise Invalid(f"{col} tidak finite")
     check_evidence(ok)
     check_reference_counts(ok, manifest)
@@ -211,7 +211,7 @@ def validate(df, manifest, cfg):
 
 
 def check_reference_counts(ok, manifest):
-    """Audit GPT #4: referensi = ukuran & komposisi terkunci di manifest; marginal y
+    """Referensi = ukuran dan komposisi terkunci di manifest; marginal y
     CONFIRM sama di 12 arm satu trial."""
     m = manifest.set_index("dataset")
     rsum = ok[[f"r{k}" for k in CODES8]].astype(int).sum(axis=1)
@@ -242,7 +242,7 @@ def wf1_delta(c):
 
 
 def check_evidence(ok):
-    """G1 (audit GPT): ringkasan harus konsisten dengan bukti tersimpan."""
+    """G1: ringkasan harus konsisten dengan bukti tersimpan."""
     need = ["arm_ordinal", "ci_hi99", "ref_ci_lo95", "ref_ci_hi95",
             "n_confirm_disagreements"] + [f"c{k}" for k in CODES8] + \
         [f"r{k}" for k in CODES8]
@@ -326,7 +326,7 @@ def risk_block(acc, datasets, clus_of, R, B, seed0, flag_col):
 
 
 def cell_status(acc_cell, datasets, R, B, seed, flag_col):
-    """Per sel: batas rasio KL skala 1 (audit GPT #2: CP pooled lintas dataset tidak otomatis valid)."""
+    """Per sel: batas rasio KL skala 1. CP pooled lintas dataset tidak otomatis valid."""
     n, k = len(acc_cell), int(acc_cell[flag_col].astype(float).sum())
     if n == 0:
         return {"n": 0, "k": 0, "status": "tanpa-accept"}
