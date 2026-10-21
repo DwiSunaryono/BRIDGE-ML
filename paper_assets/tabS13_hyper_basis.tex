@@ -5,7 +5,7 @@
 \setlength{\tabcolsep}{2.15pt}
 \caption{Frozen parameters of BRIDGE and of the evaluation protocol: value and basis of each.}
 \label{tab:hyperbasis}
-\begin{tabular}{@{}llcl@{}}
+\begin{tabularx}{\textwidth}{@{}llc>{\raggedright\arraybackslash}X@{}}
 \toprule
 Parameter & Value & Set & Tested in \\
 \midrule
@@ -23,7 +23,7 @@ Locked reference & $0.3N\le8{,}000$ if $N<40{,}000$, else $\min(N{-}20{,}000,\,1
 Trials & $100$ per dataset; $200$ per clinical task; $60$ per multiclass dataset; $1$ per $\mathcal{Q}$ task & Pow, Pre & LOCO$_0$ $18.2\%$/$0.8\%$ at $50$/$100$ (Table~\ref{tab:citedruns})$^{a}$ \\
 Seeds & fresh per trial (rows, split, bags, folds, bootstrap); learners $42$; reference fixed & Pre & $\mathcal{Q}$ seeds unused by pilots (Appendix~\ref{app:datasets}) \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 
 \vspace{2pt}
 \parbox{\textwidth}{\justifying\scriptsize *Set. Dev: set in development, on the $18$ development datasets and the development runs (Table~\ref{tab:devruns}), and frozen before any confirmatory run (Table~\ref{tab:chronology}). Lib: library defaults, with the changes stated in the row, fixed before any evaluation. Std: standard practice. Pow: power check. Pre: pre-registration. Tested in: the run or table in which each value was varied or checked. The margin criterion is met at every tested margin wherever it is met at $0.005$, and SEARCH sizes $360$, $630$, and $1{,}000$ were tested on $\mathcal{Q}$. a: $200$ trials per clinical task, adopted after the LOCO-source condition failed at $100$ (Table~\ref{tab:chronology}); $60$ per multiclass dataset as pre-registered, against $40$ in development. MC: Monte Carlo. SE: standard error. iter.: boosting iterations. lr: learning rate.}
