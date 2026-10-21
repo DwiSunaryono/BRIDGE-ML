@@ -4,7 +4,9 @@
 [![Python](https://img.shields.io/pypi/pyversions/bridge-gate.svg)](https://pypi.org/project/bridge-gate/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Code and experimental data for a manuscript submitted to *IEEE Access*.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23523985.svg)](https://doi.org/10.5281/zenodo.23523985)
+
+Code and experimental data for a manuscript submitted to *IEEE Access*. The release used in the paper is archived on Zenodo: doi:10.5281/zenodo.23523985 (tag `paper-v1`).
 
 ## What BRIDGE is
 
@@ -335,6 +337,15 @@ Dwi Sunaryono, Department of Informatics, Institut Teknologi Sepuluh Nopember (I
   journal = {IEEE Access},
   year    = {2026},
   note    = {Submitted to IEEE Access}
+}
+
+@software{bridge2026code,
+  title   = {{BRIDGE}: An Acceptance Gate to Block False Improvements in Model Updates, with a Retrospective Clinical Evaluation (code and data, release paper-v1)},
+  author  = {Sunaryono, Dwi},
+  year    = {2026},
+  publisher = {Zenodo},
+  doi     = {10.5281/zenodo.23523985},
+  url     = {https://doi.org/10.5281/zenodo.23523985}
 }
 ```
 
