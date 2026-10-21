@@ -1,0 +1,2 @@
+source_id,nama,N,K,F,target,catatan_loader
+OpenML-32,pendigits,10992,10,16,class,loader OpenML baku; sumber primer UCI 81

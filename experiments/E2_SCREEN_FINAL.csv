@@ -1,0 +1,20 @@
+bagian,source_id,nama,N,K,F,minority,duplicates,max_single_auc,status
+biner,OpenML-46937,in_vehicle_coupon_recommendation,12684,2,24,0.431567,0.0058,0.5834,KEEP
+biner,OpenML-40983,wilt,4839,2,5,0.053937,0.0041,0.7091,KEEP
+biner,OpenML-41138,APSFailure,76000,2,170,0.018092,0.0000,0.9696,KEEP
+biner,UCI-563,Iranian Churn,3150,2,13,0.157143,0.0952,0.7961,KEEP
+biner,UCI-179,SECOM,1567,2,590,0.066369,0.0000,0.6924,KEEP
+biner,UCI-198,Steel Plates Faults,1941,2,27,0.081401,0.0000,0.8566,KEEP
+biner,UCI-579,Myocardial infarction complications,1700,2,111,0.100000,0.0000,0.6405,KEEP
+biner,OpenML-1128,OVA_Breast,1545,2,10935,0.222654,0.0000,0.9500,KEEP
+biner,OpenML-43729,Lending-Club-Loan-Data,9578,2,13,0.160054,0.0000,0.6202,KEEP
+biner,OpenML-43743,TVS_Loan_Default,119528,2,30,0.021869,0.1018,0.7497,KEEP
+biner,OpenML-43826,Personal-Loan-Modeling,5000,2,13,0.096000,0.0000,0.9221,KEEP
+biner,OpenML-46927,Fitness_Club,1500,2,6,0.302667,0.0007,0.8223,KEEP
+biner,OpenML-46938,Is-this-a-good-customer,1723,2,13,0.113755,0.0000,0.6411,KEEP
+biner,OpenML-46915,churn,5000,2,19,0.141400,0.0000,0.6401,KEEP
+multikelas,OpenML-40498,wine-quality-white,4898,7,11,0.001021,0.1913,0.6720,KEEP
+multikelas,OpenML-40685,shuttle,58000,7,9,0.000172,0.0000,0.8456,KEEP
+multikelas,OpenML-180,covertype,110393,7,54,0.012129,0.1502,0.7717,KEEP
+multikelas,OpenML-40926,CIFAR_10_small,20000,10,3072,0.096850,0.0000,0.6290,KEEP
+multikelas,OpenML-42140,SVHN_small,9927,10,3072,0.062960,0.0000,0.5207,KEEP

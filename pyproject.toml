@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bridge-research"
+version = "1.0.0"
+description = "BRIDGE research code, pre-registered runs and paper assets (not the published bridge-gate package)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {file = "LICENSE"}
+dependencies = [
+    "numpy==2.5.3",
+    "pandas==3.0.6",
+    "scipy==1.18.1",
+    "scikit-learn==1.9.1",
+    "optuna==5.0.0",
+    "xgboost==3.4.1",
+    "joblib==1.6.0",
+    "threadpoolctl==3.7.0",
+    "ucimlrepo==0.0.7",
+    "matplotlib==3.11.2",
+]
+
+[tool.setuptools]
+py-modules = ["config", "data", "models", "fetch_uci"]

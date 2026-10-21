@@ -1,0 +1,164 @@
+data_id,name,suites,N,K,F,minority_pct,majority_pct,missing,target,tags
+3,kr-vs-kp,CC18+AMLB,3196.0,2.0,37.0,47.778473091364205,52.221526908635795,0.0,class,exploit_test_3;Games;mythbusting_1;OpenML-CC18;OpenML100;Recreation;Strategy;study_1;study_123;study_14;study_144;study_15;study_20;study_218;study_34;study_37;study_41;study_50;study_52;study_7;study_70;study_98;study_99;uci
+6,letter,CC18,20000.0,26.0,17.0,3.6700000000000004,4.0649999999999995,0.0,class,AzurePilot;AzurePilot1;Data Science;Kaggle;Machine Learning;OpenML-CC18;OpenML100;study_1;study_123;study_14;study_34;study_37;study_41;study_7;study_70;study_76;study_98;study_99;uci
+11,balance-scale,CC18,625.0,3.0,5.0,7.84,46.08,0.0,class,Animals;artificial;Data Science;Kaggle;OpenML-CC18;OpenML100;Psychology;shark-tutorial-demo-tag;study_1;study_123;study_135;study_14;study_34;study_37;study_41;study_50;study_52;study_7;study_70;study_98;study_99;uci
+12,mfeat-factors,CC18+AMLB,2000.0,10.0,217.0,10.0,10.0,0.0,class,OpenML-CC18;OpenML100;Pattern Recognition;Statistics;study_1;study_123;study_14;study_218;study_34;study_37;study_41;study_50;study_7;study_70;study_76;study_98;study_99;uci
+14,mfeat-fourier,CC18,2000.0,10.0,77.0,10.0,10.0,0.0,class,Machine Learning;OpenML-CC18;OpenML100;Statistics;study_1;study_123;study_14;study_34;study_37;study_41;study_50;study_52;study_7;study_70;study_76;study_98;study_99;uci
+15,breast-w,CC18,699.0,2.0,10.0,34.47782546494993,65.52217453505007,16.0,Class,Biology;cancer;Health;medical;Medicine;mythbusting_1;OpenML-CC18;OpenML100;Research;study_1;study_123;study_135;study_14;study_15;study_20;study_34;study_37;study_41;study_50;study_52;study_70;study_98;study_99;uci
+16,mfeat-karhunen,CC18,2000.0,10.0,65.0,10.0,10.0,0.0,class,Computer Vision;Machine Learning;OpenML-CC18;OpenML100;study_1;study_123;study_14;study_34;study_37;study_41;study_52;study_7;study_70;study_76;study_98;study_99;uci
+18,mfeat-morphological,CC18,2000.0,10.0,7.0,10.0,10.0,0.0,class,Machine Learning;OpenML-CC18;OpenML100;Pattern Recognition;study_1;study_123;study_14;study_34;study_37;study_41;study_52;study_7;study_70;study_76;study_98;study_99
+22,mfeat-zernike,CC18,2000.0,10.0,48.0,10.0,10.0,0.0,class,Computer Vision;Machine Learning;OpenML-CC18;OpenML100;study_1;study_123;study_14;study_34;study_37;study_41;study_52;study_7;study_70;study_76;study_98;study_99;uci
+23,cmc,CC18+AMLB,1473.0,3.0,10.0,22.606924643584524,42.701968771215206,0.0,Contraceptive_method_used,Demographics;Education;Family Planning;Health;OpenML-CC18;OpenML100;Sociology;study_1;study_123;study_14;study_34;study_37;study_41;study_50;study_7;study_70;study_98;study_99;uci
+28,optdigits,CC18,5620.0,10.0,65.0,9.857651245551601,10.177935943060499,0.0,class,Artificial Intelligence;Computer Vision;OpenML-CC18;OpenML100;study_1;study_123;study_14;study_34;study_37;study_41;study_50;study_52;study_7;study_70;study_76;study_98;study_99;uci
+29,credit-approval,CC18,690.0,2.0,16.0,44.492753623188406,55.507246376811594,67.0,class,Data Science;Finance;Kaggle;mythbusting_1;OpenML-CC18;OpenML100;study_1;study_123;study_135;study_14;study_144;study_15;study_20;study_34;study_37;study_41;study_70;study_98;study_99;uci
+31,credit-g,CC18+AMLB,1000.0,2.0,21.0,30.0,70.0,0.0,class,credit_scoring;Data Science;Economics;finance_problem;mythbusting_1;OpenML-CC18;OpenML100;Statistics;study_1;study_123;study_14;study_144;study_15;study_20;study_218;study_241;study_34;study_37;study_41;study_50;study_52;study_7;study_70;study_98;study_99;uci
+32,pendigits,CC18,10992.0,10.0,17.0,9.597889374090247,10.407569141193596,0.0,class,Artificial Intelligence;AzurePilot;Computer Vision;Machine Learning;OpenML-CC18;OpenML100;study_1;study_123;study_14;study_34;study_37;study_41;study_52;study_7;study_70;study_76;study_98;study_99;uci
+37,diabetes,CC18,768.0,2.0,9.0,34.89583333333333,65.10416666666666,0.0,class,Health;Kaggle;mythbusting_1;Nutrition;OpenML-CC18;OpenML100;study_1;study_123;study_135;study_14;study_15;study_20;study_29;study_30;study_34;study_37;study_41;study_52;study_7;study_70;study_98;study_99;uci
+38,sick,CC18,3772.0,2.0,30.0,6.1240721102863205,93.87592788971368,6064.0,Class,Health;Medicine;mythbusting_1;OpenML-CC18;OpenML100;study_1;study_123;study_14;study_144;study_15;study_20;study_34;study_41;study_52;study_98;study_99;uci
+44,spambase,CC18,4601.0,2.0,58.0,39.404477287546186,60.59552271245382,0.0,class,Computer Science;Data Science;Email Management;Information Retrieval;Kaggle;mythbusting_1;OpenML-CC18;OpenML100;study_1;study_123;study_14;study_15;study_20;study_34;study_37;study_41;study_52;study_7;study_70;study_98;study_99;uci
+46,splice,CC18,3190.0,3.0,61.0,24.043887147335425,51.88087774294671,0.0,Class,Bioinformatics;Biology;Genetics;OpenML-CC18;OpenML100;study_1;study_123;study_14;study_34;study_37;study_50;study_7;study_70;study_98;study_99;uci
+50,tic-tac-toe,CC18,958.0,2.0,10.0,34.65553235908142,65.34446764091858,0.0,Class,Games;mythbusting_1;OpenML-CC18;OpenML100;Recreation;Strategy;study_1;study_123;study_135;study_14;study_144;study_15;study_20;study_29;study_30;study_37;study_41;study_52;study_7;study_70;study_89;study_98;study_99;uci
+54,vehicle,CC18+AMLB,846.0,4.0,19.0,23.52245862884161,25.768321513002363,0.0,Class,Machine Learning;OpenML-CC18;OpenML100;study_1;study_123;study_127;study_135;study_14;study_218;study_34;study_37;study_41;study_50;study_52;study_7;study_70;study_98;study_99;Transport;uci
+151,electricity,CC18,45312.0,2.0,9.0,42.45453742937853,57.54546257062147,0.0,class,AzurePilot;concept_drift;Data Science;Economics;electricity;Kaggle;mythbusting_1;OpenML-CC18;OpenML100;study_1;study_123;study_135;study_14;study_15;study_16;study_20;study_34;study_37;study_41;study_7;study_70;study_99;Sustainability
+181,yeast,AMLB,1484.0,10.0,9.0,0.3369272237196766,31.19946091644205,0.0,class_protein_localization,Kaggle;Science;study_1;study_37;study_41;study_7;study_70;study_76
+182,satimage,CC18,6430.0,6.0,37.0,9.720062208398133,23.81026438569207,0.0,class,Environment;OpenML-CC18;OpenML100;Science;study_1;study_123;study_14;study_34;study_37;study_41;study_52;study_7;study_70;study_76;study_98;study_99;Technology
+188,eucalyptus,CC18+AMLB,736.0,5.0,20.0,14.266304347826086,29.076086956521742,448.0,Utility,Environmental Science;OpenML-CC18;OpenML100;study_1;study_123;study_135;study_14;study_34;study_37;study_41;study_52;study_70;study_98;study_99
+300,isolet,CC18,7797.0,26.0,618.0,3.8219828139027827,3.8476337052712584,0.0,class,Artificial Intelligence;Data Science;Machine Learning;OpenML-CC18;OpenML100;study_1;study_123;study_14;study_34;study_41;study_99
+307,vowel,CC18,990.0,11.0,13.0,9.090909090909092,9.090909090909092,0.0,Class,Linguistics;Machine Learning;OpenML-CC18;OpenML100;Speech Recognition;study_1;study_123;study_135;study_14;study_144;study_34;study_50;study_52;study_7;study_76;study_98;study_99;uci
+458,analcatdata_authorship,CC18,841.0,4.0,71.0,6.539833531510107,37.69322235434007,0.0,Author,Data Science;Education;Health;OpenML-CC18;OpenML100;Research;study_1;study_123;study_135;study_14;study_34;study_41;study_50;study_52;study_7;study_98;study_99
+469,analcatdata_dmft,CC18,797.0,6.0,5.0,15.432873274780427,19.44792973651192,0.0,Prevention,Data Science;Health;OpenML-CC18;OpenML100;Research;Statistics;study_1;study_123;study_135;study_14;study_34;study_41;study_50;study_52;study_7;study_98;study_99
+554,mnist_784,CC18,70000.0,10.0,785.0,9.018571428571429,11.252857142857142,0.0,class,Artificial Intelligence;AzurePilot;Computer Vision;Data Sets;Kaggle;Machine Learning;OpenML-CC18;OpenML100;study_1;study_123;study_41;study_99;vision
+1049,pc4,CC18+AMLB,1458.0,2.0,38.0,12.208504801097392,87.79149519890261,0.0,c,Computer Science;Data Science;Engineering;mythbusting_1;OpenML-CC18;OpenML100;PROMISE;study_1;study_123;study_14;study_15;study_20;study_34;study_41;study_52;study_7;study_98;study_99
+1050,pc3,CC18,1563.0,2.0,38.0,10.236724248240563,89.76327575175944,0.0,c,Computer Science;Data Science;Engineering;mythbusting_1;OpenML-CC18;OpenML100;PROMISE;study_1;study_123;study_14;study_15;study_20;study_34;study_41;study_52;study_7;study_98;study_99
+1053,jm1,CC18,10885.0,2.0,22.0,19.347726228755167,80.65227377124484,25.0,defects,Computer Science;Data Science;Engineering;mythbusting_1;OpenML-CC18;OpenML100;PROMISE;study_1;study_123;study_14;study_15;study_20;study_34;study_41;study_98;study_99
+1063,kc2,CC18,522.0,2.0,22.0,20.49808429118774,79.50191570881226,0.0,problems,Computer Science;Data Science;Engineering;OpenML-CC18;OpenML100;PROMISE;study_1;study_123;study_135;study_14;study_34;study_41;study_52;study_7;study_98;study_99
+1067,kc1,CC18+AMLB,2109.0,2.0,22.0,15.457562825983878,84.54243717401611,0.0,defects,Computer Science;Data Science;Engineering;mythbusting_1;OpenML-CC18;OpenML100;PROMISE;study_1;study_123;study_14;study_15;study_20;study_218;study_34;study_41;study_52;study_7;study_98;study_99
+1068,pc1,CC18,1109.0,2.0,22.0,6.943192064923355,93.05680793507665,0.0,defects,Computer Science;Data Science;Engineering;mythbusting_1;OpenML-CC18;OpenML100;PROMISE;study_1;study_123;study_14;study_15;study_20;study_34;study_41;study_52;study_7;study_98;study_99
+1111,KDDCup09_appetency,AMLB,50000.0,2.0,231.0,1.78,98.22,8024152.0,APPETENCY,Business;Data;Economics;Marketing;study_218
+1169,airlines,AMLB,539383.0,2.0,8.0,44.544229239705366,55.455770760294634,0.0,Delay,Aviation;concept_drift;Data Science;Statistics;study_16;study_218;study_69;Transportation
+1457,amazon-commerce-reviews,AMLB,1500.0,50.0,10001.0,2.0,2.0,0.0,Class,Consumer Products;Reviews;study_123
+1461,bank-marketing,CC18+AMLB,45211.0,2.0,17.0,11.698480458295547,88.30151954170445,0.0,Class,Banking;Data Analysis;Finance;Kaggle;OpenML-CC18;OpenML100;study_123;study_135;study_14;study_218;study_241;study_50;study_99
+1462,banknote-authentication,CC18,1372.0,2.0,5.0,44.460641399416915,55.539358600583085,0.0,Class,Data Analysis;Finance;Kaggle;OpenML-CC18;OpenML100;Security;Statistics;study_123;study_135;study_14;study_34;study_50;study_52;study_7;study_98;study_99;Technology;uci
+1464,blood-transfusion-service-center,CC18+AMLB,748.0,2.0,5.0,23.796791443850267,76.20320855614973,0.0,Class,Data Analysis;Healthcare;Kaggle;OpenML-CC18;OpenML100;study_123;study_135;study_14;study_218;study_34;study_50;study_52;study_7;study_98;study_99;uci
+1468,cnae-9,CC18+AMLB,1080.0,9.0,857.0,11.11111111111111,11.11111111111111,0.0,Class,Data Science;Engineering;Natural Language Processing;OpenML-CC18;OpenML100;study_123;study_135;study_14;study_218;study_52;study_7;study_98;study_99
+1475,first-order-theorem-proving,CC18+AMLB,6118.0,6.0,52.0,7.943772474664923,41.745668519123896,0.0,Class,AI Research;Computer Science;Education;Mathematics;OpenML-CC18;OpenML100;study_123;study_14;study_34;study_50;study_52;study_7;study_98;study_99
+1478,har,CC18,10299.0,6.0,562.0,13.651810855422857,18.87561899213516,0.0,Class,Data Science;Healthcare;OpenML-CC18;OpenML100;sport;Sports;study_123;study_14;study_93;study_99;Technology
+1480,ilpd,CC18,583.0,2.0,11.0,28.644939965694682,71.35506003430532,0.0,Class,health;Kaggle;OpenML-CC18;OpenML100;study_123;study_135;study_14;study_144;study_34;study_50;study_52;study_7;study_98;study_99;uci
+1485,madelon,CC18,2600.0,2.0,501.0,50.0,50.0,0.0,Class,Genomics;Machine Learning;OpenML-CC18;OpenML100;study_123;study_135;study_14;study_98;study_99
+1486,nomao,CC18+AMLB,34465.0,2.0,119.0,28.562309589438563,71.43769041056144,0.0,Class,Computer Science;Data Science;OpenML-CC18;OpenML100;study_123;study_135;study_14;study_144;study_218;study_99
+1487,ozone-level-8hr,CC18+AMLB,2534.0,2.0,73.0,6.3141278610891876,93.68587213891081,0.0,Class,Environment;OpenML-CC18;OpenML100;Research;study_123;study_14;study_34;study_50;study_52;study_7;study_98;study_99
+1489,phoneme,CC18+AMLB,5404.0,2.0,6.0,29.348630643967432,70.65136935603256,0.0,Class,Data Science;Linguistics;OpenML-CC18;OpenML100;speech recognition;study_123;study_14;study_218;study_34;study_50;study_52;study_7;study_98;study_99
+1494,qsar-biodeg,CC18+AMLB,1055.0,2.0,42.0,33.74407582938389,66.25592417061611,0.0,Class,Chemistry;Environmental Science;Kaggle;OpenML-CC18;OpenML100;study_123;study_14;study_34;study_52;study_7;study_98;study_99;Toxicology
+1497,wall-robot-navigation,CC18,5456.0,4.0,25.0,6.011730205278592,40.41422287390029,0.0,Class,Artificial Intelligence;Engineering;OpenML-CC18;OpenML100;study_123;study_14;study_34;study_52;study_7;study_98;study_99;Technology
+1501,semeion,CC18,1593.0,10.0,257.0,9.73006905210295,10.16949152542373,0.0,Class,Data Science;Engineering;OpenML-CC18;OpenML100;study_123;study_14;study_34;study_50;study_7;study_98;study_99;uci
+1510,wdbc,CC18,569.0,2.0,31.0,37.258347978910365,62.741652021089635,0.0,Class,Biology;cancer;Health;medical;Medicine;OpenML-CC18;OpenML100;Research;study_123;study_135;study_14;study_52;study_7;study_98;study_99;uci
+1515,micro-mass,AMLB,571.0,20.0,1301.0,1.926444833625219,10.507880910683012,0.0,Class,Biology;Data Science;Machine Learning;OpenML100;study_123;study_135;study_14;study_7
+1590,adult,CC18+AMLB,48842.0,2.0,15.0,23.928176569346054,76.07182343065395,6465.0,class,Data Science;Economics;OpenML-CC18;OpenML100;Statistics;study_123;study_135;study_14;study_144;study_218;study_241;study_34;study_99
+1596,covertype,AMLB,581012.0,7.0,55.0,0.4727957426008413,48.75992234239568,0.0,class,concept_drift;Data Science;Ecology;Machine Learning;study_218
+4134,Bioresponse,CC18+AMLB,3751.0,2.0,1777.0,45.77446014396161,54.22553985603839,0.0,target,Biotechnology;Data Science;OpenML-CC18;OpenML100;study_123;study_14;study_34;study_98;study_99
+4135,Amazon_employee_access,AMLB,32769.0,2.0,10.0,5.789007903811529,94.21099209618848,0.0,target,Data Science;Machine Learning;OpenML100;study_123;study_14;study_218;study_7
+4534,PhishingWebsites,CC18+AMLB,11055.0,2.0,31.0,44.30574400723655,55.69425599276345,0.0,Result,Cybersecurity;Data Science;Machine Learning;OpenML-CC18;OpenML100;study_123;study_14;study_144;study_34;study_52;study_98;study_99
+4538,GesturePhaseSegmentationProcessed,CC18+AMLB,9873.0,5.0,33.0,10.108376380026336,29.87946925959688,0.0,Phase,concept_drift;Data Science;Gesture Recognition;OpenML-CC18;OpenML100;study_123;study_14;study_34;study_98;study_99
+4541,Diabetes130US,AMLB,101766.0,3.0,50.0,11.159915885462727,53.911915571015854,0.0,readmitted,
+6332,cylinder-bands,CC18,540.0,2.0,40.0,42.22222222222222,57.77777777777777,999.0,band_type,Data Mining;Machine Learning;OpenML-CC18;OpenML100;Printing Technology;study_123;study_135;study_14;study_144;study_34;study_52;study_98;study_99;uci
+23381,dresses-sales,CC18,500.0,2.0,13.0,42.0,57.99999999999999,835.0,Class,Consumer Goods;E-commerce;OpenML-CC18;OpenML100;study_123;study_135;study_14;study_144;study_98;study_99
+23517,numerai28.6,CC18+AMLB,96320.0,2.0,22.0,49.482973421926914,50.517026578073086,0.0,attribute_21,AzurePilot;Data Science;Machine Learning;OpenML-CC18;study_135;study_218;study_99
+40498,wine-quality-white,AMLB,4898.0,7.0,12.0,0.10208248264597795,44.87545937117191,0.0,Class,Kaggle
+40499,texture,CC18,5500.0,11.0,41.0,9.090909090909092,9.090909090909092,0.0,Class,Data Science;Healthcare;Image Processing;Medical Science;OpenML-CC18;OpenML100;study_123;study_135;study_14;study_50;study_52;study_98;study_99
+40668,connect-4,CC18+AMLB,67557.0,3.0,43.0,9.546012996432642,65.8303358645292,0.0,class,Games;OpenML-CC18;OpenML100;Recreation;Strategy;study_123;study_135;study_14;study_218;study_99;uci
+40670,dna,CC18+AMLB,3186.0,3.0,181.0,24.01129943502825,51.914626490897675,0.0,class,Biology;Computational Biology;Genetics;Kaggle;OpenML-CC18;study_135;study_98;study_99
+40685,shuttle,AMLB,58000.0,7.0,10.0,0.017241379310344827,78.59655172413792,0.0,class,Machine Learning;study_218;study_76;Transport
+40701,churn,CC18+AMLB,5000.0,2.0,21.0,14.14,85.86,0.0,class,Business;Customer Analytics;OpenML-CC18;study_135;study_144;study_98;study_99
+40900,Satellite,AMLB,5100.0,2.0,37.0,1.4705882352941175,98.52941176470588,0.0,Target,
+40923,Devnagari-Script,CC18,92000.0,46.0,1025.0,2.1739130434782608,2.1739130434782608,0.0,character,Computer Vision;Cultural Studies;Language;OpenML-CC18;study_72;study_99;test;TUe-ml;vision
+40927,CIFAR_10,CC18,60000.0,10.0,3073.0,10.0,10.0,0.0,class,Artificial Intelligence;AzurePilot;Computer Vision;Data Sets;Machine Learning;OpenML-CC18;study_99;vision
+40966,MiceProtein,CC18,1080.0,8.0,82.0,9.722222222222223,13.88888888888889,1396.0,class,Biology;Data Science;Health;OpenML-CC18;Research;study_135;study_98;study_99
+40975,car,CC18+AMLB,1728.0,4.0,7.0,3.761574074074074,70.02314814814815,0.0,class,Automobile;OpenML-CC18;study_135;study_144;study_218;study_98;study_99;Transportation;uci
+40978,Internet-Advertisements,CC18+AMLB,3279.0,2.0,1559.0,13.998170173833484,86.00182982616651,0.0,class,Data Science;Digital Marketing;OpenML-CC18;study_135;study_99
+40979,mfeat-pixel,CC18,2000.0,10.0,241.0,10.0,10.0,0.0,class,Computer Vision;Machine Learning;OpenML-CC18;Pattern Recognition;study_98;study_99
+40981,Australian,AMLB,690.0,2.0,15.0,44.492753623188406,55.507246376811594,0.0,A15,Data Analysis;Data Science;derived;Finance;OpenML100;study_135;study_144;study_218;study_98
+40982,steel-plates-fault,CC18+AMLB,1941.0,7.0,28.0,2.833590932509016,34.672849046883044,0.0,target,Data Science;Engineering;OpenML-CC18;study_135;study_98;study_99
+40983,wilt,CC18+AMLB,4839.0,2.0,6.0,5.3936763794172355,94.60632362058277,0.0,class,Environment;OpenML-CC18;Science;study_135;study_98;study_99;Technology
+40984,segment,CC18+AMLB,2310.0,7.0,20.0,14.285714285714285,14.285714285714285,0.0,class,Computer Vision;Image Analysis;OpenML-CC18;study_135;study_218;study_98;study_99
+40994,climate-model-simulation-crashes,CC18,540.0,2.0,21.0,8.518518518518519,91.48148148148148,0.0,outcome,Data Science;Environment;OpenML-CC18;study_135;study_98;study_99;Technology
+40996,Fashion-MNIST,CC18+AMLB,70000.0,10.0,785.0,10.0,10.0,0.0,class,Artificial Intelligence;Computer Vision;Data Sets;Machine Learning;OpenML-CC18;study_218;study_99;vision
+41027,jungle_chess_2pcs_raw_endgame_complete,CC18+AMLB,44819.0,3.0,7.0,9.672237220821527,51.45585577545238,0.0,class,Artificial Intelligence;DouShouQi;Games;JungleChess;OpenML-CC18;Retrogade;study_135;study_218;study_99
+41138,APSFailure,AMLB,76000.0,2.0,171.0,1.8092105263157896,98.19078947368422,1078695.0,class,Data Science;Machine Learning;study_218;UCI
+41142,christine,AMLB,5418.0,2.0,1637.0,50.0,50.0,0.0,class,Artificial Intelligence;chalearn;Computational Science;Data Science;study_218
+41143,jasmine,AMLB,2984.0,2.0,145.0,50.0,50.0,0.0,class,Artificial Intelligence;chalearn;Computational Science;Data Science;study_218
+41144,madeline,AMLB,3140.0,2.0,260.0,49.71337579617835,50.28662420382166,0.0,class,chalearn;Technology
+41145,philippine,AMLB,5832.0,2.0,309.0,50.0,50.0,0.0,class,chalearn;Technology
+41146,sylvine,AMLB,5124.0,2.0,21.0,50.0,50.0,0.0,class,Artificial Intelligence;chalearn;Data Science;Statistics;study_218
+41147,albert,AMLB,425240.0,2.0,79.0,50.0,50.0,2734000.0,class,chalearn;study_218;Technology
+41150,MiniBooNE,AMLB,130064.0,2.0,51.0,28.062338541025955,71.93766145897405,0.0,signal,AzurePilot;Data Science;Machine Learning;Particle Physics;Physics;Research;study_218
+41156,ada,AMLB,4147.0,2.0,49.0,24.813117916566192,75.1868820834338,0.0,class,chalearn;Technology
+41157,arcene,AMLB,100.0,2.0,10001.0,44.0,56.00000000000001,0.0,class,
+41158,gina,AMLB,3153.0,2.0,971.0,49.159530605772275,50.84046939422772,0.0,class,chalearn;Technology
+41159,guillermo,AMLB,20000.0,2.0,4297.0,40.015,59.985,0.0,class,chalearn;study_218;Technology
+41161,riccardo,AMLB,20000.0,2.0,4297.0,25.0,75.0,0.0,class,chalearn;study_218;Technology
+41162,kick,AMLB,72983.0,2.0,33.0,12.298754504473644,87.70124549552636,149271.0,IsBadBuy,Automobile;chalearn;Transportation
+41163,dilbert,AMLB,10000.0,5.0,2001.0,19.13,20.49,0.0,class,Artificial Intelligence;chalearn;Computational Science;Data Science;study_218
+41164,fabert,AMLB,8237.0,7.0,801.0,6.094451863542552,23.394439723200193,0.0,class,Artificial Intelligence;chalearn;Computational Science;Data Science;study_218
+41165,robert,AMLB,10000.0,10.0,7201.0,9.58,10.43,0.0,class,chalearn;study_218;Technology
+41166,volkert,AMLB,58310.0,10.0,181.0,2.3340764877379523,21.961927628194136,0.0,class,Artificial Intelligence;chalearn;Computational Science;Data Science;study_218
+41167,dionis,AMLB,416188.0,355.0,61.0,0.21096235355176027,0.5932415158534124,0.0,class,Artificial Intelligence;chalearn;Data Science;Statistics;study_218
+41168,jannis,AMLB,83733.0,4.0,55.0,2.014737319814171,46.00575639234233,0.0,class,Artificial Intelligence;chalearn;Data Science;Statistics;study_218
+41169,helena,AMLB,65196.0,100.0,28.0,0.1702558439168047,6.143014908890116,0.0,class,Artificial Intelligence;chalearn;Data Science;Statistics;study_218
+42732,sf-police-incidents,AMLB,2215023.0,2.0,9.0,12.158745078493542,87.84125492150646,0.0,ViolentCrime,
+42733,Click_prediction_small,AMLB,39948.0,2.0,12.0,16.841894462801644,83.15810553719835,0.0,click,
+42734,okcupid-stem,AMLB,50789.0,3.0,20.0,9.612317627832798,71.57061568449862,154107.0,job,
+42742,porto-seguro,AMLB,595212.0,2.0,58.0,3.6447517859182947,96.3552482140817,846458.0,target,Data Science;Research;study_271
+42746,KDDCup99,AMLB,4898431.0,23.0,42.0,4.082940027122971E-5,57.322150704991046,0.0,target,
+42769,Higgs,AMLB,1000000.0,2.0,29.0,47.008,52.992,0.0,target,
+43072,KDDCup09-Upselling,AMLB,50000.0,2.0,14892.0,7.364,92.636,1.9658569E7,upselling,
+46904,airfoil_self_noise,TabArena,1503.0,0.0,6.0,[],[],0.0,scaled-sound-pressure,
+46905,Amazon_employee_access,TabArena,32769.0,2.0,10.0,5.789007903811529,94.21099209618848,0.0,ResourceApproved,
+46906,anneal,TabArena,898.0,5.0,39.0,0.8908685968819599,76.16926503340757,0.0,classes,
+46907,Another-Dataset-on-used-Fiat-500,TabArena,1538.0,0.0,8.0,[],[],0.0,price,
+46908,APSFailure,TabArena,76000.0,2.0,171.0,1.8092105263157896,98.19078947368422,1078695.0,AirPressureSystemFailure,
+46910,bank-marketing,TabArena,45211.0,2.0,14.0,11.698480458295547,88.30151954170445,0.0,SubscribeTermDeposit,
+46911,Bank_Customer_Churn,TabArena,10000.0,2.0,11.0,20.369999999999997,79.63,0.0,churn,
+46912,Bioresponse,TabArena,3751.0,2.0,1777.0,45.77446014396161,54.22553985603839,0.0,MoleculeElicitsResponse,
+46913,blood-transfusion-service-center,TabArena,748.0,2.0,5.0,23.796791443850267,76.20320855614973,0.0,DonatedBloodInMarch2007,
+46915,churn,TabArena,5000.0,2.0,20.0,14.14,85.86,0.0,CustomerChurned,
+46916,coil2000_insurance_policies,TabArena,9822.0,2.0,86.0,5.966198330278965,94.03380166972104,0.0,MobileHomePolicy,
+46917,concrete_compressive_strength,TabArena,1030.0,0.0,9.0,[],[],0.0,ConcreteCompressiveStrength,
+46918,credit-g,TabArena,1000.0,2.0,21.0,30.0,70.0,0.0,good_or_bad_customer,
+46919,credit_card_clients_default,TabArena,30000.0,2.0,24.0,22.12,77.88000000000001,0.0,DefaultOnPaymentNextMonth,
+46920,customer_satisfaction_in_airline,TabArena,129880.0,2.0,22.0,45.26716969510317,54.73283030489683,393.0,satisfaction,
+46921,diabetes,TabArena,768.0,2.0,9.0,34.89583333333333,65.10416666666666,0.0,TestedPositiveForDiabetes,
+46922,Diabetes130US,TabArena,71518.0,2.0,48.0,8.799183422355211,91.20081657764479,137663.0,EarlyReadmission,
+46923,diamonds,TabArena,53940.0,0.0,10.0,[],[],0.0,price,
+46924,E-CommereShippingData,TabArena,10999.0,2.0,11.0,40.33093917628875,59.66906082371125,0.0,ArrivedLate,
+46927,Fitness_Club,TabArena,1500.0,2.0,7.0,30.266666666666666,69.73333333333333,20.0,attended,
+46928,Food_Delivery_Time,TabArena,45451.0,0.0,10.0,[],[],0.0,Time_taken(min),
+46929,GiveMeSomeCredit,TabArena,150000.0,2.0,11.0,6.683999999999999,93.316,33655.0,FinancialDistressNextTwoYears,
+46930,hazelnut-spread-contaminant-detection,TabArena,2400.0,2.0,31.0,50.0,50.0,0.0,Contaminated,
+46931,healthcare_insurance_expenses,TabArena,1338.0,0.0,7.0,[],[],0.0,charges,
+46932,heloc,TabArena,10459.0,2.0,24.0,47.80571756382063,52.194282436179364,0.0,RiskPerformance,
+46933,hiva_agnostic,TabArena,3845.0,3.0,1618.0,1.092327698309493,96.4889466840052,0.0,CompoundActivity,
+46934,houses,TabArena,20640.0,0.0,9.0,[],[],0.0,LnMedianHouseValue,
+46935,HR_Analytics_Job_Change_of_Data_Scientists,TabArena,19158.0,2.0,13.0,24.934753105752165,75.06524689424784,65.0,LookingForJobChange,
+46937,in_vehicle_coupon_recommendation,TabArena,12684.0,2.0,25.0,43.15673289183223,56.84326710816777,0.0,AcceptCoupon,
+46938,Is-this-a-good-customer,TabArena,1723.0,2.0,14.0,11.375507835171213,88.62449216482878,0.0,bad_client_target,
+46939,kddcup09_appetency,TabArena,50000.0,2.0,213.0,1.78,98.22,6727959.0,appetency,
+46940,Marketing_Campaign,TabArena,2240.0,2.0,26.0,14.910714285714285,85.08928571428571,24.0,Response,
+46941,maternal_health_risk,TabArena,1014.0,3.0,7.0,26.82445759368836,40.03944773175542,0.0,RiskLevel,
+46942,miami_housing,TabArena,13776.0,0.0,16.0,[],[],0.0,SALE_PRC,
+46947,online_shoppers_intention,TabArena,12330.0,2.0,18.0,15.474452554744525,84.52554744525548,0.0,Revenue,
+46949,physiochemical_protein,TabArena,45730.0,0.0,10.0,[],[],0.0,ResidualSize,
+46950,polish_companies_bankruptcy,TabArena,5910.0,2.0,65.0,6.937394247038917,93.06260575296108,4666.0,company_bankrupt,
+46952,qsar-biodeg,TabArena,1054.0,2.0,42.0,33.68121442125237,66.31878557874764,0.0,Biodegradable,
+46953,QSAR-TID-11,TabArena,5742.0,0.0,1025.0,[],[],0.0,MEDIAN_PXC50,
+46954,QSAR_fish_toxicity,TabArena,907.0,0.0,7.0,[],[],0.0,LC50,
+46955,SDSS17,TabArena,78053.0,3.0,12.0,17.928843221913315,61.000858391093224,0.0,ObjectType,
+46956,seismic-bumps,TabArena,2584.0,2.0,16.0,6.578947368421052,93.42105263157895,0.0,HighEnergySeismicBump,
+46958,splice,TabArena,3190.0,3.0,61.0,24.043887147335425,51.88087774294671,0.0,SiteType,
+46960,students_dropout_and_academic_success,TabArena,4424.0,3.0,37.0,17.94755877034358,49.93218806509946,0.0,AcademicOutcome,
+46961,superconductivity,TabArena,21263.0,0.0,82.0,[],[],0.0,critical_temp,
+46962,taiwanese_bankruptcy_prediction,TabArena,6819.0,2.0,95.0,3.2262795131250916,96.77372048687491,0.0,Bankrupt,
+46963,website_phishing,TabArena,1353.0,3.0,10.0,7.612712490761271,51.88470066518847,0.0,WebsiteType,
+46964,wine_quality,TabArena,6497.0,0.0,13.0,[],[],0.0,median_wine_quality,
+46969,NATICUSdroid,TabArena,7491.0,2.0,87.0,35.02870110799626,64.97129889200373,0.0,Malware,
+46979,jm1,TabArena,10885.0,2.0,22.0,19.347726228755167,80.65227377124484,25.0,defects,
+46980,MIC,TabArena,1699.0,8.0,112.0,0.7062978222483813,84.04944084755739,6513.0,LET_IS,

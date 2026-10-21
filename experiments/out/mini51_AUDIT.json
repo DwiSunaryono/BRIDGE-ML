@@ -1,0 +1,23 @@
+{
+  "rows": 17400,
+  "unique_keys": 17400,
+  "unique_trials": 5800,
+  "shard_rows": {
+    "1": 6600,
+    "2": 6600,
+    "3": 4200
+  },
+  "statuses": {
+    "ok": 17400
+  },
+  "missing": [],
+  "missing_count": 0,
+  "extra": [],
+  "extra_count": 0,
+  "duplicates": {},
+  "wrong_shard": [],
+  "wrong_shard_count": 0,
+  "k173_identity_ok": 5800,
+  "k173_identity_total": 5800,
+  "analysis_ready": true
+}

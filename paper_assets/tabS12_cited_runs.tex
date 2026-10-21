@@ -1,0 +1,115 @@
+% merged by hand from tabS9_development_runs and tabS12_cited_runs; rows sorted by run number; two side-by-side halves
+\begin{table*}[!t]
+\centering
+\scriptsize\renewcommand{\arraystretch}{0.92}
+\setlength{\tabcolsep}{2.2pt}
+\caption{Runs cited in the text, by run number.}
+\label{tab:citedruns}\label{tab:devruns}
+\begin{minipage}[t]{0.494\textwidth}\centering
+\begin{tabular}[t]{@{}lrrrr@{}}
+\toprule
+Check & \begin{tabular}[b]{@{}c@{}}Acc./\\false\end{tabular} & \begin{tabular}[b]{@{}c@{}}Bound\\\% $\downarrow$\end{tabular} & \begin{tabular}[b]{@{}c@{}}LOCO\\\% $\downarrow$\end{tabular} & Yield \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{MINI-02 $\cdot$ 34 (D) $\times$ 100}} \\
+\quad frozen gate, threshold-only HGB & 586 / 1 & 1.24 & 1.45 & 17.2$^{a}$ \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-04 $\cdot$ 34 (D) $\times$ 100}} \\
+\quad threshold-only KNN, cross-fit gate & 150 / 7 & 14.04 & 19.95 & 4.4 \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-09 $\cdot$ 18 dev. $\times$ 100}} \\
+\quad third member KNN & 218 / 3 & 5.71 & 8.70 & 12.1 \\
+\quad third member SVC & 269 / 4 & 5.27 & 8.41 & 14.9 \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-12 $\cdot$ 18 dev. $\times$ 100}} \\
+\quad tuned HGB as the update & 193 / 5 & 8.61 & 12.32 & 10.7 \\
+\quad tuned HGB, baseline and member & 356 / 13 & 8.12 & 9.63 & 19.8 \\
+\quad default HGB, baseline and member & 455 / 10 & 5.20 & 6.41 & 25.3 \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-14 $\cdot$ 27 (D) $\times$ 40 per size}} \\
+\quad tuning on 630 rows & 87 / 1 & 10.12 & 14.27 & 8.1 \\
+\quad tuning on 2,000 rows & 40 / 0 & 14.52 & 20.08 & 3.7 \\
+\quad tuning on 5,000 rows & 30 / 0 & 20.95 & 59.82 & 2.8 \\
+\quad all three sizes (3,240 dec.) & 157 / 1 & 5.21 & 6.67 & 4.8 \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-16 $\cdot$ 18 dev. $\times$ 100}} \\
+\quad accuracy & 234 / 6 & 7.75 & 11.94 & 13.0 \\
+\quad balanced accuracy & 1,352 / 4 & 0.93 & 1.01 & 75.1 \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-17 $\cdot$ size study, 3,240 trials}} \\
+\multicolumn{5}{@{}l}{\quad skipped at 1,000 training rows: avida-hil6 2, porto-seguro 40} \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-19 $\cdot$ 8 wide dev.\ datasets}} \\
+\quad union policy, first 50 trials (400 dec.) & 61 / 1 & 15.10 & 32.37 & 15.2$^{b}$ \\
+\quad extended to 150 (MINI-19b; 1,200 dec.) & 179 / 5 & 9.30 & 20.58 & 14.9$^{c}$ \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-20 $\cdot$ size study, 8,100 trials}} \\
+\multicolumn{5}{@{}l}{\quad skipped at 1,000 training rows: avida-hil6 3, porto-seguro 100} \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-24 $\cdot$ 11 new, dataset-level bootstrap bound$^{d}$}} \\
+\quad naive &  & 29.4 &  &  \\
+\quad $5\times2$ cv &  & 13.0 &  &  \\
+\quad corrected $t$ &  & 12.5 &  &  \\
+\quad BRIDGE &  & 3.1 &  &  \\
+\bottomrule
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.494\textwidth}\centering
+\begin{tabular}[t]{@{}lrrrr@{}}
+\toprule
+Check & \begin{tabular}[b]{@{}c@{}}Acc./\\false\end{tabular} & \begin{tabular}[b]{@{}c@{}}Bound\\\% $\downarrow$\end{tabular} & \begin{tabular}[b]{@{}c@{}}LOCO\\\% $\downarrow$\end{tabular} & Yield \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{MINI-27 $\cdot$ 11 new, 1,064 dec.}} \\
+\multicolumn{5}{@{}l}{\quad error of the gain estimate$^{e}$: naive $+0.0034$; cross-fitted $-0.0034$} \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-28 $\cdot$ 12 clin. $\times$ 100, weighted-$F_1$ stage}} \\
+\quad BRIDGE & 222 / 6 (2.7) & 8.15 & 12.80$^{f}$ &  \\
+\quad naive & 1,145 / 254 (22.2) & 26.16 & 28.66$^{f}$ &  \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-31 $\cdot$ $\mathcal{Q}$, 1,400}} \\
+\quad XGBoost project default as base & 138 / 16 (11.6) & 19.33$^{g}$ &  & 9.9 \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-33b $\cdot$ $\mathcal{Q}$, 1,400}} \\
+\multicolumn{5}{@{}l}{\quad regularized XGBoost below HGB in base weighted-$F_1$: 94.1\% of tasks} \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-34 $\cdot$ $\mathcal{Q}$, 1,400, 9 configurations}} \\
+\quad accepted, skill-positive base & 2,161 / 1 (0.05) &  &  &  \\
+\quad accepted, skill-negative base & 1,142 / 77 (6.74) &  &  &  \\
+\multicolumn{5}{@{}l}{\quad Spearman $\rho$, skill vs bound, 9 configurations: $-0.82$ ($p=0.007$)} \\
+\multicolumn{5}{@{}l}{\quad Spearman $\rho$, 11 configurations incl.\ 2 MLPs: $-0.74$ ($p=0.010$)} \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-37 $\cdot$ $\mathcal{Q}$, 1,400}} \\
+\quad 16 bags, SEARCH 630 & 459 / 9 & 3.98$^{g}$ &  & 32.8 \\
+\quad 32 bags, SEARCH 630 & 475 / 8 & 3.56$^{g}$ &  & 33.9 \\
+\quad 64 bags, SEARCH 630 & 465 / 5 & 2.69$^{g}$ &  & 33.2 \\
+\quad 32 bags, SEARCH 360 & 464 / 2 & 1.65$^{g}$ &  & 33.1 \\
+\quad 32 bags, SEARCH 1,000 & 450 / 6 & 3.11$^{g}$ &  & 32.1 \\
+\multicolumn{5}{@{}l}{\quad Monte Carlo error$^{h}$, $\mathcal{Q}$: SD 0.00014; 0.3\%; 1.0\% (14 of 1,400)} \\
+\multicolumn{5}{@{}l}{\quad Monte Carlo error$^{h}$, 11 new $\times$ 10: SD 0.00009; 0.7\%; 1.8\% (2 of 110)} \\
+\multicolumn{5}{@{}l}{\quad reference SE$^{i}$, 5 new datasets, reference $\ge$ 40,000: 0.0003--0.0020} \\
+\multicolumn{5}{@{}l}{\quad reference SE$^{i}$, 6 new datasets, reference $<$ 40,000: 0.0043--0.0152} \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-38 $\cdot$ 11 new $\times$ 100, three reference seeds}} \\
+\quad original seed: naive & 1,064 / 203 (19.1) & 22.90 & 25.27 & 96.7 \\
+\quad original seed: BRIDGE & 284 / 3 (1.1) & 4.23 & 5.95 & 25.8 \\
+\quad seed 1: naive & 1,078 / 244 (22.6) & 26.60 & 29.29 & 98.0 \\
+\quad seed 1: BRIDGE & 340 / 8 (2.4) & 6.09 & 8.12 & 30.9 \\
+\quad seed 2: naive & 1,067 / 236 (22.1) & 26.15 & 28.83 & 97.0 \\
+\quad seed 2: BRIDGE & 289 / 2 (0.7) & 3.42 & 5.05 & 26.3 \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-50 $\cdot$ joint seven-family space}} \\
+\multicolumn{5}{@{}l}{\quad (A): naive false impr. 22.4\%; BRIDGE 1.6\%} \\
+\multicolumn{5}{@{}l}{\quad (D): naive false impr. 13.2\%; BRIDGE 0.7\%} \\
+\addlinespace[1pt]
+\multicolumn{5}{@{}l}{\textit{MINI-53 $\cdot$ (E), 1,280 dec., post hoc check$^{j}$}} \\
+\quad default (DT and SVC) & 192 / 2 (1.0) & 5.40 & 8.43 & 15.0 \\
+\quad members LR and NB & 244 / 6 (2.5) & 7.35 & 10.16 & 19.1 \\
+\quad members MLP and KNN & 147 / 6 (4.1) & 12.94 & 20.77 & 11.5 \\
+\multicolumn{5}{@{}l}{\quad false improvements of both pairs: 12; reference-uncertain 11, on references of 1,125--2,112 rows} \\
+\multicolumn{5}{@{}l}{\quad clearly worse: 1 (airline, reference 100,000 rows, gain $-0.0017$)} \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+
+\vspace{2pt}
+\parbox{\textwidth}{\justifying\scriptsize *Runs MINI-02 to MINI-19: development runs (Table~\ref{tab:chronology}). The later runs are confirmatory, sensitivity, or descriptive. Data: datasets $\times$ trials per dataset, or tasks. (D): the $34$ confirmation datasets of the supporting group, of which $27$ are in MINI-14; dev.: the $18$ development datasets. new: the $11$ new datasets of (A). clin.: the $12$ clinical tasks. dec.: decisions. Each run header gives the run number and the data of the run; a row that spans the columns states a result in words. Acc./false: accepted / false improvements, with the false-improvement share in parentheses (\%). Bound: KL-ratio bound ($b=1$), \%. LOCO: leave-one-dataset-out bound, \%. Yield: accepted updates per $100$ decisions. Superscripts. Power check LOCO$_0$, the LOCO bound recomputed with zero false improvements: a, $0.81\%$; b, $18.22\%$; c, $5.54\%$. With $50$ trials per dataset the bound exceeds $10\%$ even when no decision is a false improvement, and $100$ or more trials bring it below $10\%$. d: $95\%$ upper bound of the false-improvement rate, from a bootstrap over the $11$ datasets with 10,000 resamples, \%. e: estimate minus reference truth for the deployed configuration, against the margin $0.005$. f: LOCO by source. g: Proposition~\ref{prop:bound} bound on $\mathcal{Q}$. h: three Monte Carlo checks, namely the standard deviation of the 5\% bootstrap quantile over 20 bootstrap seeds per trial, the share of re-runs whose decision one alternative seed changes, and the share of trials in which at least one of the 20 seeds changes the decision. i: range of the per-dataset median bootstrap standard error of the reference gain, separately for references of 43,634 to 100,000 rows ($\ge$ 40,000) and 468 to 1,143 rows ($<$ 40,000). MINI-12 and MINI-14 tune HGB with Optuna (tree-structured Parzen estimator, 25 search iterations) on the 630-row SEARCH split; MINI-14 repeats this at 630, 2,000 and 5,000 tuning rows. Mean reference weighted-$F_1$ in MINI-12: $0.8180$ for the default HGB and $0.8206$ for the tuned learner, a mean gain of $+0.0026$. MINI-14, the mean reference gain of the tuned learner at $630$, $2{,}000$, and $5{,}000$ rows and over all sizes is $+0.0027$, $+0.0021$, $+0.0020$, and $+0.0023$. Share of trials whose $95\%$ reference interval lies below zero: $12.3\%$, $9.0\%$, $6.7\%$, and $9.3\%$. MINI-17/MINI-20: trials skipped because a bag had fewer than 10 examples of a class. MINI-28: the clinical stage with weighted-$F_1$ as the primary endpoint, before the net-benefit stage (MINI-30). MINI-31: XGBoost with the project defaults (300 rounds, no early stopping) during development. MINI-33b: share of tasks on which the regularized XGBoost has a lower base weighted-$F_1$ than HGB on the locked reference. MINI-34: accepted updates pooled over the nine pre-registered HGB and XGBoost configurations, split by the sign of the base learner's log-loss skill on POOL; Spearman $\rho$ between median skill and bound (Table~\ref{tab:basefull}). MINI-37: the bag count and the SEARCH size, varied one at a time. MINI-38: the outer split is repeated with two fresh reference seeds (original 20261125; seed 1: 1038000001; seed 2: 1038000002). j: post hoc, descriptive. reference-uncertain: the 95\% Bayesian-bootstrap interval of the reference gain contains zero. clearly worse: the interval lies below zero.}
+\end{table*}

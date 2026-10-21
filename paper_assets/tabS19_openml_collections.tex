@@ -1,0 +1,63 @@
+% set by hand: two side-by-side halves under one caption; group and decisions columns folded into headers and the note
+\begin{table*}[!t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.2pt}
+\caption{Datasets of the OpenML collection (E) and its extension (E2), with per-dataset decisions and curation flags.}
+\label{tab:openmlE}
+\begin{minipage}[t]{0.494\textwidth}\centering
+\begin{tabular}[t]{@{}llrrrrr@{}}
+\toprule
+Dataset & Source & N & K & Feat. & Naive & BRIDGE \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{(E) $14$ OpenML datasets}} \\
+airline-satisfaction & OML~46920 & 129,880 & 2 & 21 & 99/6 & 22/0 \\
+KDDCup09-churn & OML~1112 & 50,000 & 2 & 230 & 80/62 & 0/0 \\
+bank-marketing & OML~1461 & 45,211 & 2 & 16 & 100/0 & 53/0 \\
+pulsar-HTRU2 & OML~45558 & 17,898 & 2 & 8 & 97/45 & 0/0 \\
+jm1 & OML~1053 & 10,885 & 2 & 21 & 100/2 & 63/0 \\
+support2 & OML~46860 & 9,105 & 2 & 46 & 93/26 & 5/0 \\
+telco-customer-churn & OML~42178 & 7,043 & 2 & 19 & 99/22 & 15/1 \\
+phoneme & OML~1489 & 5,404 & 2 & 5 & 96/26 & 3/0 \\
+spambase & OML~44 & 4,601 & 2 & 57 & 98/30 & 5/1 \\
+sick & OML~38 & 3,772 & 2 & 29 & 100/16 & 4/0 \\
+bioresponse & OML~4134 & 3,751 & 2 & 1,776 & 94/57 & 1/0 \\
+ipums-la-97-small & OML~382 & 7,019 & 8 & 60 & 60/14 & 2/0 \\
+otto-group & OML~45548 & 61,878 & 9 & 93 & 60/7 & 5/0 \\
+corporate-credit-ratings & OML~46372 & 5,000 & 10 & 7 & 60/4 & 14/0 \\
+\multicolumn{7}{@{}l}{\textit{(E2) $20$ OpenML and UCI datasets}} \\
+in-vehicle-coupon & OML~46937 & 12,684 & 2 & 24 & 86/32 & 4/2 \\
+wilt & OML~40983 & 4,839 & 2 & 5 & 100/1 & 28/0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.494\textwidth}\centering
+\begin{tabular}[t]{@{}llrrrrr@{}}
+\toprule
+Dataset & Source & N & K & Feat. & Naive & BRIDGE \\
+\midrule
+APSFailure & OML~41138 & 76,000 & 2 & 170 & 99/2 & 1/0 \\
+iranian-churn & UCI~563 & 3,150 & 2 & 13 & 100/0 & 92/0 \\
+SECOM & UCI~179 & 1,567 & 2 & 590 & 74/38 & 0/0 \\
+steel-plates-faults & UCI~198 & 1,941 & 2 & 27 & 100/2 & 31/0 \\
+myocardial-infarction & UCI~579 & 1,700 & 2 & 111 & 99/40 & 10/1 \\
+OVA-breast & OML~1128 & 1,545 & 2 & 10,935 & 100/33 & 12/1 \\
+lending-club & OML~43729 & 9,578 & 2 & 13 & 100/4 & 24/0 \\
+TVS-loan-default & OML~43743 & 119,528 & 2 & 30 & 83/47 & 0/0 \\
+personal-loan & OML~43826 & 5,000 & 2 & 13 & 97/31 & 5/0 \\
+fitness-club$^{c}$ & OML~46927 & 1,500 & 2 & 6 & 96/30 & 3/0 \\
+good-customer$^{c}$ & OML~46938 & 1,723 & 2 & 13 & 99/22 & 5/1 \\
+churn$^{b}$ & OML~46915 & 5,000 & 2 & 19 & 100/0 & 100/0 \\
+wine-white & OML~40498 & 4,898 & 7 & 11 & 60/8 & 5/1 \\
+shuttle$^{f}$ & OML~40685 & 58,000 & 7 & 9 & -- & -- \\
+covertype & OML~180 & 110,393 & 7 & 54 & 60/3 & 11/0 \\
+CIFAR-10-small$^{e}$ & OML~40926 & 20,000 & 10 & 3,072 & 60/10 & 6/1 \\
+SVHN-small$^{d}$ & OML~42140 & 9,927 & 10 & 3,072 & 60/0 & 58/0 \\
+pendigits (amend.)$^{a}$ & OML~32 & 10,992 & 10 & 16 & 60/0 & 57/0 \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+
+\vspace{2pt}
+\parbox{\textwidth}{\justifying\scriptsize *(E): pre-registered OpenML collection; (E2): its pre-registered extension; both run through the released program with the same protocol (HGB, default candidate space, weighted-$F_1$; $100$ trials per binary and $60$ per multiclass dataset). Naive, BRIDGE: accepted / false improvements. Decisions per dataset: $100$ (binary) or $60$ (multiclass). K: classes. Feat.: features. OML: OpenML ID. Names shortened. Flags: $^{a}$rows grouped by $44$ writers, against the grouped-data rule (amendment for \texttt{shuttle}); $^{b}$original source lost, same data as OpenML 40701, described there as artificial; $^{c}$origin of the data not verifiable (Kaggle practice or unattributed data); $^{d}$flattened image whose source-photograph grouping cannot be audited; $^{e}$flattened image (stress test); $^{f}$all $60$ trials stopped with a structural error (a class too small after the reference split), replaced by the amendment. Flagged datasets are kept as pre-registered and reported; without the datasets flagged $a$--$c$, (E)+(E2) covers $29$ datasets and still meets the criterion (naive $22.6\%$ false, BRIDGE $479$ accepted / $8$ false improvements, $1.67\%$; bound $4.28\%$, LOCO $5.38\%$), and so do its $22$ binary datasets (naive $24.9\%$, BRIDGE $1.59\%$; bound $4.61\%$, LOCO $6.23\%$); the binary subgroup of (E2) alone does not ($11$ datasets, LOCO $13.49\%$).}
+\end{table*}

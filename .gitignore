@@ -1,0 +1,40 @@
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+*.log
+
+# Keep working files that belong to the manuscript out of this code repository
+riset*.md
+prompt_*
+PROMPT_*
+KISI_*
+KERANGKA_*
+LAPORAN_*
+*.pdf
+paper*.pdf
+paper*.docx
+paper*.tex
+manuscript*
+!paper_assets/
+!paper_assets/**
+!experiments/paper_assets.py
+
+# Internal notes, pre-registrations, reports, and run logs are kept locally
+# and are not part of the release.
+experiments/*.md
+experiments/**/*.md
+experiments/*.txt
+experiments/**/*.txt
+experiments/**/*.log
+experiments/**/*.out
+
+# Released together with the run manifests
+!experiments/PREREGISTRATION_INDEX.md
+!experiments/tabelC_kurasi_aman.txt
+
+# Manifests of the earlier exp41 study, which the paper does not cite; kept locally
+experiments/exp41_manifest/*.sha256
+
+# Output of paper_assets.py (first versions; the final tables are in paper_assets/)
+experiments/out/paper_assets_regenerated/

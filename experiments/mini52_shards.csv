@@ -1,0 +1,12 @@
+shard,data_id,name
+1,4134,Bioresponse
+1,38,sick
+1,44,spambase
+2,1112,KDDCup09_churn
+2,46920,customer_satisfaction_in_airline
+2,1053,jm1
+2,1461,bank-marketing
+3,1489,phoneme
+3,42178,telco-customer-churn
+3,45558,Pulsar-Dataset-HTRU2
+3,46860,Support2

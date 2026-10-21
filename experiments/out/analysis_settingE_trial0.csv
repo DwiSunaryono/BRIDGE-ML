@@ -1,0 +1,2 @@
+decisions,datasets,naive_accepted,naive_harmful,naive_harm_pct,bridge_accepted,bridge_harmful,bridge_harm_pct,random_expected_harmful,random_p,gain_retained_pct,group,bridge_yield_
+14,14,14,5,35.714285714285715,1,0,0.0,0.35714285714285715,0.6428571428571428,26.20526562695848,E_trial0,7.142857142857142

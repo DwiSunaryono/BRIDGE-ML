@@ -1,0 +1,12 @@
+{
+  "rows": 60,
+  "unique_reps": 60,
+  "statuses": {
+    "ok": 60
+  },
+  "missing": [],
+  "extra": [],
+  "duplicates": {},
+  "bad_seed": [],
+  "analysis_ready": true
+}

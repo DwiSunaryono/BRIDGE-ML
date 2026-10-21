@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If this software or its results are used, please cite this work as follows."
+title: "BRIDGE: An Acceptance Gate to Block False Improvements in Model Updates, with a Retrospective Clinical Evaluation"
+type: software
+version: "1.0.0"
+authors:
+  - family-names: Sunaryono
+    given-names: Dwi
+    affiliation: "Department of Informatics, Institut Teknologi Sepuluh Nopember (ITS), Surabaya, Indonesia"
+    email: dwi@its.ac.id
+license: MIT
+repository-code: "https://github.com/DwiSunaryono/BRIDGE-ML"
+url: "https://pypi.org/project/bridge-gate/"
+keywords:
+  - acceptance gate
+  - false improvement
+  - model updating
+  - cross-fitting
+  - bootstrap
+  - clinical prediction

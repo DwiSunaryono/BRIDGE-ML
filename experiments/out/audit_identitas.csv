@@ -1,0 +1,7 @@
+source,identity_key,rows,unique_keys,duplicates,note
+WiDS 2020 (GOSSIS),patient_id,91713,91713,0,"one row per patient; unique encounter_id: 91,713; hospitals: 147"
+COVID-19 Mexico,id (record id),566602,563201,3401,"Duplicates = excess rows; ids occurring more than once: 1,486; all 4,887 rows with such ids removed before filtering confirmed cases; confirmed cases kept: 218,784"
+NHANES 2017-2018,SEQN,9254,9254,0,one row per respondent (survey design); the 4 outcomes share respondents and form one LOCO cluster
+ACTG 175 (UCI 890),(not available in the UCI copy),2139,,,"randomized trial, one row per participant (source documentation)"
+BRFSS 2015,(not available; SEQNO is state-specific),,,,one record per interviewed respondent (survey design); the 4 outcomes form one LOCO cluster
+Mammography (OpenML 310),(not available),,,,"identical (X, y) rows kept once; identical X with conflicting labels removed; patient independence cannot be verified"

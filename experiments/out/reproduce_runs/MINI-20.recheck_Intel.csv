@@ -1,0 +1,2 @@
+dataset,TOTAL,rep,cfg,D,lo95,ref,kelas
+cardio,6000,16,"({'HGB': 0.5, 'DT': 0, 'SVC': 0.5}, 0.45)",268,-0.0017300025431912724,0.0054935123095876115,membaik

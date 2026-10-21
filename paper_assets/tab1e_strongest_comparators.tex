@@ -1,0 +1,24 @@
+% hand-made from tabS21_rules_merged (A)-(D), tab1c_rules_all (marks), and experiments/out/analysis_margin_lodo.csv (fixed margin, post hoc)
+\begin{table*}[!t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\caption{Strongest comparators: false-improvement rate, yield, and updates above the margin, (A)--(D).}
+\label{tab:strongest}
+\begin{tabular}{@{}lrrrrrrrrrrrr@{}}
+\toprule
+ & \multicolumn{3}{c}{(A) 11 new datasets} & \multicolumn{3}{c}{(B) Synthetic} & \multicolumn{3}{c}{(C) Clinical} & \multicolumn{3}{c}{(D) Supporting} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}\cmidrule(l){11-13}
+Rule & False \% $\downarrow$ & Yield $\uparrow$ & ${>}\varepsilon$ $\uparrow$ & False \% $\downarrow$ & Yield $\uparrow$ & ${>}\varepsilon$ $\uparrow$ & False \% $\downarrow$ & Yield $\uparrow$ & ${>}\varepsilon$ $\uparrow$ & False \% $\downarrow$ & Yield $\uparrow$ & ${>}\varepsilon$ $\uparrow$ \\
+\midrule
+Corrected $t$, re-selection & 2.3$^{\circ}$\,$\checkmark$ & 31.7 & 29.8 & 3.0$^{\circ}$\,$\checkmark$ & 37.9 & 35.9 & 0.4$^{\circ}$\,$\checkmark$ & 58.4 & 56.4 & 1.5$^{*}$\,$\checkmark$ & 39.6 & 35.2 \\
+Holdout 2/3 + 1/3 & 1.3 & 13.9 & 13.4 & 1.9\,$\checkmark$ & 18.6 & 18.0 & 0.0$^{\circ}$\,$\checkmark$ & 41.1 & 41.0 & 0.3$^{\circ}$\,$\checkmark$ & 19.5 & 18.8 \\
+Holdout 1/2 + 1/2 & 3.2 & 17.3 & 16.2 & 2.1\,$\checkmark$ & 24.2 & 23.3 & 0.0$^{\circ}$\,$\checkmark$ & 46.0 & 46.0 & 0.8$^{\circ}$\,$\checkmark$ & 22.3 & 21.2 \\
+Fixed margin, dataset held out$^{\dagger}$ & 5.8\,$\times$ & 31.5 & 28.7 & 4.2\,$\checkmark$ & 49.4 & 45.4 & -- & -- & -- & -- & -- & -- \\
+\textbf{BRIDGE} & 1.1\,$\checkmark$ & 25.8 & 24.9 & 1.7\,$\checkmark$ & 33.9 & 32.8 & 0.0\,$\checkmark$ & 50.0 & 49.9 & 0.5\,$\checkmark$ & 30.1 & 29.1 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\parbox{\textwidth}{\justifying\scriptsize False \%: false improvements among the accepted updates. Yield: accepted updates per $100$ decisions. ${>}\varepsilon$: accepted updates whose reference gain exceeds the margin $\varepsilon=0.005$, per $100$ decisions (post hoc; tests in Table~\ref{tab:falseimp}). $\checkmark$/$\times$: pre-registered criterion met/not met; no mark: LOCO not computed for the holdouts in (A). $^{*}$: BRIDGE has a significantly lower false-improvement rate; $^{\circ}$: no significant difference (paired cluster bootstrap, Holm over the comparators of a collection, Table~\ref{tab:rulesall}). $^{\dagger}$Post hoc: for each dataset (in (B), each block of $140$ tasks), the margin is chosen from the pre-registered grid $0.005$--$0.050$ on all other data, by the rule of the leave-one-setting-out analysis, and applied to the held-out dataset; the margin $0.020$ is chosen for $43$ of $48$ held-out units. No test is applied: the comparison is descriptive, because each held-out dataset's margin is chosen on data that include the other evaluated datasets, so the decisions are not independent of that choice. Not available for (C) and (D). Cost: BRIDGE re-scores stored predictions (about $0.03$~s per run; Table~\ref{tab:complexity}).}
+\end{table*}

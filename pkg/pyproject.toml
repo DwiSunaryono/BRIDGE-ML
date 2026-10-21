@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bridge-gate"
+version = "1.0.0"
+description = "BRIDGE: an acceptance gate for post-validation model updates"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "The BRIDGE authors" }]
+keywords = ["machine learning", "model selection", "validation", "bootstrap", "acceptance test"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "pandas>=1.5",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+bridge-gate = "bridge_gate.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/DwiSunaryono/BRIDGE-ML"
+Repository = "https://github.com/DwiSunaryono/BRIDGE-ML"
+Issues = "https://github.com/DwiSunaryono/BRIDGE-ML/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]

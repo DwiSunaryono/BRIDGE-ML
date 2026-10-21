@@ -1,0 +1,20 @@
+bagian,urutan_baru,source_id,nama,N,K,F,target,catatan_loader
+biner,1,OpenML-46937,in_vehicle_coupon_recommendation,12684,2,24,AcceptCoupon,loader OpenML baku
+biner,2,OpenML-40983,wilt,4839,2,5,class,loader OpenML baku
+biner,3,OpenML-41138,APSFailure,76000,2,170,class,loader OpenML baku
+biner,4,UCI-563,Iranian Churn,3150,2,13,Churn,ucimlrepo; loader eksternal terkunci
+biner,5,UCI-179,SECOM,1567,2,590,class,buang timestamp; class hanya target
+biner,6,UCI-198,Steel Plates Faults,1941,2,27,Pastry,outcome fault lain tidak menjadi fitur
+biner,7,UCI-579,Myocardial infarction complications,1700,2,111,FIBR_PREDS,outcome komplikasi lain tidak menjadi fitur
+biner,8,OpenML-1128,OVA_Breast,1545,2,10935,Tissue,buang ID_REF; maksimum satu keluarga OVA
+biner,9,OpenML-43729,Lending-Club-Loan-Data,9578,2,13,not.fully.paid,target eksplisit dari kolom data
+biner,10,OpenML-43743,TVS_Loan_Default,119528,2,30,V32,buang customer ID V1
+biner,11,OpenML-43826,Personal-Loan-Modeling,5000,2,13,Personal_Loan,target eksplisit dari kolom data
+biner,12,OpenML-46927,Fitness_Club,1500,2,6,attended,versi TabArena; booking_id sudah dibuang
+biner,13,OpenML-46938,Is-this-a-good-customer,1723,2,13,bad_client_target,versi TabArena
+biner,14,OpenML-46915,churn,5000,2,19,CustomerChurned,versi TabArena; phone_number sudah dibuang
+multikelas,1,OpenML-40498,wine-quality-white,4898,7,11,Class,loader OpenML baku
+multikelas,2,OpenML-40685,shuttle,58000,7,9,class,loader OpenML baku
+multikelas,3,OpenML-180,covertype,110393,7,54,class,loader OpenML baku
+multikelas,4,OpenML-40926,CIFAR_10_small,20000,10,3072,class,loader Parquet OpenML; keluarga CIFAR
+multikelas,5,OpenML-42140,SVHN_small,9927,10,3072,class,loader Parquet OpenML; keluarga SVHN

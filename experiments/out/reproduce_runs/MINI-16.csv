@@ -1,0 +1,73 @@
+dataset,rep,design,metric,cfg,D,lo95,ref,kelas
+bank-churn,0,union_wF1,wF1,"({'HGB': 0.5, 'DT': 0, 'SVC': 0.5}, 0.4)",82,0.003715892025829598,0.005048026655399829,tidak-pasti
+bank-churn,0,union_acc,acc,"({'HGB': 0.5, 'DT': 0, 'SVC': 0.5}, 0.4)",50,-0.0011111111111110628,-0.0030000000000000027,tidak-pasti
+bank-churn,0,union_bacc,bacc,"({'HGB': 0.75, 'DT': 0.25}, np.float64(0.25))",352,0.04932424183036445,0.08101027691704821,membaik
+bank-churn,0,union_macroF1,macroF1,"({'HGB': 0.75, 'DT': 0, 'SVC': 0.25}, 0.35)",189,0.004955873356764467,0.034157982179567004,membaik
+employee,0,union_wF1,wF1,"({'HGB': 0.75, 'DT': 0, 'SVC': 0.25}, 0.5)",75,-0.0008367365724760598,0.007113423687598708,tidak-pasti
+employee,0,union_acc,acc,"({'HGB': 0.25, 'DT': 0.25, 'SVC': 0.5}, 0.45)",83,0.0011111111111110628,0.010752688172043001,tidak-pasti
+employee,0,union_bacc,bacc,"({'HGB': 0.75, 'DT': 0, 'SVC': 0.25}, 0.5)",69,-0.0010862838592063328,0.005020491803278682,tidak-pasti
+employee,0,union_macroF1,macroF1,"({'HGB': 0.75, 'DT': 0, 'SVC': 0.25}, 0.5)",62,0.0012483799093189417,0.007233186108543732,tidak-pasti
+online-shoppers,0,union_wF1,wF1,"({'HGB': 0.75, 'DT': 0, 'SVC': 0.25}, 0.35)",47,-0.001820820448550503,0.0101169663142755,membaik
+online-shoppers,0,union_acc,acc,"({'HGB': 0.75, 'DT': 0.25}, np.float64(0.5))",32,-0.011666666666666714,0.0021627466882940816,tidak-pasti
+online-shoppers,0,union_bacc,bacc,"({'HGB': 0.75, 'DT': 0.25}, np.float64(0.2))",329,0.06256715341167804,0.09547288336863002,membaik
+online-shoppers,0,union_macroF1,macroF1,"({'HGB': 0.75, 'DT': 0, 'SVC': 0.25}, 0.35)",75,-0.0013675683958912553,0.03359675423053565,membaik
+ecom-shipping,0,union_wF1,wF1,"({'HGB': 0.25, 'DT': 0, 'SVC': 0.75}, 0.55)",289,-0.015295194924185795,0.0020455785756430256,tidak-pasti
+ecom-shipping,0,union_acc,acc,"({'HGB': 0.5, 'DT': 0.5}, np.float64(0.7))",447,0.0,0.02728099424067898,membaik
+ecom-shipping,0,union_bacc,bacc,"({'HGB': 0.75, 'DT': 0.25}, np.float64(0.7))",469,0.0525869349516336,0.07926294796381472,membaik
+ecom-shipping,0,union_macroF1,macroF1,"({'HGB': 0.25, 'DT': 0.75}, np.float64(0.7))",349,-0.006818333719506136,0.03492503818128223,membaik
+fake-job,0,union_wF1,wF1,"({'HGB': 0, 'DT': 0.75, 'SVC': 0.25}, 0.55)",18,-0.005303740906117516,-0.0018688033259478543,tidak-pasti
+fake-job,0,union_acc,acc,None,0,0.0,0.0,tidak-pasti
+fake-job,0,union_bacc,bacc,"({'HGB': 0.5, 'DT': 0.5}, np.float64(0.05))",370,0.0797433778709694,0.11737860533041256,membaik
+fake-job,0,union_macroF1,macroF1,"({'HGB': 0.25, 'DT': 0.75}, np.float64(0.25))",67,0.029214032879851415,0.06571451544683798,membaik
+compas,0,union_wF1,wF1,"({'HGB': 0.75, 'DT': 0, 'SVC': 0.25}, 0.5)",25,-0.011288465283367088,0.002093054668909522,tidak-pasti
+compas,0,union_acc,acc,None,25,-0.011666666666666714,0.0,tidak-pasti
+compas,0,union_bacc,bacc,"({'HGB': 0.75, 'DT': 0, 'SVC': 0.25}, 0.5)",25,-0.011346137407379341,0.0019381397062355754,tidak-pasti
+compas,0,union_macroF1,macroF1,"({'HGB': 0.75, 'DT': 0, 'SVC': 0.25}, 0.5)",25,-0.011195038929533524,0.002337913418884563,tidak-pasti
+amazon-access,0,union_wF1,wF1,"({'HGB': 0.25, 'DT': 0.75}, np.float64(0.55))",14,-0.0027838450434014895,-0.0015375798225747417,tidak-pasti
+amazon-access,0,union_acc,acc,"({'HGB': 1}, np.float64(0.7))",3,-0.0022222222222222365,0.00012500000000004174,tidak-pasti
+amazon-access,0,union_bacc,bacc,"({'HGB': 0.5, 'DT': 0.5}, np.float64(0.85))",353,0.007293433561549524,0.0359088109888982,membaik
+amazon-access,0,union_macroF1,macroF1,"({'HGB': 0.5, 'DT': 0.5}, np.float64(0.85))",134,0.0217489170538415,0.03732745389167463,membaik
+hr-analytics,0,union_wF1,wF1,"({'HGB': 0.5, 'DT': 0, 'SVC': 0.5}, 0.35)",135,0.007054879293586713,0.016938285066643632,membaik
+hr-analytics,0,union_acc,acc,"({'HGB': 0.5, 'DT': 0, 'SVC': 0.5}, 0.35)",135,-0.00666666666666671,0.003306072733600063,tidak-pasti
+hr-analytics,0,union_bacc,bacc,"({'HGB': 1}, np.float64(0.3))",285,0.056997359931701345,0.08610995991240322,membaik
+hr-analytics,0,union_macroF1,macroF1,"({'HGB': 0.75, 'DT': 0, 'SVC': 0.25}, 0.3)",211,0.029654530098116295,0.05139774279543119,membaik
+newspaper-churn,0,union_wF1,wF1,"({'HGB': 0.25, 'DT': 0.5, 'SVC': 0.25}, 0.35)",160,0.011840332934520182,0.013664429075018636,membaik
+newspaper-churn,0,union_acc,acc,"({'HGB': 0.5, 'DT': 0.5}, np.float64(0.55))",93,-0.006111111111111067,0.000841042893187538,tidak-pasti
+newspaper-churn,0,union_bacc,bacc,"({'HGB': 0.75, 'DT': 0.25}, np.float64(0.2))",456,0.11427498440273054,0.10757723475110592,membaik
+newspaper-churn,0,union_macroF1,macroF1,"({'HGB': 0.5, 'DT': 0.5}, np.float64(0.35))",202,0.06790312337217391,0.05506115018214852,membaik
+avida-cov2,0,union_wF1,wF1,"({'HGB': 0.25, 'DT': 0.75}, np.float64(0.7))",112,0.024065475053934682,0.020570674603521022,membaik
+avida-cov2,0,union_acc,acc,"({'HGB': 0.25, 'DT': 0.75}, np.float64(0.7))",111,0.016666666666666607,0.01251117068811436,tidak-pasti
+avida-cov2,0,union_bacc,bacc,"({'HGB': 0.75, 'DT': 0.25}, np.float64(0.3))",215,0.06163757940924038,0.07085178824309257,membaik
+avida-cov2,0,union_macroF1,macroF1,"({'HGB': 0.25, 'DT': 0.75}, np.float64(0.7))",130,0.0357186223126839,0.04276812442692157,membaik
+heloc,0,union_wF1,wF1,"({'HGB': 0.75, 'DT': 0, 'SVC': 0.25}, 0.5)",53,-0.009465063415051173,-0.003074713088922376,tidak-pasti
+heloc,0,union_acc,acc,"({'HGB': 0.75, 'DT': 0, 'SVC': 0.25}, 0.5)",53,-0.009444444444444478,-0.003039513677811523,tidak-pasti
+heloc,0,union_bacc,bacc,"({'HGB': 0.5, 'DT': 0, 'SVC': 0.5}, 0.45)",60,-0.006984977095245875,-0.0030291743974555363,tidak-pasti
+heloc,0,union_macroF1,macroF1,"({'HGB': 0.75, 'DT': 0, 'SVC': 0.25}, 0.5)",53,-0.009500968076284106,-0.003107284911478825,tidak-pasti
+hmeq,0,union_wF1,wF1,"({'HGB': 0.5, 'DT': 0.25, 'SVC': 0.25}, 0.3)",139,0.009656024451831436,0.015366577009046645,membaik
+hmeq,0,union_acc,acc,"({'HGB': 0.5, 'DT': 0.5}, np.float64(0.4))",118,-0.0022222222222222365,-0.0039149888143176215,tidak-pasti
+hmeq,0,union_bacc,bacc,"({'HGB': 0.75, 'DT': 0.25}, np.float64(0.15))",385,0.10957097741805276,0.09434549501142175,membaik
+hmeq,0,union_macroF1,macroF1,"({'HGB': 0.5, 'DT': 0.25, 'SVC': 0.25}, 0.3)",170,0.045774302194780556,0.040226380238141846,membaik
+polish-bankruptcy,0,union_wF1,wF1,"({'HGB': 1}, np.float64(0.25))",39,-0.004343303966001466,0.010837280340679323,membaik
+polish-bankruptcy,0,union_acc,acc,"({'HGB': 1}, np.float64(0.55))",14,-0.007777777777777772,0.0011280315848843925,tidak-pasti
+polish-bankruptcy,0,union_bacc,bacc,"({'HGB': 0.75, 'DT': 0.25}, np.float64(0.1))",271,0.1479759751376375,0.17539541759053956,membaik
+polish-bankruptcy,0,union_macroF1,macroF1,"({'HGB': 1}, np.float64(0.1))",156,0.027130171692751594,0.08267120757033375,membaik
+credit-default-tw,0,union_wF1,wF1,"({'HGB': 0.5, 'DT': 0, 'SVC': 0.5}, 0.3)",160,0.014361484862938029,0.05358371913623228,membaik
+credit-default-tw,0,union_acc,acc,"({'HGB': 0.5, 'DT': 0, 'SVC': 0.5}, 0.35)",76,0.0,0.014124999999999943,membaik
+credit-default-tw,0,union_bacc,bacc,"({'HGB': 1}, np.float64(0.25))",465,0.086110499989873,0.11263568844029714,membaik
+credit-default-tw,0,union_macroF1,macroF1,"({'HGB': 1}, np.float64(0.3))",317,0.06017586345792241,0.11679248824673294,membaik
+coil2000,0,union_wF1,wF1,"({'HGB': 1}, np.float64(0.3))",8,-0.0036211997064736767,0.0014801773985481104,tidak-pasti
+coil2000,0,union_acc,acc,None,0,0.0,0.0,tidak-pasti
+coil2000,0,union_bacc,bacc,"({'HGB': 1}, np.float64(0.05))",696,0.0874702868003811,0.13086437479488022,membaik
+coil2000,0,union_macroF1,macroF1,"({'HGB': 1}, np.float64(0.1))",238,0.04535342852820473,0.04066903322767784,membaik
+codexglue,0,union_wF1,wF1,"({'HGB': 1}, np.float64(0.45))",406,-0.005277137752178201,0.012129465007229001,membaik
+codexglue,0,union_acc,acc,"({'HGB': 0, 'DT': 0.25, 'SVC': 0.75}, 0.5)",269,-0.022222222222222254,0.009874999999999967,tidak-pasti
+codexglue,0,union_bacc,bacc,"({'HGB': 0.75, 'DT': 0.25}, np.float64(0.4))",644,0.012797712844986764,0.016377703087379403,membaik
+codexglue,0,union_macroF1,macroF1,"({'HGB': 0.5, 'DT': 0, 'SVC': 0.5}, 0.45)",423,0.004450043698528344,0.016889201636957507,membaik
+naticusdroid,0,union_wF1,wF1,"({'HGB': 0.5, 'DT': 0, 'SVC': 0.5}, 0.5)",45,0.0011976061091938106,0.009883537483557192,membaik
+naticusdroid,0,union_acc,acc,"({'HGB': 0.5, 'DT': 0, 'SVC': 0.5}, 0.5)",45,0.0011111111111110628,0.009790832220738732,membaik
+naticusdroid,0,union_bacc,bacc,"({'HGB': 0.25, 'DT': 0.25, 'SVC': 0.5}, 0.35)",77,0.00589569490980113,0.011178221440880098,membaik
+naticusdroid,0,union_macroF1,macroF1,"({'HGB': 0.5, 'DT': 0, 'SVC': 0.5}, 0.5)",45,0.0014475179582641884,0.01095161082876206,membaik
+taiwan-bankruptcy,0,union_wF1,wF1,"({'HGB': 0.75, 'DT': 0.25}, np.float64(0.25))",19,-0.00024454904500259556,0.007109746830940011,membaik
+taiwan-bankruptcy,0,union_acc,acc,"({'HGB': 0, 'DT': 0.75, 'SVC': 0.25}, 0.5)",18,-0.007222222222222241,-0.0004889975550123049,tidak-pasti
+taiwan-bankruptcy,0,union_bacc,bacc,"({'HGB': 0.5, 'DT': 0.5}, np.float64(0.05))",267,0.24834801000583825,0.32244246405438926,membaik
+taiwan-bankruptcy,0,union_macroF1,macroF1,"({'HGB': 1}, np.float64(0.1))",55,0.07293291255014646,0.1951905911469955,membaik

@@ -1,0 +1,8 @@
+setting,margin_range,margin_above_eps_per100,bridge_above_eps_per100,false_pct_margin_minus_bridge_lo,false_pct_margin_minus_bridge_hi,p_false_diff,margin_accepted,margin_false,margin_false_pct,margin_bound,margin_LOCO,margin_yield,margin_pass,bridge_accepted,bridge_false,bridge_false_pct,bridge_bound,bridge_LOCO,bridge_yield,bridge_pass
+"dev 1,000 rows wF1",0.02-0.02,39.1,20.9,1.4,6.03,0.0001,1127,51,4.53,6.86,7.55,43.4,True,558,6,1.08,3.04,3.59,21.5,True
+"dev 2,430 rows wF1",0.02-0.02,29.3,25.1,-0.03,2.27,0.2482,809,7,0.87,2.25,2.54,30.0,True,688,1,0.15,1.05,1.2,25.5,True
+"dev 6,000 rows wF1",0.02-0.02,20.8,29.6,-0.39,0.43,1.0,567,2,0.35,1.68,2.07,21.0,True,825,3,0.36,1.37,1.57,30.6,True
+new wF1,0.015-0.035,28.7,24.9,-0.57,11.77,0.2164,347,20,5.76,11.27,15.1,31.5,False,284,3,1.06,4.23,5.95,25.8,True
+new balanced accuracy,0.015-0.035,82.5,76.8,-0.37,2.22,0.7038,917,6,0.65,1.73,1.95,83.4,True,848,1,0.12,0.81,0.92,77.1,True
+new macro-F1,0.015-0.035,81.7,75.1,0.0,2.43,0.7038,910,6,0.66,1.74,1.97,82.7,True,829,0,0.0,0.47,0.53,75.4,True
+Q wF1,0.02-0.02,45.4,32.8,0.89,4.14,0.0014,691,29,4.2,6.33,-,49.4,True,475,8,1.68,3.56,-,33.9,True

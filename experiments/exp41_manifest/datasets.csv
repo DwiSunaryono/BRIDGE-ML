@@ -1,0 +1,10 @@
+stratum,dataset,data_id,cluster,N,n_ref,ref_pos
+utama,dota2,45563,u_dota2,102944,82944,43738
+utama,santander,45566,u_santander,200000,100000,10049
+utama,home-credit,45567,u_home-credit,307511,100000,8073
+utama,coil2000,46281,u_coil2000,9822,2946,176
+utama,bnp-paribas,46856,u_bnp-paribas,114321,94321,71797
+utama,polish-bankruptcy,46950,u_polish-bankruptcy,5910,1773,123
+utama,taiwan-bankruptcy,46962,u_taiwan-bankruptcy,6819,2045,66
+utama,naticusdroid,46969,u_naticusdroid,7491,2247,787
+utama,hr-analytics,46935,u_hr-analytics,19158,5747,1433

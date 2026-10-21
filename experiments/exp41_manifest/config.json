@@ -1,0 +1,30 @@
+{
+ "experiment": "exp41",
+ "STATUS": "BEKU 2026-10-08 \u2014 diluncurkan sebelum verifikasi akhir. Hasil tidak dibuka sampai verifikasi selesai; perbaikan verifier = deviasi tercatat.",
+ "OFFSETS": {
+  "utama": 98000000
+ },
+ "LOCKED_REF_SEED": 20261125,
+ "R": {
+  "utama": 180
+ },
+ "MARGIN": 0.007,
+ "MARGIN_PEMBANDING": 0.002,
+ "N_WORKERS": 30,
+ "N_BOOT_CLUSTER": 20000,
+ "BOOT_SEED": 20261126,
+ "BATAS_PRIMER": "rasio KL: U_W(alpha .025)/L_A(alpha .025), skala 8 pooled; CPMAX/CPCLUS/CP/bootstrap = pembanding tanpa jaminan",
+ "BATAS_SEL": "rasio KL skala 1 (buruk: batas bawah rasio KL > 10% ATAU n>=10 & titik > 15%)",
+ "SMOKE": {
+  "santander": "31m20s, RSS 1.46GB, n_ref 100000",
+  "home-credit": "11m01s, RSS 0.91GB, n_ref 100000"
+ },
+ "SEED_RULE": "offset + 1000*indeks_manifest + rep",
+ "DATASET_KELUAR_AUDIT": "46937 coupon: grouped-row (652 responden x 20 skenario)",
+ "RESUME": "trial ditulis utuh setelah selesai; runner bisa dijalankan ulang, trial selesai dilewati",
+ "TES": {
+  "test_verify_exp41.py": "51/51 lulus",
+  "test_exp41_equivalence.py": "lulus",
+  "sim_interval_exp41.py": "KL cakupan terburuk 1.0 (24 skenario)"
+ }
+}

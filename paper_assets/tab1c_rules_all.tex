@@ -1,0 +1,27 @@
+% hand-made summary of tab1_rules_identical_decisions (A), tab2_synthetic_population (B), tab1b_rules_CD (C, D), tab4_holdout, and setting E
+\begin{table}[!t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{Acceptance rules on collections (A)--(E): false-improvement rate of the accepted updates (\%).}
+\label{tab:rulesall}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Rule & (A) & (B) & (C) & (D) & (E) \\
+\midrule
+Naive (validation improves)  & 19.1$^{*}$\,$\times$ & 20.7$^{*}$\,$\times$ & 20.0$^{*}$\,$\times$ & 12.5$^{*}$\,$\times$ & 25.6$^{*}$\,$\times$ \\
+McNemar, same POOL  & 12.0$^{*}$\,$\times$ & 34.8$^{*}$\,$\times$ & 0.0$^{\circ}$\,$\times$ & 6.7$^{*}$\,$\times$ & -- \\
+McNemar, cross-fit  & 8.9\,$\times$ & 26.0\,$\times$ & 0.0$^{\circ}$\,$\times$ & 2.5$^{*}$\,$\checkmark$ & -- \\
+$5\times2$~cv paired $t$  & 6.3$^{*}$\,$\times$ & 5.6$^{*}$\,$\checkmark$ & 2.5$^{*}$\,$\checkmark$ & 3.6$^{*}$\,$\checkmark$ & -- \\
+Corrected resampled $t$  & 6.3$^{*}$\,$\times$ & 5.7$^{*}$\,$\checkmark$ & 2.6$^{\circ}$\,$\checkmark$ & 4.2$^{*}$\,$\checkmark$ & -- \\
+Corrected $t$, re-selection  & 2.3$^{\circ}$\,$\checkmark$ & 3.0$^{\circ}$\,$\checkmark$ & 0.4$^{\circ}$\,$\checkmark$ & 1.5$^{*}$\,$\checkmark$ & -- \\
+BRIDGE without margin  & 2.8$^{*}$\,$\checkmark$ & 3.5$^{*}$\,$\checkmark$ & 0.6$^{\circ}$\,$\checkmark$ & 1.6$^{*}$\,$\checkmark$ & -- \\
+Holdout 2/3 + 1/3  & 1.3 & 1.9\,$\checkmark$ & 0.0$^{\circ}$\,$\checkmark$ & 0.3$^{\circ}$\,$\checkmark$ & -- \\
+Holdout 1/2 + 1/2  & 3.2 & 2.1\,$\checkmark$ & 0.0$^{\circ}$\,$\checkmark$ & 0.8$^{\circ}$\,$\checkmark$ & -- \\
+\textbf{BRIDGE} & 1.1\,$\checkmark$ & 1.7\,$\checkmark$ & 0.0\,$\checkmark$ & 0.5\,$\checkmark$ & 1.0\,$\checkmark$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\parbox{\linewidth}{\justifying\scriptsize $\checkmark$/$\times$: pre-registered criterion met/not met (Table~\ref{tab:criterion}). $^{*}$: BRIDGE has a significantly lower false-improvement rate than the rule; $^{\circ}$: no significant difference (paired test \eqref{eq:hdiff}, $\alpha=0.05$, Holm over the comparators of one collection; in (E), a single comparison, $p<0.0002$). No superscript: paired test not run. No mark: criterion not evaluated, because LOCO is not computed for the holdouts in (A). --: not run, because the program used for (E) records the decisions of the naive rule and BRIDGE. Accepted counts, bounds, LOCO, yield, and updates above the margin of each rule: Table~\ref{tab:rules}; for (E): Table~\ref{tab:summary}.}
+\end{table}

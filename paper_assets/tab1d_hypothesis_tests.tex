@@ -1,0 +1,24 @@
+% hand-made plain-language summary of the hypothesis tests; numbers by collection in tabS20_hypothesis_tests_detail.tex (tab:testsdetail)
+\begin{table*}[!t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\caption{Hypothesis tests: results and decisions on questions 1--6.}
+\label{tab:tests}
+\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{1.3cm}>{\raggedright\arraybackslash}p{6.1cm}>{\raggedright\arraybackslash}p{8.6cm}@{}}
+\toprule
+No. & Test ($H_0$) & Result & Decision on $H_0$ ($\alpha=0.05$) and meaning \\
+\midrule
+1 & T1 \eqref{eq:hdiff} & BRIDGE lower by $12.0$ to $24.6$ pp ($p<0.04$) & Rejected in (A)--(E): BRIDGE accepts fewer false improvements than the naive rule in every collection \\
+2 & T1 \eqref{eq:hdiff} & BRIDGE lower by $2.0$ to $33.1$ pp wherever $H_0$ is rejected & Rejected in (A), (B), (D), and against the $5\times2$~cv test in (C): BRIDGE accepts fewer false improvements \\
+3 & T1 \eqref{eq:hdiff} & These rules have $0.0\%$ to $3.0\%$ false improvements; BRIDGE is $1.0$ pp lower than the re-selection test in (D) & Not rejected (except that test in (D)): these rules share the principle of BRIDGE, separating the data that choose from the data that judge; BRIDGE accepts $1.1$ to $1.9$ times as many updates as the holdouts (Section~\ref{sec:exp-rules}) \\
+4 & T1 \eqref{eq:hdiff} & BRIDGE lower by $1.1$ to $1.8$ pp in (A), (B), (D); no difference in (C) & Rejected in (A), (B), (D): the margin lowers the false-improvement rate; in (C) both versions accept almost no false improvement \\
+5 & T2 \eqref{eq:hequiv} & All $12$ comparisons within $\pm2$ pp ($p\le0.0498$) & Rejected in (A)--(D): rejecting this $H_0$ means that the margins are equivalent, so the false-improvement rate is stable across margins in this range \\
+6 & T3 \eqref{eq:hrandom}, post hoc & Random draw $49$ to $240$ false improvements, BRIDGE $0$ to $8$ ($p<10^{-23}$) & Rejected in (A)--(E): BRIDGE picks fewer false improvements than a random choice, also within single datasets in (D) and (E) \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\parbox{\textwidth}{\justifying\scriptsize Questions 1--6: Section~\ref{sec:exp-tests}. T1--T3 and the null hypotheses: Section~\ref{sec:exp-settings}. The test, not BRIDGE, decides on $H_0$. Rejecting $H_0$ means that the data show the effect named in the question (in question 5, that the margins give equivalent results). Not rejecting means that no effect is shown, which is not proof of equality. In (C), the pre-registered unit is the task ($12$ clusters, $p=0.004$); over the six sources ($6$ clusters), the difference does not differ significantly ($p=0.17$). pp = percentage points. $p$: Holm-adjusted wherever several rules are compared within one collection. Estimates, $95\%$ intervals, and $p$-values of every comparison in every collection: Table~\ref{tab:testsdetail} (Appendix~\ref{app:results}).}
+\end{table*}

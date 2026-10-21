@@ -1,0 +1,31 @@
+% hand-made merged table: MINI-45/46/50 for (A) and (D), MINI-53 for (B), (C), (E) (out/analysis_mini45.csv, analysis_mini46.csv, analysis_mini50.csv, analysis_mini53.csv)
+\begin{table}[!htb]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.6pt}
+\caption{Conditions of use: ensemble members and base learners across (A)--(E).}
+\label{tab:members}\label{tab:basereal}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Design & (A) & (B) & (C) & (D) & (E) \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Paper's design}} \\
+Default (DT, SVC) & 1.1 $\checkmark$ & 1.7 $\checkmark$ & 0.0 $\checkmark$ & 0.5 $\checkmark$ & 1.0 $\checkmark$ \\
+\addlinespace[1pt]
+\multicolumn{6}{@{}l}{\textit{Members replaced (base HGB)}} \\
+LR and NB & 2.3 $\checkmark$ & 0.5 $\checkmark$ & 0.2 $\checkmark$ & 0.9 $\checkmark$ & 2.5 $\times$ \\
+MLP and KNN & 1.2 $\checkmark$ & 1.5 $\checkmark$ & 0.0 $\checkmark$ & 1.9 $\checkmark$ & 4.1 $\times$ \\
+\addlinespace[1pt]
+\multicolumn{6}{@{}l}{\textit{Base learner replaced (members DT, SVC)}} \\
+XGBoost, 300 rounds & 4.1 $\times$ & 11.6 $\times$ & 0.1 $\checkmark$ & 1.7 $\checkmark$ & 4.2 $\times$ \\
+XGBoost, early stop. & 0.8 $\checkmark$ & 0.1 $\checkmark$ & 0.0 $\checkmark$ & 0.8 $\checkmark$ & 0.7 $\checkmark$ \\
+MLP, early stop. & 0.2 $\checkmark$ & 0.4 $\checkmark$ & 0.0 $\checkmark$ & 0.0 $\checkmark$ & 0.1 $\checkmark$ \\
+\addlinespace[1pt]
+\multicolumn{6}{@{}l}{\textit{All seven member families ($711$ configurations)}} \\
+Seven families & 1.6 $\checkmark$ & 0.9 $\checkmark$ & 0.2 $\checkmark$ & 0.7 $\checkmark$ & 1.4 $\checkmark$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\parbox{\linewidth}{\justifying\scriptsize *Cells: the false-improvement rate of BRIDGE among accepted updates (\%), with the pre-registered criterion ($\checkmark$ met, $\times$ not met). Metric: weighted-$F_1$; (C): net benefit, $p_t=0.2$.}
+\end{table}

@@ -1,0 +1,80 @@
+did,nama,N,F,minor,keputusan,alasan
+38,sick,3772,30,6.1,KELUAR-touched,KELUAR-touched: keluarga sick (exp37)
+131,"BNG(sick,nominal,1000000)",1000000,30,6.1,KELUAR-sintetis,KELUAR-sintetis
+132,"BNG(sonar,nominal,1000000)",1000000,61,46.6,KELUAR-sintetis,KELUAR-sintetis
+264,BNG(sonar),1000000,61,46.7,KELUAR-sintetis,KELUAR-sintetis
+350,webdata_wXa,36974,124,24.0,KELUAR-teknis,sparse ARFF: loader beku (as_frame=True) gagal memuat; tidak diubah demi identitas protokol
+357,vehicle_sensIT,98528,101,50.0,KELUAR-T2,KELUAR-T2: binarisasi multikelas
+976,JapaneseVowels,9961,15,16.2,KELUAR-T2,KELUAR-T2: binarisasi multikelas
+977,letter,20000,17,4.1,KELUAR-T2,KELUAR-T2: binarisasi multikelas
+980,optdigits,5620,65,10.2,KELUAR-T2,KELUAR-T2: binarisasi multikelas
+981,kdd_internet_usage,10108,69,26.9,KELUAR-T2,deskripsi: Binarized version (majority vs rest)
+993,kdd_ipums_la_97-small,7019,61,37.0,KELUAR-T2,KELUAR-T2: Binarized version
+1000,hypothyroid,3772,30,7.7,KELUAR-touched,KELUAR-touched: keluarga sick (exp37)
+1019,pendigits,10992,17,10.4,KELUAR-T2,KELUAR-T2: binarisasi multikelas
+1021,page-blocks,5473,11,10.2,KELUAR-T2,KELUAR-T2: binarisasi multikelas
+1040,sylva_prior,14395,109,6.2,KELUAR-T2,KELUAR-T2: sylva = cover type dibinarkan (ChaLearn)
+1053,jm1,10885,22,19.3,KELUAR-touched,KELUAR-touched: jm1 (exp37)
+1116,musk,6598,168,15.4,KELUAR-grup,"KELUAR-grup: musk, banyak konformasi per molekul"
+1180,BNG(spect_test),1000000,23,8.5,KELUAR-sintetis,KELUAR-sintetis
+1216,Click_prediction_small,1496391,10,4.5,KELUAR-touched,KELUAR-touched: keluarga click (exp37)
+1217,Click_prediction_small,149639,12,4.5,KELUAR-touched,KELUAR-touched: keluarga click (exp37)
+1218,Click_prediction_small,1997410,12,16.7,KELUAR-touched,KELUAR-touched: keluarga click (exp37)
+1219,Click_prediction_small,399482,12,16.8,KELUAR-touched,KELUAR-touched: keluarga click (exp37)
+1220,Click_prediction_small,39948,10,16.8,KELUAR-touched,KELUAR-touched: keluarga click (exp37)
+1236,Stagger1,1000000,4,11.2,KELUAR-sintetis,KELUAR-sintetis
+1242,vehicleNorm,98528,101,50.0,KELUAR-T2,KELUAR-T2: binarisasi multikelas
+1461,bank-marketing,45211,17,11.7,KELUAR-touched,KELUAR-touched: bank-marketing (exp21)
+1486,nomao,34465,119,28.6,KELUAR-touched,KELUAR-touched: nomao (exp36)
+1558,bank-marketing,4521,17,11.5,KELUAR-touched,KELUAR-touched: bank-marketing (exp21)
+40536,SpeedDating,8378,121,16.5,KELUAR-grup,KELUAR-grup: pasangan/peserta berulang
+40666,clean2,6598,169,15.4,KELUAR-grup,"KELUAR-grup: musk, banyak konformasi per molekul"
+40701,churn,5000,21,14.1,KELUAR-touched,KELUAR-touched: churn (exp36)
+40983,wilt,4839,6,5.4,KELUAR-touched,KELUAR-touched: wilt (exp37)
+41147,albert,425240,79,50.0,KELUAR-T3,KELUAR-T3: ChaLearn identitas disembunyikan
+41434,Click_prediction_small,39948,12,16.8,KELUAR-touched,KELUAR-touched: keluarga click (exp37)
+41526,test_dataset,15547,61,48.8,KELUAR-T3,KELUAR-T3
+41946,Sick_numeric,3772,30,6.1,KELUAR-touched,KELUAR-touched: keluarga sick (exp37)
+42717,Click_prediction_small,39948,10,16.8,KELUAR-touched,KELUAR-touched: keluarga click (exp37)
+42733,Click_prediction_small,39948,12,16.8,KELUAR-touched,KELUAR-touched: keluarga click (exp37)
+42742,porto-seguro,595212,58,3.6,KELUAR-touched,KELUAR-touched: porto-seguro (exp38)
+42750,Census-Income-KDD,199523,42,6.2,KELUAR-touched,KELUAR-touched: keluarga adult (exp38 audit)
+43051,art_daily_nojump4,4032,3,3.2,KELUAR-sintetis,KELUAR-sintetis
+43900,amazon_employee_access,32769,10,5.8,KELUAR-touched,KELUAR-touched: amazon (exp38/39)
+43901,click_prediction_small,39926,9,16.8,KELUAR-touched,KELUAR-touched: keluarga click (exp37)
+43903,Diabetes-130-Hospitals_(Fairlearn),101766,22,11.2,KELUAR-T2/K,KELUAR-T2/K: readmitted/diabetes dibinarkan (exp38 audit)
+43920,kdd_internet_usage,10108,71,26.9,KELUAR-T2,KELUAR-T2: Binarized version
+44234,Bank_marketing_data_set_UCI,45211,17,11.7,KELUAR-touched,KELUAR-touched: bank-marketing (exp21)
+45558,Pulsar-Dataset-HTRU2,17898,9,9.2,KELUAR-touched,KELUAR-touched: pulsar (exp37)
+45560,online-shoppers-intention,12330,18,15.5,KELUAR-touched,KELUAR-touched: online-shoppers (exp38)
+45563,Dota2-Games-Results-Data-Set,102944,117,47.3,MASUK,Team_won asli (UCI); baris = pertandingan independen; fitur pick hero + Cluster_ID/Game_mode
+45566,SantanderCustomerSatisfaction,200000,201,10.0,MASUK,target asli kompetisi Santander; 200 fitur anonim (biaya F2 tinggi)
+45567,hcdr_main,307511,121,8.1,MASUK,Home Credit Default Risk TARGET asli; 120 fitur; tabel utama saja
+45665,colon,5100000,63,50.0,KELUAR-sintetis,KELUAR-sintetis
+45668,bates_classif_100,5100000,101,50.0,KELUAR-sintetis,KELUAR-sintetis
+45669,breast,5100000,78,50.0,KELUAR-sintetis,KELUAR-sintetis
+45672,prostate,5100000,103,50.0,KELUAR-sintetis,KELUAR-sintetis
+45703,simulated_bank_marketing,5100000,17,11.6,KELUAR-sintetis,KELUAR-sintetis
+46281,insurance_company,9822,86,6.0,MASUK,"UCI CoIL 2000 caravan policy asli; 85 fitur; CATATAN screening: 15.9% baris X duplikat, 185 X-sama-y-beda (profil zip-code) -> perlu putusan auditor"
+46282,internet_usage,10108,69,26.9,KELUAR-T2/K,keluarga kdd_internet_usage
+46359,Fraud-Detection-Updated,4156,29,10.0,KELUAR-T3,sudah KELUAR-T3 di audit exp38 (keluarga 46358)
+46468,Give-Me-Some-Credit-Sampled,45000,11,6.7,KELUAR-touched,KELUAR-touched: GMSC (exp38)
+46483,HMEQ_Data_New,5960,13,19.9,KELUAR-touched,KELUAR-touched: hmeq (exp38)
+46517,HMEQ_Data_Preprocessed,5960,21,19.9,KELUAR-touched,KELUAR-touched: hmeq (exp38)
+46518,Give-Me-Some-Credit-Sampled-Preprocessed,45000,11,6.7,KELUAR-touched,KELUAR-touched: GMSC (exp38)
+46805,college_scorecard,124699,119,12.8,KELUAR-T2,target = completion rate dibinarkan
+46841,cdc_diabetes,253680,22,13.9,KELUAR-T2/K,KELUAR-T2/K: readmitted/diabetes dibinarkan (exp38 audit)
+46856,BNP_Paribas_Cardif_Claims_Management,114321,133,23.9,MASUK,target klaim (Kaggle) asli; 131 fitur anonim + kolom ID (dipakai loader sebagai fitur; bukan target)
+46882,jigsaw_unintended_bias100K,100000,44,6.0,KELUAR-K,KELUAR-K: jigsaw (exp38 audit)
+46905,Amazon_employee_access,32769,10,5.8,KELUAR-touched,KELUAR-touched: amazon (exp38/39)
+46910,bank-marketing,45211,14,11.7,KELUAR-touched,KELUAR-touched: bank-marketing (exp21)
+46915,churn,5000,20,14.1,KELUAR-touched,KELUAR-touched: churn (exp36)
+46916,coil2000_insurance_policies,9822,86,6.0,KELUAR-K,TabArena versi CoIL 2000; keluarga 46281
+46922,Diabetes130US,71518,48,8.8,KELUAR-T2/K,KELUAR-T2/K: readmitted/diabetes dibinarkan (exp38 audit)
+46929,GiveMeSomeCredit,150000,11,6.7,KELUAR-touched,KELUAR-touched: GMSC (exp38)
+46947,online_shoppers_intention,12330,18,15.5,KELUAR-touched,KELUAR-touched: online-shoppers (exp38)
+46950,polish_companies_bankruptcy,5910,65,6.9,MASUK,UCI bankruptcy asli; N=5910 = file tahun ke-5 saja (satu horizon)
+46962,taiwanese_bankruptcy_prediction,6819,95,3.2,MASUK,UCI bankruptcy asli; minoritas 3.2%
+46969,NATICUSdroid,7491,87,35.0,MASUK,UCI malware Android asli; 86 fitur izin
+46979,jm1,10885,22,19.3,KELUAR-touched,KELUAR-touched: jm1 (exp37)
+47005,jigsaw_unintended_bias100K,100000,41,6.0,KELUAR-K,KELUAR-K: jigsaw (exp38 audit)

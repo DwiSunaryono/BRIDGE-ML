@@ -1,0 +1,404 @@
+did,nama,N,ncols,minor_pct,kelas_audit,keputusan,alasan
+24,mushroom,8124,23,48.2,EXCLUDE-touched,KELUAR-touched,scan otomatis
+44,spambase,4601,58,39.4,EXCLUDE-touched,KELUAR-touched,scan otomatis
+72,BNG(kr-vs-kp),1000000,37,47.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+73,"BNG(labor,nominal,1000000)",1000000,17,35.4,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+77,"BNG(breast-cancer,nominal,1000000)",1000000,10,29.7,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+120,BNG(mushroom),1000000,23,48.2,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+121,"BNG(colic.ORIG,nominal,1000000)",1000000,28,33.7,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+122,"BNG(colic,nominal,1000000)",1000000,23,37.0,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+124,"BNG(credit-a,nominal,1000000)",1000000,16,44.5,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+126,"BNG(credit-g,nominal,1000000)",1000000,21,30.0,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+128,"BNG(cylinder-bands,nominal,1000000)",1000000,40,42.3,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+135,BNG(spambase),1000000,58,39.4,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+137,BNG(tic-tac-toe),39366,10,34.7,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+139,BNG(trains),1000000,33,49.9,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+140,"BNG(heart-statlog,nominal,1000000)",1000000,14,44.6,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+142,"BNG(hepatitis,nominal,1000000)",1000000,20,20.9,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+143,BNG(vote),131072,17,38.7,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+146,BNG(ionosphere),1000000,35,35.9,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+151,electricity,45312,9,42.5,EXCLUDE-touched,KELUAR-touched,scan otomatis
+152,Hyperplane_10_1E-3,1000000,11,50.0,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+153,Hyperplane_10_1E-4,1000000,11,50.0,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+161,SEA(50),1000000,4,38.6,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+162,SEA(50000),1000000,4,38.6,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+179,adult,48842,15,23.9,EXCLUDE-touched,KELUAR-touched,scan otomatis
+246,BNG(labor),1000000,17,35.3,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+251,BNG(breast-w),39366,10,34.4,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+256,BNG(colic.ORIG),1000000,28,36.2,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+257,BNG(colic),1000000,23,37.0,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+258,BNG(credit-a),1000000,16,44.6,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+260,BNG(credit-g),1000000,21,30.0,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+262,BNG(cylinder-bands),1000000,40,42.2,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+267,BNG(heart-statlog),1000000,14,44.4,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+269,BNG(hepatitis),1000000,20,20.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+293,covertype,581012,55,48.8,EXCLUDE-multikelas?,KELUAR-T2,KELUAR-T2: covtype LibSVM biner = kelas 2 vs sisa
+351,codrna,488565,9,33.3,KANDIDAT-perlu-verifikasi,KELUAR-T3,codrna: asal label Y tidak dijelaskan (audit kedua)
+354,poker,1025010,11,49.9,EXCLUDE-multikelas?,KELUAR-T2/sintetis,KELUAR-T2/sintetis: poker hand dibinarkan
+720,abalone,4177,9,49.8,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+722,pol,15000,49,33.6,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+725,bank8FM,8192,9,40.4,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+727,2dplanes,40768,11,49.9,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+728,analcatdata_supreme,4052,8,24.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+734,ailerons,13750,41,42.4,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+735,cpu_small,8192,13,30.2,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+752,puma32H,8192,33,49.6,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+761,cpu_act,8192,22,30.2,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+803,delta_ailerons,7129,6,46.9,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+807,kin8nm,8192,9,49.1,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+816,puma8NH,8192,9,49.8,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+819,delta_elevators,9517,7,49.7,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+821,house_16H,22784,17,29.6,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+823,houses,20640,9,43.2,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+833,bank32nh,8192,33,31.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+843,house_8L,22784,9,29.6,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+846,elevators,16599,19,30.9,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+847,wind,6574,15,46.7,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+871,pollen,3848,6,50.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+881,mv,40768,11,40.3,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+901,fried,40768,11,49.9,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+923,visualizing_soil,8641,5,45.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+959,nursery,12960,9,33.3,EXCLUDE-multikelas?,KELUAR-T2,KELUAR-T2: nursery Binarized version
+979,waveform-5000,5000,41,33.8,EXCLUDE-multikelas?,KELUAR-T2/sintetis,KELUAR-T2/sintetis: waveform Binarized
+1037,ada_prior,4562,15,24.8,KANDIDAT-perlu-verifikasi,KELUAR-T2/touched,"ada_prior: turunan Adult, income>50K"
+1046,mozilla4,15545,6,32.9,EXCLUDE-touched,KELUAR-grup/timeseries,"mozilla4 (PROMISE, Koru 2007): BUKAN touched (label scan salah). Format counting-process survival: kolom id,start,end,event per interval waktu -> banyak baris per modul id (grouped-row) + berurutan waktu"
+1119,adult-census,32561,16,24.1,EXCLUDE-multikelas?,KELUAR-touched,KELUAR-touched: adult
+1120,MagicTelescope,19020,12,35.2,EXCLUDE-touched,KELUAR-touched,scan otomatis
+1169,airlines,539383,8,44.5,KANDIDAT-perlu-verifikasi,KELUAR-T2/timeseries,"airlines delay, data berwaktu"
+1181,BNG(spectf_test),1000000,45,21.5,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1182,BNG(adult),1000000,15,24.0,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1205,BNG(Australian),1000000,15,42.7,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1211,BNG(SPECT),1000000,23,20.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1212,BNG(SPECTF),1000000,45,28.1,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1235,Agrawal1,1000000,10,32.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1237,Stagger2,1000000,4,44.4,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1238,Stagger3,1000000,4,33.4,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1240,AirlinesCodrnaAdult,1076790,30,44.0,EXCLUDE-multikelas?,KELUAR-sintetis,KELUAR-sintetis: gabungan Airlines+Codrna+Adult
+1241,codrnaNorm,488565,9,33.3,KANDIDAT-perlu-verifikasi,KELUAR-K,codrnaNorm varian 351
+1369,"BNG(kr-vs-kp,1000,1)",1000000,37,47.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1370,"BNG(kr-vs-kp,1000,5)",1000000,37,47.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1371,"BNG(kr-vs-kp,1000,10)",1000000,37,47.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1372,"BNG(kr-vs-kp,5000,1)",1000000,37,47.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1373,"BNG(kr-vs-kp,5000,5)",1000000,37,47.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1374,"BNG(kr-vs-kp,5000,10)",1000000,37,47.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1375,"BNG(kr-vs-kp,10000,1)",1000000,37,47.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1376,"BNG(kr-vs-kp,10000,5)",1000000,37,47.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1377,"BNG(kr-vs-kp,10000,10)",1000000,37,47.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1460,banana,5300,3,44.8,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1471,eeg-eye-state,14980,15,44.9,EXCLUDE-touched,KELUAR-touched,scan otomatis
+1489,phoneme,5404,6,29.3,EXCLUDE-touched,KELUAR-touched,scan otomatis
+1496,ringnorm,7400,21,49.5,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1502,skin-segmentation,245057,4,20.8,EXCLUDE-multikelas?,KELUAR-grup,"skin-segmentation: piksel dari gambar yang sama (grouped-row), bukan multikelas"
+1507,twonorm,7400,21,50.0,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+1590,adult,48842,15,23.9,EXCLUDE-touched,KELUAR-touched,scan otomatis
+4534,PhishingWebsites,11055,31,44.3,EXCLUDE-touched,KELUAR-touched,scan otomatis
+23512,higgs,98050,29,47.1,EXCLUDE-multikelas?,KELUAR-sintetis,KELUAR-sintetis: HIGGS Monte Carlo
+23517,numerai28.6,96320,22,49.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,numerai: return masa depan per era
+40514,BNG(credit-g),1000000,21,30.0,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+40515,BNG(spambase),1000000,58,39.4,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+40518,BNG(ionosphere),1000000,35,35.9,EXCLUDE-sintetis,KELUAR-sintetis,scan otomatis
+40922,Run_or_walk_information,88588,7,49.9,KANDIDAT-perlu-verifikasi,KELUAR-timeseries,Run_or_walk: sensor per sesi/pengguna
+41005,jungle_chess_2pcs_endgame_rat_rat,3660,47,43.9,EXCLUDE-multikelas?,KELUAR-sintetis,KELUAR-sintetis: endgame jungle chess (state game dihitung)
+41146,sylvine,5124,21,50.0,KANDIDAT-perlu-verifikasi,KELUAR-T3,sylvine: identitas disembunyikan (ChaLearn); kandidat T3-lemah
+41150,MiniBooNE,130064,51,28.1,KANDIDAT-perlu-verifikasi,MASUK,MiniBooNE: signal vs background; metadata UCI/OpenML tidak menyebut MC (kedua auditor); bila bukti MC muncul -> keluar per aturan simulasi fisika
+41156,ada,4147,49,24.8,KANDIDAT-perlu-verifikasi,KELUAR-T3,ada: identitas disembunyikan (ChaLearn); kandidat T3-lemah
+41228,Klaverjas2018,981541,33,46.2,KANDIDAT-perlu-verifikasi,KELUAR-T2,Klaverjas: regresi selisih skor dibinarkan
+41672,airlines,539383,8,44.5,KANDIDAT-perlu-verifikasi,KELUAR-K,airlines duplikat 1169
+41708,FOREX_eurchf-minute-Close,375840,12,48.2,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41709,FOREX_audchf-hour-High,43825,12,48.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41710,FOREX_eurhkd-minute-High,375840,12,46.4,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41711,FOREX_eurusd-minute-Close,375840,12,48.4,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41712,FOREX_eurcad-hour-High,43825,12,48.1,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41714,FOREX_eurpln-minute-High,375840,12,43.3,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41715,FOREX_eurhuf-hour-High,43825,12,38.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41717,FOREX_usdjpy-minute-High,375840,12,44.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41718,FOREX_audjpy-hour-High,43825,12,48.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41723,FOREX_cadchf-hour-High,43825,12,48.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41727,FOREX_usdcad-hour-Close,43825,12,49.9,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41728,FOREX_cadjpy-minute-High,375840,12,46.4,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41729,FOREX_chfjpy-minute-Close,375840,12,48.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41732,FOREX_usdjpy-minute-Close,375840,12,47.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41734,FOREX_eurpln-hour-Close,43825,12,49.4,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41735,FOREX_eurcad-minute-Close,375840,12,49.2,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41736,FOREX_eurhuf-hour-Close,43825,12,39.3,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41738,FOREX_chfsgd-minute-High,375840,12,46.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41739,FOREX_eurhkd-hour-High,43825,12,46.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41741,FOREX_eursgd-minute-High,375840,12,47.2,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41742,FOREX_eurgbp-hour-High,43825,12,47.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41743,FOREX_eurpln-minute-Close,375840,12,43.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41745,FOREX_chfjpy-minute-High,375840,12,46.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41747,FOREX_audnzd-minute-Close,375840,12,48.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41748,FOREX_usddkk-minute-Close,375840,12,49.1,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41749,FOREX_gbpusd-minute-High,375840,12,45.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41751,FOREX_eurnok-minute-Close,375840,12,47.1,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41752,FOREX_eurjpy-minute-Close,375840,12,49.0,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41755,FOREX_cadchf-minute-Close,375840,12,48.0,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41757,FOREX_usdchf-minute-Close,375840,12,47.4,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41758,FOREX_eursgd-hour-Close,43825,12,49.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41759,FOREX_eurtry-hour-High,43825,12,47.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41761,FOREX_eursek-minute-Close,375840,12,47.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41762,FOREX_audsgd-hour-Close,43825,12,49.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41763,FOREX_audcad-hour-High,43825,12,48.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41767,FOREX_cadjpy-hour-Close,43825,12,49.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41768,FOREX_eurnok-hour-High,43825,12,47.4,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41770,FOREX_audjpy-minute-High,375840,12,46.2,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41771,FOREX_eurtry-minute-Close,375840,12,46.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41772,FOREX_audchf-minute-High,375840,12,46.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41773,FOREX_eurtry-hour-Close,43825,12,49.4,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41774,FOREX_eurhuf-minute-High,375840,12,26.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41775,FOREX_usdcad-minute-Close,375840,12,48.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41776,FOREX_eurhkd-minute-Close,375840,12,49.0,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41777,FOREX_eurjpy-hour-High,43825,12,47.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41778,FOREX_eurdkk-minute-High,375840,12,34.9,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41779,FOREX_eursek-hour-High,43825,12,48.4,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41780,FOREX_usdchf-hour-High,43825,12,48.3,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41781,FOREX_audcad-hour-Close,43825,12,49.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41782,FOREX_usdjpy-hour-Close,43825,12,49.0,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41786,FOREX_eurgbp-minute-Close,375840,12,48.3,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41787,FOREX_eurpln-hour-High,43825,12,46.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41789,FOREX_eurnzd-minute-High,375840,12,47.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41792,FOREX_usdchf-hour-Close,43825,12,49.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41793,FOREX_eurjpy-minute-High,375840,12,46.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41794,FOREX_nzdusd-minute-Close,375840,12,47.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41795,FOREX_gbpusd-minute-Close,375840,12,48.3,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41796,FOREX_eurrub-minute-Close,375840,12,28.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41798,FOREX_usdcad-minute-High,375840,12,45.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41799,FOREX_eurhkd-hour-Close,43825,12,49.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41800,FOREX_cadjpy-minute-Close,375840,12,48.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41802,FOREX_audcad-minute-High,375840,12,47.2,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41804,FOREX_gbpusd-hour-Close,43825,12,49.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41805,FOREX_eurrub-hour-High,43825,12,29.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41806,FOREX_audjpy-hour-Close,43825,12,49.3,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41807,FOREX_nzdusd-minute-High,375840,12,44.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41808,FOREX_eurgbp-minute-High,375840,12,46.2,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41809,FOREX_audusd-minute-High,375840,12,44.9,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41810,FOREX_audchf-minute-Close,375840,12,48.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41813,FOREX_audsgd-minute-Close,375840,12,47.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41814,FOREX_euraud-minute-Close,375840,12,49.1,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41816,FOREX_usddkk-hour-High,43825,12,46.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41817,FOREX_audusd-minute-Close,375840,12,48.0,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41819,FOREX_eurrub-minute-High,375840,12,27.9,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41820,FOREX_chfsgd-hour-High,43825,12,47.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41822,FOREX_audnzd-minute-High,375840,12,46.9,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41823,FOREX_eurcad-minute-High,375840,12,47.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41824,FOREX_eurgbp-hour-Close,43825,12,49.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41825,FOREX_audnzd-hour-High,43825,12,48.2,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41827,FOREX_euraud-hour-Close,43825,12,49.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41828,FOREX_usdcad-hour-High,43825,12,48.1,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41831,FOREX_eurdkk-hour-Close,43825,12,47.4,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41832,FOREX_nzdusd-hour-Close,43825,12,49.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41833,FOREX_cadjpy-hour-High,43825,12,48.2,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41835,FOREX_euraud-hour-High,43825,12,47.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41836,FOREX_cadchf-minute-High,375840,12,46.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41837,FOREX_audjpy-minute-Close,375840,12,48.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41838,FOREX_cadchf-hour-Close,43825,12,50.0,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41840,FOREX_eurnok-minute-High,375840,12,45.2,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41842,FOREX_eurchf-hour-High,43825,12,48.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41843,FOREX_audusd-hour-High,43825,12,47.0,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41845,FOREX_eurusd-minute-High,375840,12,45.0,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41850,FOREX_eursek-minute-High,375840,12,45.3,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41851,FOREX_usdjpy-hour-High,43825,12,46.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41852,FOREX_eurchf-minute-High,375840,12,45.9,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41853,FOREX_eurnzd-minute-Close,375840,12,49.1,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41854,FOREX_audcad-minute-Close,375840,12,48.9,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41855,FOREX_eurtry-minute-High,375840,12,44.4,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41856,FOREX_eurdkk-hour-High,43825,12,45.4,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41859,FOREX_eurnok-hour-Close,43825,12,49.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41860,FOREX_eurusd-hour-Close,43825,12,49.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41861,FOREX_euraud-minute-High,375840,12,47.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41862,FOREX_eurrub-hour-Close,43825,12,30.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41865,FOREX_audsgd-hour-High,43825,12,48.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41869,FOREX_eursgd-minute-Close,375840,12,49.0,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41870,FOREX_chfjpy-hour-Close,43825,12,49.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41871,FOREX_usddkk-hour-Close,43825,12,49.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41873,FOREX_eurusd-hour-High,43825,12,46.3,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41876,FOREX_eurdkk-minute-Close,375840,12,27.2,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41877,FOREX_eurchf-hour-Close,43825,12,49.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41878,FOREX_audusd-hour-Close,43825,12,49.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41879,FOREX_gbpusd-hour-High,43825,12,46.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41880,FOREX_chfsgd-minute-Close,375840,12,47.9,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41881,FOREX_chfjpy-hour-High,43825,12,47.9,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41883,FOREX_eurnzd-hour-High,43825,12,47.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41884,FOREX_nzdusd-hour-High,43825,12,47.1,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41885,FOREX_chfsgd-hour-Close,43825,12,49.2,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41886,FOREX_eurnzd-hour-Close,43825,12,49.0,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41887,FOREX_audsgd-minute-High,375840,12,46.1,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41888,FOREX_audchf-hour-Close,43825,12,50.0,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41889,FOREX_eurjpy-hour-Close,43825,12,49.6,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41890,FOREX_usddkk-minute-High,375840,12,46.5,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41891,FOREX_eurcad-hour-Close,43825,12,50.0,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41892,FOREX_usdchf-minute-High,375840,12,44.8,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41893,FOREX_eursgd-hour-High,43825,12,48.3,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41895,FOREX_eurhuf-minute-Close,375840,12,27.3,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41896,FOREX_eursek-hour-Close,43825,12,49.7,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41898,FOREX_audnzd-hour-Close,43825,12,49.2,KANDIDAT-perlu-verifikasi,KELUAR-timeseries/T2,"FOREX: arah harga berikut, berurutan waktu"
+41949,Elegibilidade,269177,2,44.1,KANDIDAT-perlu-verifikasi,KELUAR-T3,Elegibilidade: tanpa deskripsi
+42178,telco-customer-churn,7043,20,26.5,EXCLUDE-multikelas?,KELUAR-sintetis,KELUAR-sintetis: telco IBM fiktif
+42192,compas-two-years,5278,14,47.0,KANDIDAT-perlu-verifikasi,MASUK,compas two_year_recid: indikator kejadian dalam jendela 2 tahun (label kanonik ProPublica). CATATAN: outcome-window
+42193,compas-two-years,5278,14,47.0,KANDIDAT-perlu-verifikasi,KELUAR-K,compas duplikat 42192
+42344,sf-police-incidents,538638,7,50.0,KANDIDAT-perlu-verifikasi,KELUAR-T2,sf-police: target gabungan kategori (audit exp38)
+42477,default-of-credit-card-clients,30000,24,22.1,EXCLUDE-multikelas?,MASUK,"default-of-credit-card-clients: y = default bulan depan, UCI Yeh & Lien 2009; k=2 (audit kedua)"
+42493,airlines,26969,8,44.6,KANDIDAT-perlu-verifikasi,KELUAR-T2/timeseries,airlines
+42769,Higgs,1000000,29,47.0,EXCLUDE-multikelas?,KELUAR-sintetis,KELUAR-sintetis: HIGGS MC
+43439,Medical-Appointment-No-Shows,110527,13,20.2,KANDIDAT-perlu-verifikasi,MASUK,Medical no-show: No-show yes/no asli
+43489,Census-(Augmented),1000000,15,31.5,EXCLUDE-multikelas?,KELUAR-touched,KELUAR-touched: adult/census
+43607,WMO-Hurricane-Survival-Dataset,5021,23,48.5,KANDIDAT-perlu-verifikasi,KELUAR-T3,WMO hurricane: asal Class tidak jelas
+43890,law-school-admission-bianry,20800,12,32.2,KANDIDAT-perlu-verifikasi,KELUAR-T2,law school: ugpa>3 dibinarkan
+43892,national-longitudinal-survey-binary,4908,17,37.8,KANDIDAT-perlu-verifikasi,KELUAR-T2,NLSY: income90>1.7 dibinarkan
+43898,adult,48790,15,23.9,EXCLUDE-multikelas?,KELUAR-touched,KELUAR-touched: adult
+43904,law-school-admission-bianry,20800,11,32.2,KANDIDAT-perlu-verifikasi,KELUAR-T2/K,law school duplikat
+43922,mushroom,8124,23,48.2,EXCLUDE-multikelas?,KELUAR-touched,KELUAR-touched: mushroom
+43945,electricity,38474,9,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43946,eye_movements,7608,24,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43947,KDDCup09_upselling,5032,46,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+43948,covertype,423680,55,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+43949,rl,4970,13,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43950,electricity,38474,8,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43951,electricity,38474,8,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43952,electricity,38474,8,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43953,electricity,38474,8,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43956,pol,10082,27,50.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+43957,house_16H,13488,17,50.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+43958,kdd_ipums_la_97-small,5188,21,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43964,electricity,38474,8,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43966,electricity,38474,8,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43968,pol,10082,27,50.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+43969,house_16H,13488,17,50.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+43970,kdd_ipums_la_97-small,5188,21,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43971,MagicTelescope,13376,11,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43972,bank-marketing,10578,8,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+43974,MiniBooNE,72998,51,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43975,Higgs,940160,25,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+43976,eye_movements,7608,21,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+43977,jannis,57580,55,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+43979,california,20634,9,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44033,electricity,38474,9,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44034,eye_movements,7608,24,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44035,KDDCup09_upselling,5032,46,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44036,covertype,423680,55,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44037,rl,4970,13,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44038,road-safety,111762,33,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44070,MagicTelescope,13376,11,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44071,bank-marketing,10578,8,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44073,MagicTelescope,13376,11,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44074,bank-marketing,10578,8,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44076,MiniBooNE,72998,51,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44077,Higgs,940160,25,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44078,eye_movements,7608,21,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44079,jannis,57580,55,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44080,electricity,38474,8,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44081,covertype,566602,11,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44082,pol,10082,27,50.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+44083,house_16H,13488,17,50.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+44084,kdd_ipums_la_97-small,5188,21,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44085,MagicTelescope,13376,11,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44086,bank-marketing,10578,8,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44088,MiniBooNE,72998,51,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44089,credit,16714,11,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44090,california,20634,9,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44092,Higgs,940160,25,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44093,eye_movements,7608,21,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44094,jannis,57580,55,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44095,spambase_reproduced,4601,58,39.4,KANDIDAT-perlu-verifikasi,KELUAR-touched,spambase_reproduced: keluarga spambase
+44111,electricity,38474,8,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44112,covertype,566602,11,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44113,pol,10082,27,50.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+44114,house_16H,13488,17,50.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+44115,kdd_ipums_la_97-small,5188,21,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44116,MagicTelescope,13376,11,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44117,bank-marketing,10578,8,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44119,MiniBooNE,72998,51,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44120,electricity,38474,8,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44121,covertype,566602,11,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44122,pol,10082,27,50.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+44123,house_16H,13488,17,50.0,EXCLUDE-regresi,KELUAR-regresi,scan otomatis
+44124,kdd_ipums_la_97-small,5188,21,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44125,MagicTelescope,13376,11,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44126,bank-marketing,10578,8,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44128,MiniBooNE,72998,51,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44129,Higgs,940160,25,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44130,eye_movements,7608,21,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44131,jannis,57580,55,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44156,electricity,38474,9,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44157,eye_movements,7608,24,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44158,KDDCup09_upselling,5032,46,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44159,covertype,423680,55,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44160,rl,4970,13,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44161,road-safety,111762,33,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+44162,compass,16644,18,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%/K,compass versi Grinsztajn
+44185,KDDCup09_upselling,5032,46,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44186,KDDCup09_upselling,5128,50,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+44224,MembershipWoes,10362,15,30.3,KANDIDAT-perlu-verifikasi,KELUAR-leakage,"MembershipWoes: END_DATE null iff INFORCE (7219/7219 vs 3143/3143), dikonfirmasi audit kedua"
+44225,MembershipWoes,10362,15,30.3,KANDIDAT-perlu-verifikasi,KELUAR-K,MembershipWoes duplikat 44224
+45020,default-of-credit-card-clients,13272,21,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+45021,jannis,57580,55,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+45022,Diabetes130US,71090,8,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+45023,heloc,10000,23,50.0,KANDIDAT-perlu-verifikasi,KELUAR-K/50%,heloc versi Grinsztajn
+45024,credit,16714,11,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+45025,california,20634,9,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+45026,heloc,10000,23,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+45027,credit,16714,11,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+45028,california,20634,9,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+45035,albert,58252,32,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+45036,default-of-credit-card-clients,13272,22,50.0,EXCLUDE-multikelas?,KELUAR-50%/K/touched,versi Grinsztajn tabular-benchmark (subsample seimbang) dari keluarga covertype/bank-marketing/jannis/Higgs/credit/KDDCup09/Diabetes130US/albert/default-credit
+45037,BitcoinHeist_Ransomware,24780,8,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%/T2,BitcoinHeist versi Grinsztajn (subsample seimbang); asli 42553 multikelas
+45038,road-safety,111762,33,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,versi seimbang buatan (benchmark Grinsztajn/tabular-benchmark); keluarga asli diputus terpisah
+45039,compas-two-years,4966,12,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%/K,compas versi Grinsztajn
+45051,adult-test,48842,15,23.9,EXCLUDE-multikelas?,KELUAR-touched,KELUAR-touched: adult-test
+45068,adult,48842,15,23.9,EXCLUDE-multikelas?,KELUAR-touched,KELUAR-touched: adult
+45547,Cardiovascular-Disease-dataset,70000,12,50.0,KANDIDAT-perlu-verifikasi,MASUK,"Cardiovascular: cardio asli; 34979/35021 = ukuran sumber asli 70000 (rasio alami, bukan rebalancing)"
+45549,ATLAS-Higgs-Boson-Machine-Learning-Challenge-2014,818238,31,34.2,EXCLUDE-multikelas?,KELUAR-sintetis,KELUAR-sintetis: ATLAS Higgs MC
+45550,ATLAS-Higgs-Boson-Machine-Learning-Challenge-2014,818238,31,34.2,EXCLUDE-multikelas?,KELUAR-sintetis,KELUAR-sintetis: ATLAS MC
+45551,ATLAS-Higgs-Boson-Machine-Learning-Challenge-2014,800000,31,34.2,EXCLUDE-multikelas?,KELUAR-sintetis,KELUAR-sintetis: ATLAS MC
+45553,FICO-HELOC-cleaned,9871,24,48.0,KANDIDAT-perlu-verifikasi,MASUK,FICO HELOC: RiskPerformance Good/Bad asli (FICO challenge)
+45554,FICO-HELOC-cleaned,9871,24,48.0,KANDIDAT-perlu-verifikasi,KELUAR-K,HELOC duplikat 45553
+45556,Click,1000000,12,50.0,KANDIDAT-perlu-verifikasi,KELUAR-touched/50%,Click: keluarga click (exp37)
+45568,telco-customer-churn,7043,20,26.5,EXCLUDE-multikelas?,KELUAR-sintetis,KELUAR-sintetis: telco IBM fiktif
+45570,Higgs,11000000,29,47.0,EXCLUDE-multikelas?,KELUAR-sintetis,KELUAR-sintetis: Higgs MC
+45578,California-Housing-Classification,20640,9,50.0,KANDIDAT-perlu-verifikasi,KELUAR-T2,California housing: harga dibinarkan
+45583,click,1000000,12,50.0,KANDIDAT-perlu-verifikasi,KELUAR-touched/50%,click: keluarga click (exp37)
+45654,bates_classif_20,5100000,21,50.0,KANDIDAT-perlu-verifikasi,KELUAR-sintetis,bates_classif_20
+45656,simulated_adult,5100000,15,24.9,EXCLUDE-multikelas?,KELUAR-sintetis,KELUAR-sintetis
+45660,simulated_electricity,5100000,9,42.4,KANDIDAT-perlu-verifikasi,KELUAR-sintetis,simulated_electricity
+45689,simulated_adult,5100000,15,24.9,EXCLUDE-multikelas?,KELUAR-sintetis,KELUAR-sintetis
+45693,simulated_electricity,5100000,9,42.4,KANDIDAT-perlu-verifikasi,KELUAR-sintetis,simulated_electricity
+45704,simulated_covertype,5100000,11,50.0,EXCLUDE-multikelas?,KELUAR-sintetis,KELUAR-sintetis
+45739,covertype,73503,4,37.7,EXCLUDE-multikelas?,KELUAR-T3,KELUAR-T3: covertype target Place tak jelas
+45745,TestDatasetOfLocations,73503,4,37.7,KANDIDAT-perlu-verifikasi,KELUAR-T3,TestDatasetOfLocations
+45922,Test_Dataset,73503,3,37.7,KANDIDAT-perlu-verifikasi,KELUAR-T3,Test_Dataset
+46280,blastchar,7043,20,26.5,KANDIDAT-perlu-verifikasi,KELUAR-sintetis,Telco churn IBM: perusahaan fiktif (IBM sample data)
+46298,electrical_grid_stability_simulated_classification,10000,13,36.2,KANDIDAT-perlu-verifikasi,KELUAR-sintetis,electrical grid stability simulated
+46362,Customer_Churn_Classification,175028,25,21.1,EXCLUDE-multikelas?,KELUAR-sintetis,"KELUAR-sintetis: Kaggle Playground (175k, dibangkitkan dari bank churn)"
+46363,Customer_Churn_Classification,175028,25,21.1,EXCLUDE-multikelas?,KELUAR-sintetis/K,KELUAR-sintetis/K: Customer_Churn playground
+46371,Customer_Churn_Classification_Nominal,35000,25,21.1,EXCLUDE-multikelas?,KELUAR-sintetis/K,KELUAR-sintetis/K: Customer_Churn playground
+46373,default-of-credit-card-clients,30000,24,22.1,EXCLUDE-multikelas?,KELUAR-K,KELUAR-K: default credit (42477)
+46374,default-of-credit-card-clients,30000,24,22.1,EXCLUDE-multikelas?,KELUAR-K,KELUAR-K: default credit (42477)
+46375,default-of-credit-card-clients,30000,24,22.1,EXCLUDE-multikelas?,KELUAR-K,KELUAR-K: default credit (42477)
+46376,credit,16714,11,50.0,EXCLUDE-multikelas?,KELUAR-touched,KELUAR-touched: credit/GMSC (exp38 give-some-credit)
+46430,LT-Vehicle-Loan-Default-Prediction,233154,41,21.7,EXCLUDE-multikelas?,MASUK,"LT Vehicle Loan Default: loan_default asli; k=2 (audit kedua)"
+46526,Loan_Approval_Status_Classification,45000,24,22.2,KANDIDAT-perlu-verifikasi,KELUAR-sintetis,Loan approval: SMOTENC sintetis
+46543,dataset_credit,16714,11,50.0,EXCLUDE-multikelas?,KELUAR-touched,KELUAR-touched: credit/GMSC
+46548,dataset_default_of_credit_card_clients,30000,24,22.1,EXCLUDE-multikelas?,KELUAR-K,KELUAR-K: default credit (42477)
+46553,Loan_Status,45000,14,22.2,KANDIDAT-perlu-verifikasi,KELUAR-sintetis/K,Loan status keluarga 46526
+46554,Loan_Status,45000,14,22.2,KANDIDAT-perlu-verifikasi,KELUAR-sintetis/K,Loan status
+46563,Loan_Approval_Status_Classification,45000,14,22.2,KANDIDAT-perlu-verifikasi,KELUAR-sintetis/K,Loan approval
+46565,Loan_Approval_Status,45000,14,22.2,KANDIDAT-perlu-verifikasi,KELUAR-sintetis/K,Loan approval
+46682,CodeXGLUE,27318,6,45.6,KANDIDAT-perlu-verifikasi,MASUK,"CodeXGLUE defect: label insecure/secure asli (Devign). CATATAN: fitur teks kode, dikodekan ordinal"
+46683,Dynamically-Generated-Hate-Speech-Dataset,41144,13,46.1,KANDIDAT-perlu-verifikasi,KELUAR-sintetis,Hate speech dinamis: sumber menyatakan seluruh konten sintetis
+46801,ACSIncome,1664500,12,47.9,KANDIDAT-perlu-verifikasi,KELUAR-T2,ACSIncome: income>50K
+46810,kick_starter_funding,86502,10,32.0,KANDIDAT-perlu-verifikasi,MASUK,Kickstarter: final_status berhasil/gagal asli
+46820,REASONER,58497,35,27.1,KANDIDAT-perlu-verifikasi,KELUAR-grup,"REASONER: baris per user-item, user berulang (setara aturan sesi Run_or_walk)"
+46822,Dynamically-Generated-Hate-Speech-Dataset,41144,9,46.1,KANDIDAT-perlu-verifikasi,KELUAR-sintetis/K,Hate speech duplikat
+46860,Support2,9105,47,31.9,KANDIDAT-perlu-verifikasi,KELUAR-leakage,"Support2: fitur hospdead, d.time, sfdm2 secara definisi memuat hasil (death)"
+46868,Phishing_Legitimate_full,10000,49,50.0,KANDIDAT-perlu-verifikasi,KELUAR-50%,Phishing_Legitimate: dikurasi 5000/5000
+46874,student_depression_dataset,27901,17,41.5,KANDIDAT-perlu-verifikasi,KELUAR-T3,student depression: tanpa provenance
+46911,Bank_Customer_Churn,10000,11,20.4,EXCLUDE-multikelas?,MASUK,"Bank_Customer_Churn: churn asli, Kaggle/TabArena; k=2 (audit kedua)"
+46919,credit_card_clients_default,30000,24,22.1,EXCLUDE-multikelas?,KELUAR-K,KELUAR-K: default credit TabArena (42477)
+46920,customer_satisfaction_in_airline,129880,22,45.3,KANDIDAT-perlu-verifikasi,KELUAR-T2,"airline satisfaction: ""neutral or dissatisfied"" = gabungan kategori"
+46924,E-CommereShippingData,10999,11,40.3,KANDIDAT-perlu-verifikasi,MASUK,E-commerce shipping: ArrivedLate asli
+46925,Employee,4653,9,34.4,KANDIDAT-perlu-verifikasi,MASUK,Employee: LeaveOrNot asli
+46932,heloc,10459,24,47.8,KANDIDAT-perlu-verifikasi,KELUAR-K,"heloc TabArena, keluarga 45553"
+46935,HR_Analytics_Job_Change_of_Data_Scientists,19158,13,24.9,KANDIDAT-perlu-verifikasi,CADANGAN,HR analytics: LookingForJobChange asli; data_id > 12 pertama
+46937,in_vehicle_coupon_recommendation,12684,25,43.2,EXCLUDE-multikelas?,CADANGAN,"in_vehicle_coupon: AcceptCoupon asli, UCI; k=2; data_id > 12 pertama"
+46948,PhishingWebsites,11055,31,44.3,KANDIDAT-perlu-verifikasi,KELUAR-touched,PhishingWebsites (exp21)
+47153,spam,4601,58,39.4,KANDIDAT-perlu-verifikasi,KELUAR-touched,spam: keluarga spambase

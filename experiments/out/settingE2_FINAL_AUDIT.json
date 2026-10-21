@@ -1,0 +1,26 @@
+{
+  "original_with_shuttle": {
+    "rows": 1700,
+    "unique": 1700,
+    "statuses": {
+      "ok": 1640,
+      "ERROR cannot run the procedure: The least populated classes in y have only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2. Classes with too few members are: [6]": 60
+    },
+    "missing": [],
+    "extra": [],
+    "duplicates": {},
+    "bad_seed": []
+  },
+  "amended_replacing_shuttle_with_pendigits": {
+    "rows": 1700,
+    "unique": 1700,
+    "statuses": {
+      "ok": 1700
+    },
+    "missing": [],
+    "extra": [],
+    "duplicates": {},
+    "bad_seed": [],
+    "analysis_ready": true
+  }
+}

@@ -1,0 +1,4 @@
+data_id,status,reasons,N,K,F,minority,duplicates,max_single_auc,missing_target
+42532,ERROR load: Target column 'Location_(Census_Region)' has 284 missing values. Missing values are not supported for target columns.,,,,,,,,
+46927,KEEP,,1500,2,6,0.30266666666666664,0.0007,0.8223,0
+46915,KEEP,,5000,2,19,0.1414,0.0,0.6401,0

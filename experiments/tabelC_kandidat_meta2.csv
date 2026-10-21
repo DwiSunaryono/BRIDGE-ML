@@ -1,0 +1,125 @@
+data_id,name,suites,N,K,F,minority_pct,majority_pct,missing,target,tags,same_name_as_existing
+20,mfeat-pixel,OpenML100,2000.0,10.0,241.0,10.0,10.0,0.0,class,Machine Learning;OpenML100;study_1;study_123;study_14;study_34;study_37;study_41;study_7;study_70;study_76;uci,True
+21,car,OpenML100,1728.0,4.0,7.0,3.761574074074074,70.02314814814815,0.0,class,OpenML100;study_1;study_123;study_14;study_34;study_37;study_41;study_50;study_52;study_7;study_70;uci,True
+24,mushroom,OpenML100,8124.0,2.0,23.0,48.20285573609059,51.7971442639094,2480.0,class,Botany;Ecology;Kaggle;mythbusting_1;OpenML100;study_1;study_123;study_14;study_144;study_15;study_190;study_20;study_34;study_37;study_41;study_50;study_70;trivial;uci,False
+36,segment,OpenML100,2310.0,7.0,20.0,14.285714285714285,14.285714285714285,0.0,class,Computer Vision;Image Analysis;OpenML100;study_1;study_123;study_14;study_34;study_37;study_41;study_50;study_52;study_7;study_70;study_76;uci,True
+42,soybean,OpenML100,683.0,19.0,36.0,1.171303074670571,13.469985358711567,2337.0,class,Agriculture;Botany;Data Classification;OpenML100;study_1;study_123;study_135;study_14;study_34;study_37;study_41;study_70;study_76;uci,False
+60,waveform-5000,OpenML100,5000.0,3.0,41.0,33.06,33.839999999999996,0.0,class,artificial;Data Science;Machine Learning;OpenML100;Statistics;study_1;study_123;study_14;study_34;study_37;study_41;study_52;study_7;study_70;uci,False
+312,scene,OpenML100,2407.0,2.0,300.0,17.90610718737017,82.09389281262983,0.0,Urban,Computer Vision;Image Analysis;Machine Learning;multi_label;mythbusting_1;OpenML100;study_1;study_123;study_14;study_15;study_20;study_34;study_7,False
+333,monks-problems-1,OpenML100,556.0,2.0,7.0,50.0,50.0,0.0,class,AI Research;artificial;Computer Science;Education;Mathematics;mythbusting_1;OpenML100;study_1;study_123;study_135;study_14;study_144;study_15;study_20;study_34;study_41;study_50;study_52;study_7;uci,False
+334,monks-problems-2,OpenML100,601.0,2.0,7.0,34.27620632279534,65.72379367720465,0.0,class,AI Research;artificial;Computer Science;Education;Mathematics;mythbusting_1;OpenML100;study_1;study_123;study_135;study_14;study_144;study_15;study_20;study_34;study_41;study_50;study_52;study_7;uci,False
+335,monks-problems-3,OpenML100,554.0,2.0,7.0,48.014440433213,51.985559566786996,0.0,class,AI Research;artificial;Computer Science;Education;Mathematics;mythbusting_1;OpenML100;study_1;study_123;study_135;study_14;study_144;study_15;study_20;study_34;study_41;study_50;study_52;study_7;uci,False
+375,JapaneseVowels,OpenML100,9961.0,9.0,15.0,7.850617407890774,16.20319245055717,0.0,speaker,grouped_data;Linguistics;Machine Learning;OpenML-CC18;OpenML100;Speech Recognition;study_1;study_123;study_135;study_14;study_34;study_41;study_7;time_series;uci,False
+377,synthetic_control,OpenML100,600.0,6.0,61.0,16.666666666666664,16.666666666666664,0.0,class,artificial;Classification;Data Science;Machine Learning;OpenML100;study_1;study_123;study_135;study_14;study_34;study_52;study_7;time_series,False
+451,irish,OpenML100,500.0,2.0,6.0,44.4,55.60000000000001,32.0,Leaving_Certificate,Demographics;Education;label_leakage;mythbusting_1;OpenML100;study_1;study_123;study_135;study_14;study_144;study_15;study_20;study_34;study_41;study_52,False
+470,profb,OpenML100,672.0,2.0,10.0,33.33333333333333,66.66666666666666,1200.0,Home/Away,American Football;Competition;Data Analysis;mythbusting_1;OpenML100;Sports;study_1;study_123;study_135;study_14;study_144;study_15;study_20;study_34;study_41;study_52;unspecified_target_feature,False
+478,collins,OpenML100,500.0,15.0,22.0,1.2,16.0,0.0,Corp.Genre,OpenML100;study_1;study_123;study_14;study_34;study_7;trivial,False
+1036,sylva_agnostic,OpenML100,14395.0,2.0,217.0,6.154914901007294,93.84508509899271,0.0,label,mythbusting_1;OpenML100;study_1;study_123;study_14;study_15;study_20;study_34;study_41,False
+1038,gina_agnostic,OpenML100,3468.0,2.0,971.0,49.16378316032296,50.83621683967705,0.0,label,derived;Education;mythbusting_1;OpenML100;study_1;study_123;study_135;study_14;study_15;study_20;study_34;study_41,False
+1043,ada_agnostic,OpenML100,4562.0,2.0,49.0,24.813678211310826,75.18632178868917,0.0,label,OpenML100;study_1;study_123;study_14;study_34;study_41;study_52;study_7,False
+1046,mozilla4,OpenML100,15545.0,2.0,6.0,32.859440334512705,67.1405596654873,0.0,state,Computer Science;Data Science;Engineering;mythbusting_1;OpenML100;PROMISE;study_1;study_123;study_135;study_14;study_15;study_20;study_34;study_41;study_7;time_series,False
+1112,KDDCup09_churn,OpenML100,50000.0,2.0,231.0,7.344,92.656,8024152.0,CHURN,Business;Data Science;OpenML100;study_123;study_14;Telecommunications,False
+1114,KDDCup09_upselling,OpenML100,50000.0,2.0,231.0,7.364,92.636,8024152.0,UPSELLING,Business;Data Science;Marketing;OpenML100;study_123;study_14,False
+1120,MagicTelescope,OpenML100,19020.0,2.0,12.0,35.16298633017876,64.83701366982125,0.0,class:,artificial;astrophysics;gamma_rays;Machine Learning;mythbusting_1;OpenML100;Physics;study_1;study_123;study_14;study_15;study_20;study_34;study_7,False
+1570,wilt,OpenML100,4839.0,2.0,6.0,5.3936763794172355,94.60632362058277,0.0,Class,OpenML100;study_123;study_14;study_34;study_52;study_7,True
+1491,one-hundred-plants-margin,OpenML100,1600.0,100.0,65.0,1.0,1.0,0.0,Class,Biology;Botany;Data Science;Environmental Science;OpenML100;study_123;study_14;study_34;study_50;study_7,False
+1492,one-hundred-plants-shape,OpenML100,1600.0,100.0,65.0,1.0,1.0,0.0,Class,Biology;Botany;Data Science;Environmental Science;OpenML100;study_123;study_14;study_34;study_50;study_52;study_7,False
+1493,one-hundred-plants-texture,OpenML100,1599.0,100.0,65.0,0.9380863039399625,1.0006253908692933,0.0,Class,Biology;Botany;Data Science;Environmental Science;OpenML100;study_123;study_14;study_34;study_50;study_7,False
+1504,steel-plates-fault,OpenML100,1941.0,2.0,34.0,34.672849046883044,65.32715095311696,0.0,Class,Data Science;Engineering;Kaggle;OpenML100;study_123;study_14;study_34;study_50;study_52;study_7,True
+1505,tamilnadu-electricity,OpenML100,45781.0,20.0,4.0,3.051484240186977,6.34761145453354,0.0,Class,OpenML100;study_123;study_14;study_34;study_7,False
+1479,hill-valley,OpenML100,1212.0,2.0,101.0,50.0,50.0,0.0,Class,artificial;Data Science;OpenML100;study_123;study_135;study_14;study_190;study_50;study_52;study_7,False
+1466,cardiotocography,OpenML100,2126.0,10.0,36.0,2.4929444967074317,27.234242709313268,0.0,Class,Data Science;Healthcare;Machine Learning;OpenML100;study_123;study_14;study_34;study_52;study_7;trivial,False
+1467,climate-model-simulation-crashes,OpenML100,540.0,2.0,21.0,8.518518518518519,91.48148148148148,0.0,Class,Data Science;Environment;OpenML100;study_123;study_135;study_14;study_34;study_50;study_7;Technology,True
+1471,eeg-eye-state,OpenML100,14980.0,2.0,15.0,44.879839786381844,55.12016021361815,0.0,Class,brain;Data Science;EEG;Kaggle;Neuroscience;OpenML100;Psychology;study_123;study_14;study_34;study_7;time_series;uci,False
+1476,gas-drift,OpenML100,13910.0,6.0,129.0,11.79726815240834,21.63191948238677,0.0,Class,Chemistry;Data Analysis;Engineering;OpenML100;Sensing Technology;study_123;study_135;study_14;time_series,False
+1459,artificial-characters,OpenML100,10218.0,10.0,8.0,5.871990604815033,13.857897827363477,0.0,Class,artificial;Artificial Intelligence;Data Science;Machine Learning;OpenML100;study_123;study_135;study_14;study_50;study_52;uci,False
+23380,cjs,OpenML100,2796.0,6.0,35.0,9.799713876967097,24.320457796852647,68100.0,TR,Crop Management;Environmental Science;label_leakage;OpenML100;study_123;study_135;study_14;study_144;study_34;study_52,False
+4550,MiceProtein,OpenML100,1080.0,8.0,82.0,9.722222222222223,13.88888888888889,1396.0,class,OpenML100;study_123;study_135;study_14;study_34;study_52;trivial,True
+40496,LED-display-domain-7digit,OpenML100,500.0,10.0,8.0,7.3999999999999995,11.4,0.0,Class,artificial;Artificial Intelligence;Data Science;keel;Machine Learning;OpenML100;study_123;study_135;study_14;study_50;study_52;study_76;study_88;uci,False
+40509,Australian,OpenML100,690.0,2.0,15.0,44.492753623188406,55.507246376811594,0.0,Y,study_123;study_14;uci,True
+23512,higgs,OpenML100,98050.0,2.0,29.0,47.14227434982152,52.85772565017848,9.0,class,artificial;Data Science;derived;mf_less_than_80;OpenML100;physics;Research;study_123;study_218;uci,True
+40536,SpeedDating,OpenML100,8378.0,2.0,121.0,16.47171162568632,83.52828837431368,18372.0,match,OpenML100;Relationships;Social Science;study_123;study_135;study_14;study_144,False
+7,audiology,tabzilla,226.0,24.0,70.0,0.4424778761061947,25.221238938053098,317.0,class,Data Science;Health;Medicine;study_1;study_41;study_76;uci,False
+10,lymph,tabzilla,148.0,4.0,19.0,1.3513513513513513,54.729729729729726,0.0,class,exploit_test_10;Health;Medicine;study_1;study_41;study_7;study_88;uci,False
+25,colic,tabzilla,368.0,2.0,27.0,36.95652173913043,63.04347826086957,1927.0,surgical_lesion,Animal Health;Data Analysis;Medical Diagnosis;mythbusting_1;Research;study_1;study_123;study_50;study_52;uci;Veterinary Medicine,False
+51,heart-h,tabzilla,294.0,2.0,14.0,36.054421768707485,63.94557823129252,782.0,num,Health;Kaggle;Medicine;Research;study_1;study_41;study_50;uci,False
+846,elevators,tabzilla,16599.0,2.0,19.0,30.905476233508043,69.09452376649196,0.0,binaryClass,Aerospace Engineering;binarized_regression_problem;Data Science;Machine Learning;mythbusting_1;Statistics;study_1;study_15;study_20;study_41;study_7,False
+934,socmob,tabzilla,1156.0,2.0,6.0,22.145328719723185,77.85467128027682,0.0,binaryClass,binarized_regression_problem;Data Science;Health;mythbusting_1;Sociology;study_1;study_144;study_15;study_20;study_41;study_7,False
+1567,poker-hand,tabzilla,1025009.0,10.0,11.0,7.804809518745689E-4,50.11673068236474,0.0,Class,,False
+42395,SantanderCustomerSatisfaction,classification_2025_March_1,200000.0,2.0,202.0,10.049,89.95100000000001,0.0,target,,False
+44160,rl,classification_2025_March_1,4970.0,2.0,13.0,50.0,50.0,0.0,class,,False
+44161,road-safety,classification_2025_March_1,111762.0,2.0,33.0,50.0,50.0,0.0,Sex_of_Driver,,False
+44162,compass,classification_2025_March_1,16644.0,2.0,18.0,50.0,50.0,0.0,is_recid,,False
+46640,LICD,classification_2025_March_1,63634.0,0.0,581.0,[],[],3.3545438E7,NonCompliance,,False
+46646,BAF_base,classification_2025_March_1,1000000.0,0.0,32.0,[],[],0.0,fraud_bool,,False
+46641,BAF_variant_I,classification_2025_March_1,1000000.0,0.0,32.0,[],[],0.0,fraud_bool,,False
+46642,BAF_variant_II,classification_2025_March_1,1000000.0,0.0,32.0,[],[],0.0,fraud_bool,,False
+46643,BAF_variant_III,classification_2025_March_1,1000000.0,0.0,34.0,[],[],0.0,fraud_bool,,False
+46644,BAF_variant_IV,classification_2025_March_1,1000000.0,0.0,32.0,[],[],0.0,fraud_bool,,False
+46645,BAF_variant_V,classification_2025_March_1,1000000.0,0.0,34.0,[],[],0.0,fraud_bool,,False
+46648,AVIDa-hIL6,classification_2025_March_1,573891.0,0.0,4.0,[],[],0.0,label,,False
+46647,AVIDa-SARS-CoV-2,classification_2025_March_1,3733.0,0.0,6.0,[],[],0.0,label,,False
+46650,US_Accidents_March23,classification_2025_March_1,7728394.0,0.0,46.0,[],[],1.2840498E7,Severity,,False
+46649,DDXPlus,classification_2025_March_1,1292579.0,49.0,6.0,0.025143530878963687,6.325880275016073,0.0,PATHOLOGY,,False
+46651,product_sentiment_machine_hack,classification_2025_March_1,5091.0,0.0,5.0,[],[],0.0,Sentiment,,False
+46664,data_scientist_salary,classification_2025_March_1,15841.0,6.0,7.0,7.859352313616565,22.776339877532983,15520.0,salary,,False
+46652,news_channel,classification_2025_March_1,20284.0,6.0,18.0,6.438572273713272,25.384539538552552,0.0,channel,,False
+46653,wine_reviews,classification_2025_March_1,84123.0,30.0,6.0,0.7952640776006561,12.620805249456154,5644.0,variety,,False
+46655,fake_job_postings2,classification_2025_March_1,12725.0,0.0,6.0,[],[],21193.0,fraudulent,,False
+46668,kick_starter_funding,classification_2025_March_1,86502.0,0.0,10.0,[],[],7.0,final_status,,False
+46654,jigsaw_unintended_bias100K,classification_2025_March_1,100000.0,2.0,45.0,6.0440000000000005,93.95599999999999,1902953.0,target,,False
+46674,college_scorecard,classification_2025_March_1,124699.0,0.0,119.0,[],[],0.0,Completion_rate_for_first_time_full_time_target,,False
+46678,mimic_extract_los_3,classification_2025_March_1,4156450.0,79.0,19.0,2.4058992649977745E-5,48.80217493293556,4797904.0,ROUTE,,False
+46677,physionet_sepsis,classification_2025_March_1,1552210.0,0.0,44.0,[],[],4.3512155E7,SepsisLabel,,False
+46676,WBCAtt,classification_2025_March_1,10298.0,5.0,12.0,11.788696834336765,32.32666537191688,0.0,label,,False
+46681,REASONER,classification_2025_March_1,58497.0,0.0,35.0,[],[],59.0,like,,False
+46683,Dynamically-Generated-Hate-Speech-Dataset,classification_2025_March_1,41144.0,2.0,13.0,46.10392766867587,53.89607233132413,11054.0,label,,False
+46684,HolisticBias,classification_2025_March_1,472991.0,4.0,15.0,1.883333932358121,35.97742874600151,780.0,noun_gender,,False
+46686,DBPedia,classification_2025_March_1,342781.0,219.0,4.0,0.05455378215245303,0.7876749294739206,0.0,l3,,False
+46692,funpedia,classification_2025_March_1,29819.0,0.0,4.0,[],[],0.0,gender,,False
+46701,social_bias_frames,classification_2025_March_1,147139.0,4.0,19.0,1.6922773703776701,50.4359823024487,784148.0,offensiveYN,,False
+46708,Wikipedia_Talk_Labels,classification_2025_March_1,855514.0,16.0,13.0,0.004441774184875992,83.5912679395077,727142.0,class,,False
+46709,SOCC,classification_2025_March_1,1043.0,14.0,16.0,0.09587727708533077,37.29626078619368,2641.0,toxicity_level,,False
+46585,QSAR_Bioconcentration_classification,classification_2025_March_1,779.0,0.0,13.0,[],[],0.0,Class,,False
+46592,Cervical_Cancer_Risk_Factors,classification_2025_March_1,858.0,0.0,33.0,[],[],3622.0,Class,,False
+46593,HCV_data,classification_2025_March_1,615.0,5.0,13.0,1.1382113821138211,86.66666666666667,31.0,Category,,False
+46584,Student_Performance_on_an_Entrance_Examination,classification_2025_March_1,666.0,4.0,12.0,15.165165165165165,31.53153153153153,0.0,Performance,,False
+46597,Estimation_of_Obesity_Levels,classification_2025_March_1,2111.0,7.0,17.0,12.88488867835149,16.627190904784463,0.0,NObeyesdad,,False
+46598,cdc_diabetes,classification_2025_March_1,253680.0,0.0,22.0,[],[],0.0,Diabetes_binary,,False
+46600,maternal_health_risk,classification_2025_March_1,1014.0,3.0,7.0,26.82445759368836,40.03944773175542,0.0,RiskLevel,,True
+46601,Cirrhosis_Patient_Survival_Prediction,classification_2025_March_1,418.0,3.0,18.0,5.980861244019139,55.50239234449761,965.0,Status,,False
+46602,Predicting_Risk_Factors_of_Chronic_Kidney_Disease,classification_2025_March_1,200.0,2.0,29.0,36.0,64.0,0.0,class,,False
+46603,regensburg_pediatric_appendicitis,classification_2025_March_1,782.0,5.0,56.0,0.1278772378516624,61.76470588235294,13984.0,Management,,False
+46604,glioma_grading_clinical_and_mutation_features,classification_2025_March_1,839.0,0.0,24.0,[],[],0.0,Grade,,False
+46605,differentiated_thyroid_cancer_recurrence,classification_2025_March_1,383.0,2.0,17.0,28.198433420365536,71.80156657963447,0.0,Recurred,,False
+46606,darwin,classification_2025_March_1,174.0,2.0,452.0,48.85057471264368,51.14942528735632,0.0,class,,False
+46607,hepatitis_c_virus_hcv_for_egyptian_patients,classification_2025_March_1,1385.0,0.0,29.0,[],[],0.0,Baselinehistological_staging,,False
+46608,drug_reviews_druglib_com,classification_2025_March_1,4143.0,541.0,8.0,0.02413709872073377,1.7861453053342988,12.0,urlDrugName,,False
+46609,sepsis_survival_minimal_clinical_records,classification_2025_March_1,110341.0,0.0,4.0,[],[],0.0,hospital_outcome_1alive_0dead,,False
+46610,bone_marrow_transplant_children,classification_2025_March_1,187.0,0.0,37.0,[],[],81.0,survival_status,,False
+46611,toxicity,classification_2025_March_1,171.0,2.0,1204.0,32.748538011695906,67.2514619883041,0.0,Class,,False
+46633,BNP_Paribas_Cardif_Claims_Management,classification_2025_March_1,114321.0,0.0,133.0,[],[],5097471.0,target,,False
+46636,Homesite_Quote_Conversion,classification_2025_March_1,260753.0,0.0,299.0,[],[],326623.0,QuoteConversion_Flag,,False
+46637,IEEE-CIS_Fraud_Detection,classification_2025_March_1,590540.0,0.0,457.0,[],[],1.29105493E8,isFraud,,False
+46634,Santander_Customer_Satisfaction,classification_2025_March_1,76020.0,0.0,371.0,[],[],0.0,TARGET,,False
+46628,Support2,classification_2025_March_1,9105.0,0.0,47.0,[],[],47110.0,death,,False
+46635,Fetal_cardiotocography_dataset,classification_2025_March_1,2126.0,0.0,40.0,[],[],0.0,CLASS,,False
+46630,Skin_Cancer_PAD-UFES-20,classification_2025_March_1,2298.0,2.0,26.0,41.601392515230636,58.39860748476936,10484.0,biopsed,,False
+46719,mental-health-in-tech-survey,classification_2025_March_1,1259.0,2.0,27.0,18.109610802223987,81.89038919777602,1892.0,tech_company,,False
+46720,OSMI_Mental_Health_in_Tech_Survey,classification_2025_March_1,1433.0,3.0,63.0,23.237962316817864,52.82623866015352,21961.0,remote_work,,False
+46721,Mental_Health_Dataset,classification_2025_March_1,292364.0,5.0,17.0,17.15293264560616,22.694654608638544,5202.0,Occupation,,False
+46722,Phishing_Legitimate_full,classification_2025_March_1,10000.0,0.0,50.0,[],[],0.0,CLASS_LABEL,,False
+46733,diabetes_risk_prediction_dataset,classification_2025_March_1,520.0,2.0,17.0,38.46153846153847,61.53846153846154,0.0,class,,False
+46737,agriculture_dataset_karnataka,classification_2025_March_1,3158.0,13.0,12.0,0.6649778340721976,46.16846105129829,58.0,Crops,,False
+46745,Advanced_IoT_Dataset,classification_2025_March_1,30000.0,6.0,14.0,16.666666666666664,16.666666666666664,0.0,Class,,False
+46750,Dataset-Mental-Disorders,classification_2025_March_1,120.0,4.0,19.0,23.333333333333332,25.833333333333336,0.0,Expert_Diagnose,,False
+46752,student_lifestyle_dataset,classification_2025_March_1,2000.0,3.0,8.0,14.85,51.449999999999996,0.0,Stress_Level,,False
+46753,student_depression_dataset,classification_2025_March_1,27901.0,0.0,18.0,[],[],3.0,Depression,,False
+46756,divorce_prediction,classification_2025_March_1,170.0,0.0,55.0,[],[],0.0,Divorce,,False
+46757,depression_2020,classification_2025_March_1,1429.0,0.0,23.0,[],[],20.0,depressed,,False
+46758,PostPartum_Depression,classification_2025_March_1,1503.0,2.0,11.0,34.79707252162342,65.20292747837658,27.0,Feeling_anxious,,False
+46760,Indicators_of_Anxiety_or_Depression,classification_2025_March_1,16092.0,3.0,14.0,33.33333333333333,33.33333333333333,8358.0,Indicator,,False
+46761,mental_health_detection,classification_2025_March_1,540.0,10.0,16.0,0.1851851851851852,29.074074074074076,0.0,Depression_State,,False
+46762,air-quality-and-pollution-assessment,classification_2025_March_1,5000.0,4.0,10.0,10.0,40.0,0.0,Air_Quality,,False
+43136,ACSIncome,classification_2025_March_1,1664500.0,[],12.0,[],[],0.0,,,False
+43138,ACSPublicCoverage,classification_2025_March_1,1138289.0,[],19.0,[],[],0.0,,,False
