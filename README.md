@@ -6,7 +6,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23523985.svg)](https://doi.org/10.5281/zenodo.23523985)
 
-Code and experimental data for a manuscript submitted to *IEEE Access*. The release used in the paper is archived on Zenodo: doi:10.5281/zenodo.23523985 (tag `paper-v1`).
+Code and experimental data for the BRIDGE paper, available as a preprint at [arXiv:2610.29515](https://arxiv.org/abs/2610.29515). The release used in the paper is archived on Zenodo: doi:10.5281/zenodo.23523985 (tag `paper-v1`).
 
 ## What BRIDGE is
 
@@ -331,12 +331,14 @@ Dwi Sunaryono, Department of Informatics, Institut Teknologi Sepuluh Nopember (I
 ## Citation
 
 ```bibtex
-@article{bridge2026,
-  title   = {{BRIDGE}: An Acceptance Gate to Block False Improvements in Model Updates, with a Retrospective Clinical Evaluation},
-  author  = {Sunaryono, Dwi},
-  journal = {IEEE Access},
-  year    = {2026},
-  note    = {Submitted to IEEE Access}
+@misc{bridge2026,
+  title         = {{BRIDGE}: An Acceptance Gate to Block False Improvements in Model Updates, with a Retrospective Clinical Evaluation},
+  author        = {Sunaryono, Dwi},
+  year          = {2026},
+  eprint        = {2610.29515},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  doi           = {10.48550/arXiv.2610.29515}
 }
 
 @software{bridge2026code,
