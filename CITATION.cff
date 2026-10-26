@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If this software or its results are used, please cite this work as follows."
 title: "BRIDGE: An Acceptance Gate to Block False Improvements in Model Updates, with a Retrospective Clinical Evaluation"
 type: software
-version: "paper-v1.1"
+version: "paper-v1.2"
 doi: 10.5281/zenodo.23523984
 date-released: 2026-10-27
 authors:

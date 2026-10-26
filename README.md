@@ -6,7 +6,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23523984.svg)](https://doi.org/10.5281/zenodo.23523984)
 
-Code and experimental data for the BRIDGE paper, available as a preprint at [arXiv:2610.29515](https://arxiv.org/abs/2610.29515). Releases are archived on Zenodo under the concept DOI [10.5281/zenodo.23523984](https://doi.org/10.5281/zenodo.23523984), which resolves to the latest release (tag `paper-v1.1`); the first release, `paper-v1`, is doi:10.5281/zenodo.23523985.
+Code and experimental data for the BRIDGE paper, available as a preprint at [arXiv:2610.29515](https://arxiv.org/abs/2610.29515). Releases are archived on Zenodo under the concept DOI [10.5281/zenodo.23523984](https://doi.org/10.5281/zenodo.23523984), which resolves to the latest release (tag `paper-v1.2`); the first release, `paper-v1`, is doi:10.5281/zenodo.23523985.
 
 ## What BRIDGE is
 
@@ -342,11 +342,11 @@ Dwi Sunaryono, Department of Informatics, Institut Teknologi Sepuluh Nopember (I
 }
 
 @software{bridge2026code,
-  title   = {{BRIDGE}: An Acceptance Gate to Block False Improvements in Model Updates, with a Retrospective Clinical Evaluation (code and data, release paper-v1.1)},
+  title   = {{BRIDGE}: An Acceptance Gate to Block False Improvements in Model Updates, with a Retrospective Clinical Evaluation (code and data, release paper-v1.2)},
   author  = {Sunaryono, Dwi},
   year    = {2026},
   publisher = {Zenodo},
-  version = {paper-v1.1},
+  version = {paper-v1.2},
   doi     = {10.5281/zenodo.23523984},
   url     = {https://doi.org/10.5281/zenodo.23523984}
 }
