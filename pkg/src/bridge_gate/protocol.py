@@ -184,6 +184,9 @@ class Result:
     ref_class: str = None             # 'better', 'worse' or 'uncertain'
     counts: np.ndarray = field(default=None, repr=False)
     models: dict = field(default=None, repr=False)     # learner name -> list of fitted bags
+    pool_labels: np.ndarray = field(default=None, repr=False)      # true classes of the POOL rows
+    pool_current: np.ndarray = field(default=None, repr=False)     # current model's predictions on POOL
+    pool_chosen: np.ndarray = field(default=None, repr=False)      # chosen configuration's predictions on POOL
 
     @property
     def naive_accept(self):
@@ -269,7 +272,8 @@ def run(X, y, seed, metric="wF1", X_ref=None, y_ref=None, K=None, progress=None)
     g = 0.0 if cfg is None else float(core.delta(core.counts(yp, base, labels(P, cfg, K), K), K, metric))
     res = Result(accept=bool(lb > core.MARGIN) and cfg is not None, lower_bound=float(lb), chosen=cfg, gain_pool=g, K=K,
                  metric=metric, total=TOT, search=SS, pool=TOT - SS, bags=len(bags), validated=not cond, conditions=cond,
-                 counts=cnt, models=fitted)
+                 counts=cnt, models=fitted, pool_labels=yp, pool_current=base,
+                 pool_chosen=None if cfg is None else labels(P, cfg, K))
     if X_ref is not None:
         Pr = avg(X_ref.reset_index(drop=True)); yr = np.asarray(y_ref, int)
         br = (Pr["HGB"] >= .5).astype(int) if K == 2 else Pr["HGB"].argmax(1)

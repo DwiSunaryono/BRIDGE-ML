@@ -38,3 +38,6 @@ experiments/exp41_manifest/*.sha256
 
 # Output of paper_assets.py (first versions; the final tables are in paper_assets/)
 experiments/out/paper_assets_regenerated/
+
+# Step logs written by experiments/reproduce_paper.sh
+experiments/out/reproduce_log/

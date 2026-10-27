@@ -46,6 +46,7 @@ from sklearn.calibration import CalibratedClassifierCV
 from sklearn.metrics import accuracy_score, balanced_accuracy_score, confusion_matrix, f1_score
 from sklearn.tree import DecisionTreeClassifier
 from . import core
+from .report import card, metric_condition, pool_conditions, UNCHECKABLE
 
 BUILTIN = ("iris", "wine", "breast_cancer", "digits")
 MODELS = {
@@ -66,9 +67,16 @@ GRIDS = {   # small grids for tuned_<model>, tuned on SEARCH only with 3-fold CV
 }
 LEARNER_NAMES = {"hgb": "histogram gradient boosting", "rf": "random forest (300 trees)", "dt": "decision tree",
                  "logreg": "logistic regression", "svc": "support vector classifier (calibrated)", "knn": "k-nearest neighbors (k=5)"}
+WEAK_HGB = 100       # reference procedure: below this many training rows HGB (>= 20 rows per leaf) is a weak current model
 SMALL_SEARCH = 200   # default hgb uses at least 20 rows per leaf, so fewer than 10 leaves below 200 SEARCH rows
 THRESHOLDS = [round(t, 2) for t in np.arange(0.05, 0.96, 0.05) if abs(t - 0.5) > 1e-9]   # reference grid
 SCALES = (0.5, 0.7, 1.4, 2.0)                                                              # reference grid
+
+
+def tested_conditions(conds, metric, K):
+    """Conditions not met, with the metric condition stated as in the paper (clinical metrics tested on clinical tasks)."""
+    c = [x for x in conds if not x.startswith("metric ")]; mc = metric_condition(metric, K)
+    return c + ([mc] if mc else [])
 
 
 def load(spec, target):
@@ -366,8 +374,14 @@ def decide_from_predictions(a, t_start, t0):
     d = core.gate_select(y, pc, preds, a.metric, fold_seed=fs, boot_seed=bs, K=max(K, 2))
     gs = time.perf_counter() - tg
     print(f"Predictions: {a.predictions}: {len(y)} judging rows, {K} classes, {len(cand)} candidate{'s' if len(cand) > 1 else ''}")
-    print(f"DECISION: {'INSTALL ' + str(d.chosen) if d.accept else 'KEEP the current model'}  "
-          f"(best candidate {d.chosen}; {a.metric} gain {d.gain_pool:+.4f}; unlucky-case gain {d.lower_bound:+.4f}; limit {core.MARGIN:+.4f})")
+    gains = {c: float(core.delta(core.counts(y, pc, p, max(K, 2)), max(K, 2), a.metric)) for c, p in preds.items()}
+    best = max(gains, key=gains.get)
+    near = (best, core.score(y, preds[best], a.metric, max(K, 2)), int((preds[best] == y).sum()))
+    print("\n" + card(d.accept, len(y), a.metric, "current", d.chosen, d.score_current, d.score_candidate,
+                      d.right_current, d.right_candidate, gains[best] if d.chosen is None else d.gain_pool,
+                      d.lower_bound, len(cand), closest=near,
+                      conditions=pool_conditions(len(y), max(K, 2), a.metric, int(np.bincount(y, minlength=K).min())),
+                      uncheckable=UNCHECKABLE))
     total = time.perf_counter() - t0
     print(f"Time: start {t_start:%Y-%m-%d %H:%M:%S}, total {total:.2f} s (BRIDGE decision {gs:.3f} s)")
     if a.out:
@@ -403,7 +417,8 @@ def _plain(cfg, K, names):
     model = (f"{used[0][0]} (32 bags)" if len(used) == 1 else
              "average of the probabilities of " + ", ".join(f"{m} (weight {wi:g})" for m, wi in used) + " (each 32 bags)")
     if K == 2:
-        return f"{model}; predicts class '{names[1]}' when its probability is at least {float(post):g} (instead of 0.5)"
+        moved = "" if abs(float(post) - 0.5) < 1e-9 else " (instead of 0.5)"
+        return f"{model}; predicts class '{names[1]}' when its probability is at least {float(post):g}{moved}"
     if post is None:
         return f"{model}; predicts the most probable class"
     return f"{model}; predicts the most probable class after multiplying the probability of '{names[post[0]]}' by {post[1]:g}"
@@ -443,47 +458,33 @@ def run_reference(a, t_start, t0):
     print(f"Procedure: reference procedure{' (validated in its runs)' if r.validated else ''}. {r.total} training rows"
           + (f" drawn from the {n_data}" if unused else "") + f": models are trained on {r.search} rows "
           f"({r.bags} bags of 80%; HGB, DT, SVC) and judged on the other {r.pool}, which no model saw in training.")
-    if not r.validated:
-        print("WARNING: outside the conditions covered by the reference runs, so their results do not cover this decision:")
-        for c in r.conditions:
-            print(f"  - {c}")
+    conds = tested_conditions(r.conditions, a.metric, K)
+    if r.search < WEAK_HGB:
+        conds.append(f"the current model (HGB) is trained on only {r.search} rows, too few for gradient boosting to learn "
+                     "much, so large gains are expected and say little; for small data try --current rf --auto")
     cur = "HGB (32 bags), threshold 0.5" if K == 2 else "HGB (32 bags), most probable class"
     nc = len(protocol.candidates(K)); chosen = r.name(names)
     print(f"Current model: {cur}.  Candidates: {nc} (" + ("threshold; HGB+DT and HGB+DT+SVC weights x threshold" if K == 2
           else "HGB/DT/SVC weights; class scales of HGB and of HGB+DT") + ")")
-    print("\n" + "=" * 78)
-    if r.accept:
-        print(f"  DECISION     : INSTALL {chosen}")
-        print(f"  Model to use : {_plain(r.chosen, K, names)}")
-    else:
-        print(f"  DECISION     : KEEP the current model ({cur})")
-    lim = f"To install, BRIDGE requires the gain to stay above {core.MARGIN:+.4f} in {a.metric} even in an unlucky case"
-    if r.chosen is None:
-        title, why = "Why keep?", f"No candidate scored higher than the current model on the {r.pool} judging rows."
-    elif r.accept:
-        title = "Why install?"
-        why = (f"The best of {nc} candidates ({chosen}) gains {r.gain_pool:+.4f} in {a.metric} on the {r.pool} judging rows. "
-               f"{lim}; here the unlucky-case gain is {r.lower_bound:+.4f}, above that limit.")
-    else:
-        title = "Why keep, although a candidate scored higher?"
-        why = (f"The best of {nc} candidates ({chosen}) gains {r.gain_pool:+.4f} in {a.metric} on the {r.pool} judging rows, "
-               f"but when {nc} candidates are tried some score higher by luck alone. {lim}; here the unlucky-case gain is "
-               f"{r.lower_bound:+.4f}, below that limit, so it is not proof of a real improvement.")
-    print(f"  {title}")
-    for line in textwrap.wrap(why, 74):
-        print(f"    {line}")
-    print("=" * 78)
+    yp = r.pool_labels; right = lambda p: int((p == yp).sum())
+    ref = None
     if a.reference:
         lo, hi = r.ref_interval
-        verdict = {"better": "clearly better", "worse": "clearly worse", "uncertain": "not clearly better or worse"}[r.ref_class]
-        what = chosen if r.chosen is not None else "the current model"
-        print(f"\nCheck on the {len(yrs)} reference rows (never used above): {what} vs the current model: {a.metric} gain "
-              f"{r.gain_ref:+.4f} (95% interval [{lo:+.4f}, {hi:+.4f}]): {verdict}.")
-        if r.chosen is not None:
-            if r.accept:
-                print("  BRIDGE installed it: " + ("a harmful install." if r.gain_ref <= 0 else "a useful install."))
-            else:
-                print("  BRIDGE kept the current model: " + ("a missed improvement." if r.gain_ref > 0 else "a harmful change avoided."))
+        verdict = {"better": "clearly better", "worse": "clearly worse", "uncertain": "neither clearly better nor worse"}[r.ref_class]
+        ref = (len(yrs), r.gain_ref, lo, hi, verdict)
+    print("\n" + card(r.accept, r.pool, a.metric, "HGB, threshold 0.5" if K == 2 else "HGB", None if r.chosen is None else chosen,
+                      core.score(yp, r.pool_current, a.metric, K),
+                      None if r.chosen is None else core.score(yp, r.pool_chosen, a.metric, K),
+                      right(r.pool_current), None if r.chosen is None else right(r.pool_chosen),
+                      r.gain_pool if r.chosen is not None else None, r.lower_bound, nc, reference=ref,
+                      conditions=conds, uncheckable=UNCHECKABLE[2:]))
+    if r.accept:
+        print(f"\n  Model to use : {_plain(r.chosen, K, names)}")
+    if a.reference and r.chosen is not None:
+        if r.accept:
+            print("  On the extra rows, installing it was " + ("harmful." if r.gain_ref <= 0 else "useful."))
+        else:
+            print("  On the extra rows, keeping the current model " + ("missed an improvement." if r.gain_ref > 0 else "avoided a harmful change."))
     if a.detail:
         print(f"\nDETAILS\n  BRIDGE bound (5% bootstrap quantile, {core.REPLICATES} replicates, {core.FOLDS}-fold cross-fitting): "
               f"{r.lower_bound:+.6f}; limit {core.MARGIN}")
@@ -509,6 +510,20 @@ def run_reference(a, t_start, t0):
         Path(f"{a.out}.json").write_text(json.dumps(res, indent=2))
         print(f"Saved: {a.out}.json")
     return 0
+
+
+START = """bridge-gate: decide whether a new model may replace the model in use.
+
+Try it on a built-in dataset (about 5 seconds):
+    bridge-gate --dataset breast_cancer
+
+Your own data (CSV file; the target is the last column unless --target is given):
+    bridge-gate --dataset my_data.csv --target outcome
+
+You already have both models' predictions (CSV with columns y, current, and one per candidate):
+    bridge-gate --predictions my_predictions.csv
+
+All options: bridge-gate --help"""
 
 
 def main(argv=None):
@@ -548,7 +563,7 @@ def main(argv=None):
     if a.predictions:
         return decide_from_predictions(a, t_start, t0)
     if not a.dataset:
-        ap.error("give --dataset (or --predictions)")
+        print(START); return 0
     if not a.show_warnings:
         warnings.filterwarnings("ignore")
 
@@ -569,8 +584,6 @@ def main(argv=None):
         notes.append(f"only {len(search)} training rows: hgb (>= 20 rows per leaf) learns little; consider --current rf")
     print(f"Models are trained on {len(search)} rows and judged on the other {len(pool)} rows, which no model saw in training.")
     print(f"Current model: {a.current}{auto_note}")
-    print("Note: custom candidates are outside the reference procedure (run without --candidates and --auto "
-          "for that procedure).")
     if a.detail:
         for n in notes:
             print("  note:", n)
@@ -629,41 +642,27 @@ def main(argv=None):
           "candidate, and the difference (the reference delta).")
     print(f"  net rows = rows the candidate gets right that the current model gets wrong, minus the reverse.")
 
-    # 2. decision, model to use, and reason
-    print("\n" + "=" * 78)
-    if d.accept:
-        print(f"  DECISION     : INSTALL the new model {d.chosen}  ({kind_of(d.chosen, a.current)})")
-    else:
-        print(f"  DECISION     : KEEP the current model {a.current}, unchanged")
+    # 2. decision card and the model to use
+    from .protocol import conditions as reference_conditions
+    custom_conditions = tested_conditions(reference_conditions(len(y), K, a.metric), a.metric, K)
+    custom_conditions.append("custom candidates: the confirmation runs used the reference candidate set "
+                             "(run without --candidates and --auto for that procedure)")
+    if any(parse_base(m)[0] for c in cands for m in parse(c, a.current)[0]):
+        custom_conditions.append("tuning updates: in the paper the risk criterion was not met for every learner")
+    if np.bincount(yp, minlength=K).min() < 30:
+        custom_conditions.append(f"smallest class has {int(np.bincount(yp, minlength=K).min())} judging rows: "
+                                 "only large improvements can be accepted")
+    pb = preds[d.chosen] if d.chosen is not None else None
+    print("\n" + card(d.accept, n, a.metric, a.current, d.chosen, d.score_current, d.score_candidate,
+                      d.right_current, d.right_candidate, d.gain_pool if d.chosen is not None else None,
+                      d.lower_bound, N,
+                      closest=None if not rows else (rows[0]["candidate"], sc(preds[rows[0]["candidate"]])[idx[a.metric]],
+                                                     int(right(preds[rows[0]["candidate"]]).sum())),
+                      conditions=custom_conditions, uncheckable=UNCHECKABLE[2:]))
+    print()
     print_spec("Model to use", use, B, a.current, K, names)
     if d.accept:
         print_spec("Replaces", a.current, B, a.current, K, names)
-    m0 = s0[idx[a.metric]]; mname = head[idx[a.metric]]
-    if d.chosen is None:
-        title = "Why keep?"
-        why = f"No candidate scored higher than the current model on the {n} judging rows."
-    else:
-        pb = preds[d.chosen]; m1 = sc(pb)[idx[a.metric]]; net = fixed(pb) - broke(pb)
-        diff = (f"{mname} {m0:.3f} -> {m1:.3f}; {abs(net)} {'more' if net >= 0 else 'fewer'} row{'s' if abs(net) != 1 else ''} "
-                f"right out of {n}")
-        if d.accept:
-            title = "Why install?"
-            why = (f"The new model scored higher ({diff}), and "
-                   + (f"with only 1 candidate tried, a difference this size is very unlikely to be luck. " if N == 1 else
-                      f"even after trying {N} candidates, a difference this size is very unlikely to be luck. ")
-                   + f"To install, BRIDGE requires the gain to stay above {core.MARGIN:+.4f} in {mname} even in an unlucky case; "
-                   f"here the unlucky-case gain is {d.lower_bound:+.4f}, above that limit.")
-        else:
-            title = "Why keep, although a candidate scored higher?"
-            why = (f"The best candidate ({d.chosen}) scored higher ({diff}). "
-                   + (f"But {N} candidates were tried, and when that many are tried, some score higher by luck alone. "
-                      if N > 1 else f"But a difference of {abs(net)} row{'s' if abs(net) != 1 else ''} out of {n} could be luck. ")
-                   + f"To install, BRIDGE requires the gain to stay above {core.MARGIN:+.4f} in {mname} even in an unlucky case; "
-                   f"here the unlucky-case gain is {d.lower_bound:+.4f}, below that limit, so it is not proof of a real improvement.")
-    print(f"  {title}")
-    for line in textwrap.wrap(why, 74):
-        print(f"    {line}")
-    print("=" * 78)
 
     # 3. technical details on request
     if a.detail:

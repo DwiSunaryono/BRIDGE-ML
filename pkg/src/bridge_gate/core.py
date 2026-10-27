@@ -66,6 +66,17 @@ def delta(c, K=2, metric="wF1"):
     return _multi_wf1(T.sum(-2)) - _multi_wf1(T.sum(-1))
 
 
+def score(y, pred, metric="wF1", K=None):
+    """Metric of one set of predicted labels, computed with the same formulas as `delta`."""
+    y, p = np.asarray(y, dtype=np.int64), np.asarray(pred, dtype=np.int64); K = _K(y, p) if K is None else int(K)
+    c = counts(y, p, p, K).astype(float)
+    if K == 2:
+        return float(_binary_metric(c.reshape(2, 2, 2).sum(-1), metric))
+    if metric != "wF1":
+        raise NotImplementedError("for more than two classes the validated metric is weighted-F1 ('wF1')")
+    return float(_multi_wf1(c.reshape(K, K, K).sum(-1)))
+
+
 def lower_bound(c, K=2, metric="wF1", seed=0, replicates=REPLICATES, quantile=QUANTILE):
     """Lower bootstrap quantile of the gain. Counts are resampled from a multinomial distribution."""
     c = np.asarray(c); rng = np.random.default_rng(seed); n = int(c.sum())
@@ -90,10 +101,29 @@ class Decision:
     metric: str = "wF1"
     counts: np.ndarray = field(default=None, repr=False)
     warnings: list = field(default_factory=list)
+    n_tried: int = 1                 # number of candidates judged
+    score_current: float = None      # metric of the current model on all POOL rows
+    score_candidate: float = None    # metric of the selected candidate on all POOL rows (None when none improved)
+    right_current: int = None        # POOL rows predicted correctly by the current model
+    right_candidate: int = None
 
     @property
     def naive_accept(self):
         return self.gain_pool > 0
+
+    def explain(self):
+        """The decision as a plain-language result card, with the tested conditions it does not meet."""
+        from .report import card, pool_conditions, UNCHECKABLE
+        smallest = int(np.asarray(self.counts).reshape((self.K,) * 3).sum((1, 2)).min())   # rows of the smallest class
+        return card(self.accept, self.n, self.metric, "current", self.chosen, self.score_current, self.score_candidate,
+                    self.right_current, self.right_candidate, None if self.chosen is None else self.gain_pool,
+                    self.lower_bound, self.n_tried, conditions=pool_conditions(self.n, self.K, self.metric, smallest),
+                    uncheckable=UNCHECKABLE)
+
+    def __str__(self):
+        verdict = f"INSTALL {self.chosen}" if self.accept else "KEEP the current model"
+        return (f"BRIDGE decision: {verdict} (gain on {self.n} judging rows {self.gain_pool:+.4f}; "
+                f"unlucky-case gain {self.lower_bound:+.4f}, needs > {MARGIN:+.4f}). Use .explain() for the full card.")
 
 
 def _K(*arrays):
@@ -105,7 +135,9 @@ def gate(y_pool, pred_current, pred_candidate, metric="wF1", seed=0, margin=MARG
     y, b, c = (np.asarray(v) for v in (y_pool, pred_current, pred_candidate)); K = _K(y, b, c) if K is None else int(K)
     cnt = counts(y, b, c, K); lb = lower_bound(cnt, K, metric, seed)
     return Decision(accept=lb > margin, lower_bound=lb, gain_pool=float(delta(cnt, K, metric)), chosen="candidate",
-                    n=len(y), K=K, metric=metric, counts=cnt, warnings=_pool_warnings(y, K))
+                    n=len(y), K=K, metric=metric, counts=cnt, warnings=_pool_warnings(y, K),
+                    score_current=score(y, b, metric, K), score_candidate=score(y, c, metric, K),
+                    right_current=int((b == y).sum()), right_candidate=int((c == y).sum()))
 
 
 def gate_select(y_pool, pred_current, candidates, metric="wF1", fold_seed=0, boot_seed=0, margin=MARGIN, folds=FOLDS, K=None):
@@ -134,7 +166,9 @@ def gate_select(y_pool, pred_current, candidates, metric="wF1", fold_seed=0, boo
     lb = lower_bound(cnt, K, metric, boot_seed)
     j = pick(np.arange(len(y))); g = 0.0 if j is None else float(delta(counts(y, b, P[j], K), K, metric))
     return Decision(accept=(lb > margin) and j is not None, lower_bound=lb, gain_pool=g, chosen=None if j is None else names[j],
-                    n=len(y), K=K, metric=metric, counts=cnt, warnings=_pool_warnings(y, K))
+                    n=len(y), K=K, metric=metric, counts=cnt, warnings=_pool_warnings(y, K), n_tried=len(names),
+                    score_current=score(y, b, metric, K), score_candidate=None if j is None else score(y, P[j], metric, K),
+                    right_current=int((b == y).sum()), right_candidate=None if j is None else int((P[j] == y).sum()))
 
 
 # Data split and input requirements.

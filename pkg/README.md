@@ -16,6 +16,65 @@ From a local checkout:
 Python 3.10 or later is required. NumPy, SciPy, pandas and scikit-learn are
 installed automatically.
 
+## Quick start
+
+    pip install bridge-gate
+    bridge-gate --dataset breast_cancer
+
+The second command runs the gate on a built-in dataset in about five seconds
+and ends with a result card:
+
+    ==============================================================================
+      RESULT: KEEP the current model
+    ==============================================================================
+                                Current model         Best candidate
+      Model                     HGB, threshold 0.5    DT 0.25 + SVC 0.75 @thr0.55
+      Score (weighted F1)       0.941                 0.955
+      Rows predicted correctly  396 of 421            402 of 421
+      ----------------------------------------------------------------------------
+      Evidence check (both must pass to install)       value      needed   pass?
+      1. Candidate scores higher on the judging rows  +0.0140     above 0     yes
+      2. Still higher in an unlucky case (worst 5%)  -0.0071   > +0.0050      NO
+      ----------------------------------------------------------------------------
+      In plain words:
+        The candidate scores higher on these rows, but 173 candidates were tried,
+        and when many are tried some score higher by luck alone. In an unlucky
+        case the gain falls to -0.0071, below the required +0.0050. The higher
+        score is therefore not proof of a real improvement, and the current model
+        stays.
+      ----------------------------------------------------------------------------
+      TESTED CONDITIONS: NOT MET (1)
+        - 569 rows: the reference runs use at least 1050 rows for two
+          classes
+        The gate still decides, but the results of the paper (at most 1.7%
+        false improvements among accepted updates) do not cover this decision.
+        Treat it as a first screen.
+      The program cannot check these; make sure that:
+        - the judging rows come from the same population as the data the
+          model will see
+    ==============================================================================
+
+How to read it:
+
+- **RESULT** is the decision: install the candidate, or keep the current model.
+- The first table compares the two models on the *judging rows*, labeled rows
+  that no model saw in training.
+- The second table holds the two checks. The usual practice stops at check 1
+  ("the new model scores higher"). BRIDGE also requires check 2: the gain must
+  stay above a small minimum (+0.005) even in an unlucky case, the lowest 5% of
+  20,000 resamples of the judging rows. An update is installed only when both
+  checks pass.
+- **In plain words** explains the outcome in one paragraph.
+- **TESTED CONDITIONS** says whether the decision lies inside the conditions
+  tested in the paper. MET: the results of the paper cover it. NOT MET: each
+  condition that is not met is listed; the gate still decides, but treat the
+  result as a first screen. The card also lists the conditions of use that the
+  program cannot check, such as that the judging rows come from the same
+  population as future data.
+
+More examples, including a data file inside the tested conditions, are in
+[examples/](https://github.com/DwiSunaryono/BRIDGE-ML/tree/main/pkg/examples).
+
 ## Command line
 
     bridge-gate --dataset your.csv --target label
@@ -32,8 +91,8 @@ the same decision as the reference trial code.
 Custom candidates are available with `--candidates` or `--auto`. These runs are
 outside the reference procedure and the output says so.
 
-    bridge-gate --dataset iris --current rf --auto
-    bridge-gate --dataset iris --current rf --auto combined
+    bridge-gate --dataset breast_cancer --current rf --auto
+    bridge-gate --dataset breast_cancer --current rf --auto combined
     bridge-gate --dataset mango.csv --target grade --current rf \
         --candidates tuned_hgb,fs50_hgb,thr0.35,ens_hgb+logreg
 
@@ -47,7 +106,15 @@ Run `bridge-gate --help` for all options. The full user manual is in
     search, pool = bridge.split(y)          # fit and tune on SEARCH; judge on POOL
     # fit the current and candidate models on X[search], y[search]
     d = bridge.gate(y[pool], current.predict(X[pool]), candidate.predict(X[pool]))
-    print(d.accept, d.lower_bound, d.gain_pool, d.warnings)
+    print(d)                # one sentence
+    print(d.explain())      # the result card shown above
+    d.accept, d.lower_bound, d.gain_pool, d.warnings   # the values themselves
+
+If you already have the predicted labels of both models, the command line
+needs no training: write a CSV file with the columns `y` (true labels),
+`current`, and one column per candidate, then run
+
+    bridge-gate --predictions my_predictions.csv
 
 For several candidates, pass all of them and let the gate choose with
 cross-fitting:

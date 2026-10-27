@@ -3,3 +3,4 @@ include MANUAL.md
 include CHANGELOG.md
 include LICENSE
 recursive-include tests *.py
+recursive-include examples *.csv *.md

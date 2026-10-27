@@ -63,3 +63,20 @@ def test_cli_help():
 if __name__ == "__main__":
     for f in [v for k, v in dict(globals()).items() if k.startswith("test_")]:
         f(); print("OK", f.__name__)
+
+
+def test_result_card_and_sentence():
+    import numpy as np
+    import bridge_gate as bridge
+    rng = np.random.default_rng(1)
+    y = rng.integers(0, 2, 600)
+    current = np.where(rng.random(600) < 0.75, y, 1 - y)
+    candidate = np.where(rng.random(600) < 0.9, y, 1 - y)
+    d = bridge.gate(y, current, candidate)
+    text = d.explain()
+    assert d.accept and "RESULT: INSTALL the candidate" in text and "candidate candidate" not in text
+    assert "1. Candidate scores higher" in text and "2. Still higher in an unlucky case" in text
+    assert str(d).startswith("BRIDGE decision: INSTALL")
+    assert abs(d.score_candidate - d.score_current - d.gain_pool) < 1e-12
+    k = bridge.gate_select(y, candidate, {"worse": current})
+    assert k.chosen is None and "nothing to install" in k.explain()

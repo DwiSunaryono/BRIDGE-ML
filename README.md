@@ -6,7 +6,24 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23523984.svg)](https://doi.org/10.5281/zenodo.23523984)
 
-Code and experimental data for the BRIDGE paper, available as a preprint at [arXiv:2610.29515](https://arxiv.org/abs/2610.29515). Releases are archived on Zenodo under the concept DOI [10.5281/zenodo.23523984](https://doi.org/10.5281/zenodo.23523984), which resolves to the latest release (tag `paper-v1.2`); the first release, `paper-v1`, is doi:10.5281/zenodo.23523985.
+Code and experimental data for the BRIDGE paper, available as a preprint at [arXiv:2610.29515](https://arxiv.org/abs/2610.29515). Releases are archived on Zenodo under the concept DOI [10.5281/zenodo.23523984](https://doi.org/10.5281/zenodo.23523984), which resolves to the latest release (tag `paper-v1.3`); the first release, `paper-v1`, is doi:10.5281/zenodo.23523985.
+
+## Quick start
+
+To use the gate on your own models:
+
+```bash
+pip install bridge-gate
+bridge-gate --dataset breast_cancer      # a built-in example; ends with a result card
+bridge-gate --dataset my_data.csv --target outcome
+```
+
+The result card states the decision (install or keep), compares the current model and the best candidate, and lists
+the two evidence checks with a pass column. The [package README](pkg/README.md) shows a card and how to read it.
+
+To check the numbers of the paper, run `cd experiments && bash reproduce_paper.sh` (section
+[Reproducing the paper in one command](#reproducing-the-paper-in-one-command)). That script checks the numbers of the paper: it
+prints one line per step and then the main result table.
 
 ## What BRIDGE is
 
@@ -286,7 +303,11 @@ cd experiments && bash reproduce_paper.sh
 ```
 
 The script checks every run manifest, counts the trials, and recomputes the main tables from the stored per-trial
-outputs, without training any model (about 3 minutes on one CPU). Run it with Python 3.12 and the pinned versions. Each analysis rewrites its CSV in `out/` with
+outputs, without training any model (about 3 minutes on one CPU). The screen shows one line per step and then the
+main result table, one row per collection: accepted updates and false improvements for the naive rule and for BRIDGE,
+the reduction with its 95% interval, and the upper bound on the BRIDGE rate. The detailed tables of each step are
+written to `out/reproduce_log/`; `VERBOSE=1 bash reproduce_paper.sh` also prints them. In those tables an empty cell
+is shown as `NaN` when a column does not apply to a row. Run it with Python 3.12 and the pinned versions. Each analysis rewrites its CSV in `out/` with
 identical content, so `git status` stays clean after the run.
 
 ## Reproducing a run

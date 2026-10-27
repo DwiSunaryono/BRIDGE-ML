@@ -17,10 +17,10 @@ The full reference procedure (training draw, 32 bags of HGB/DT/SVC, candidate
 space, gate) is bridge_gate.protocol.run. The bridge-gate command runs it by
 default.
 """
-from .core import (MARGIN, QUANTILE, REPLICATES, FOLDS, Decision, counts, delta, lower_bound, gate, gate_select,
+from .core import (MARGIN, QUANTILE, REPLICATES, FOLDS, Decision, counts, delta, score, lower_bound, gate, gate_select,
                    check, split)
 from . import protocol
 
-__all__ = ["MARGIN", "QUANTILE", "REPLICATES", "FOLDS", "Decision", "counts", "delta", "lower_bound", "gate",
+__all__ = ["MARGIN", "QUANTILE", "REPLICATES", "FOLDS", "Decision", "counts", "delta", "score", "lower_bound", "gate",
            "gate_select", "check", "split", "protocol"]
-__version__ = "1.0.0"
+__version__ = "1.1.0"

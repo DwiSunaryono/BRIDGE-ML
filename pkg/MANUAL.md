@@ -56,8 +56,8 @@ install, missed improvement, or harmful change avoided.
 
 ### 2.3 Custom candidates
 
-    bridge-gate --dataset iris --current rf --auto
-    bridge-gate --dataset iris --current rf --auto combined
+    bridge-gate --dataset breast_cancer --current rf --auto
+    bridge-gate --dataset breast_cancer --current rf --auto combined
     bridge-gate --dataset mango.csv --target grade --current rf --auto --out result
     bridge-gate --dataset breast_cancer --current hgb --candidates tuned_hgb,fs50_hgb,thr0.35,ens_hgb+logreg
 
@@ -114,11 +114,23 @@ candidates (`--auto`), the same candidate was kept out.
    difference is the reference delta. `net rows` counts rows the candidate gets
    right that the current model gets wrong, minus the reverse. The result column
    reads KEPT, REPLACED, INSTALLED, or "best, not installed".
-2. DECISION: KEEP or INSTALL, followed by the full configuration to use:
-   learner, tuning, features and prediction rule. For an installed model it
-   also shows what is replaced.
-3. Reason: why the gate kept or installed the candidate, with the gain on POOL
-   and the lower bound used in the decision.
+2. RESULT card, printed in every mode:
+   - the decision, KEEP or INSTALL;
+   - the current model and the best candidate side by side, with the score on
+     the judging (POOL) rows and the number of rows predicted correctly; when no
+     candidate scores higher, the closest candidate is shown;
+   - the two evidence checks, each with its value, the value it needs and a
+     pass column: (1) the candidate scores higher on the judging rows, which is
+     where the usual practice stops; (2) the gain stays above +0.005 even in an
+     unlucky case, the lowest 5% of 20,000 resamples. BRIDGE installs only when
+     both pass;
+   - one paragraph in plain words;
+   - TESTED CONDITIONS: MET when the decision lies inside the conditions of
+     section 6, otherwise NOT MET with each unmet condition (rows, classes,
+     metric, smallest class, custom candidates, tuning updates, a weak current
+     model); then the conditions of section 5 that the program cannot check.
+3. Model to use: the full configuration (learner, tuning, features and
+   prediction rule) and, for an installed model, what it replaces.
 4. Time: start, end, total, and the split between training and the gate
    decision. `--out` also saves these values.
 
@@ -183,6 +195,12 @@ Useful options:
 | `chosen` | Selected candidate (`gate_select`). |
 | `K`, `n` | Number of classes and POOL size. |
 | `warnings` | Notes about the data, for example a class with very few rows. |
+| `score_current`, `score_candidate` | Metric of each model on POOL (`score_candidate` is `None` when no candidate scored higher). |
+| `right_current`, `right_candidate` | POOL rows predicted correctly by each model. |
+| `n_tried` | Number of candidates judged. |
+
+`print(d)` gives the decision in one sentence; `print(d.explain())` gives the
+result card described in section 2.4.
 
 `bridge.check(y[search], y[pool])` lists the same notes before training.
 
