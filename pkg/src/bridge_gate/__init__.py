@@ -23,4 +23,4 @@ from . import protocol
 
 __all__ = ["MARGIN", "QUANTILE", "REPLICATES", "FOLDS", "Decision", "counts", "delta", "score", "lower_bound", "gate",
            "gate_select", "check", "split", "protocol"]
-__version__ = "1.1.0"
+__version__ = "1.1.1"

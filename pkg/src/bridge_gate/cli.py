@@ -443,8 +443,9 @@ def run_reference(a, t_start, t0):
     y = ys.map(code).to_numpy()
     print(f"Data: {a.dataset}: {n_data} rows, {X.shape[1]} features, {K} classes ("
           + ", ".join(f"{n} {c}" for n, c in zip(names, np.bincount(y, minlength=K))) + ")")
-    if K > 2 and a.metric != "wF1":
-        sys.exit("for more than two classes use --metric wF1")
+    if K > 2 and a.metric not in core.METRICS_MULTI:
+        sys.exit(f"--metric {a.metric} is defined for two classes only; for {K} classes use "
+                 + ", ".join(core.METRICS_MULTI) + " (bacc or macroF1 when some classes are rare)")
     bar = Progress(1, "Training models", not a.no_progress)
     try:
         r = protocol.run(X, y, a.seed, metric=a.metric, K=K,
@@ -544,7 +545,7 @@ def main(argv=None):
                     help="generate the candidates: 'single' (default when given) changes one thing at a time (other learner, "
                          "tuning, feature selection, threshold or class scale, ensemble); 'combined' builds every combination "
                          "(learner x tuning x features x post-processing, plus ensembles of two)")
-    ap.add_argument("--metric", default="wF1", choices=["wF1", "acc", "bacc", "macroF1", "nb10", "nb20", "F2"], help="acc, bacc, macroF1, net benefit nb10/nb20, F2: two classes only")
+    ap.add_argument("--metric", default="wF1", choices=["wF1", "acc", "bacc", "macroF1", "nb10", "nb20", "F2"], help="decision metric (default wF1); bacc or macroF1 when some classes are rare; acc, net benefit nb10/nb20 and F2: two classes only")
     ap.add_argument("--search-fraction", type=float, default=core.SEARCH_FRACTION,
                     help="share of the data used for training and tuning (default 0.259, as in the reference procedure); the rest is POOL")
     ap.add_argument("--seed", type=int, default=0)
@@ -571,8 +572,9 @@ def main(argv=None):
         return run_reference(a, t_start, t0)
     X, y, names = load(a.dataset, a.target); K = len(names)
     print(f"Data: {a.dataset}: {len(y)} rows, {X.shape[1]} features, {K} classes (" + ", ".join(f"{n} {c}" for n, c in zip(names, np.bincount(y))) + ")")
-    if a.metric != "wF1" and K > 2:
-        sys.exit("for more than two classes use --metric wF1")
+    if K > 2 and a.metric not in core.METRICS_MULTI:
+        sys.exit(f"--metric {a.metric} is defined for two classes only; for {K} classes use "
+                 + ", ".join(core.METRICS_MULTI) + " (bacc or macroF1 when some classes are rare)")
     search, pool = core.split(y, search_fraction=a.search_fraction, seed=a.seed)
     Xs, ys, Xp, yp = X.iloc[search], y[search], X.iloc[pool], y[pool]
     ok, notes = core.check(ys, yp); auto_note = ""

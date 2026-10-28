@@ -18,12 +18,16 @@ UNCHECKABLE = ("the judging rows were not used to train, tune or choose any mode
                "the judging rows come from the same population as the data the model will see")
 
 
+TESTED_MULTI = ("wF1", "bacc", "macroF1")       # metrics tested with more than two classes (MINI-54)
+
+
 def metric_condition(metric, K):
     """The condition on the metric that is not met, or None."""
     if K == 2 and metric in CLINICAL_METRICS:
         return f"metric {metric}: tested only on the 12 retrospective clinical tasks"
-    if (K == 2 and metric not in ("wF1", "bacc", "macroF1")) or (K > 2 and metric != "wF1"):
-        return f"metric {metric}: the tested metrics are wF1, bacc and macroF1 (two classes) and wF1 (more classes)"
+    if (K == 2 and metric not in ("wF1", "bacc", "macroF1")) or (K > 2 and metric not in TESTED_MULTI):
+        return (f"metric {metric}: the tested metrics are wF1, bacc and macroF1 (two classes) and "
+                f"{', '.join(TESTED_MULTI)} (more classes)")
     return None
 
 

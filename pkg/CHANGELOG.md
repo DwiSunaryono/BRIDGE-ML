@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.1.1
+
+- Balanced accuracy (`bacc`) and macro-F1 (`macroF1`) now work with more than two classes, in the command line and
+  in Python (`gate`, `gate_select`, `score`, `protocol.run`). They are the metrics of use when some classes are rare.
+- Tested: on the eight multiclass datasets of the paper (480 decisions, MINI-54), BRIDGE accepts 253 updates with one
+  false improvement under balanced accuracy and 248 updates with none under macro-F1 (bounds 2.9% and 1.7%, both
+  within the pass criterion), so the result card marks these metrics as tested for more than two classes.
+- `protocol.run_metrics` judges one fit under several metrics. Weighted-F1 decisions and all two-class decisions are
+  unchanged: every multiclass trial of MINI-54 reproduces the stored weighted-F1 decision exactly.
+- Accuracy, net benefit and F2 remain two-class metrics; asking for them with more classes stops with a message that
+  names the metrics that apply.
+
 ## 1.1.0
 
 - Every run ends with a result card: the current model and the best candidate side by side (score and rows

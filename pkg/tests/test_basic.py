@@ -37,6 +37,23 @@ def test_select_picks_better_candidate():
     assert d.chosen == "good" and d.accept
 
 
+
+def test_multiclass_metrics_match_sklearn():
+    from sklearn.metrics import balanced_accuracy_score, f1_score
+    rng = np.random.default_rng(3)
+    for K in (3, 7, 10):
+        y = rng.integers(0, K, 600); p = np.where(rng.random(600) < .7, y, rng.integers(0, K, 600))
+        assert abs(bridge.score(y, p, "macroF1", K) - f1_score(y, p, average="macro")) < 1e-12
+        assert abs(bridge.score(y, p, "bacc", K) - balanced_accuracy_score(y, p)) < 1e-12
+        assert abs(bridge.score(y, p, "wF1", K) - f1_score(y, p, average="weighted")) < 1e-12
+
+
+def test_multiclass_rare_class_improvement_accepted_by_macro_f1():
+    rng = np.random.default_rng(4); y = np.r_[rng.integers(0, 4, 1900), np.full(100, 4)]
+    old = y.copy(); old[-90:] = 0                      # the rare class is mostly missed
+    new = y.copy(); new[-20:] = 0
+    assert bridge.gate(y, old, new, metric="macroF1", K=5).accept
+
 def test_protocol_candidates_and_labels():
     p = np.array([0.8, 0.3, 0.6])
     P = {"HGB": p, "DT": p, "SVC": p}

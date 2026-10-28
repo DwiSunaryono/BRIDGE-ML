@@ -6,7 +6,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23523984.svg)](https://doi.org/10.5281/zenodo.23523984)
 
-Code and experimental data for the BRIDGE paper, available as a preprint at [arXiv:2610.29515](https://arxiv.org/abs/2610.29515). Releases are archived on Zenodo under the concept DOI [10.5281/zenodo.23523984](https://doi.org/10.5281/zenodo.23523984), which resolves to the latest release (tag `paper-v1.3`); the first release, `paper-v1`, is doi:10.5281/zenodo.23523985.
+Code and experimental data for the BRIDGE paper, available as a preprint at [arXiv:2610.29515](https://arxiv.org/abs/2610.29515). Releases are archived on Zenodo under the concept DOI [10.5281/zenodo.23523984](https://doi.org/10.5281/zenodo.23523984), which resolves to the latest release (tag `paper-v1.4`); the first release, `paper-v1`, is doi:10.5281/zenodo.23523985.
 
 ## Quick start
 
@@ -167,6 +167,7 @@ Scope (all results use the frozen gate):
 | Macro-F1 | 11 new datasets | 829 / 0 | 0.47 % |
 | Training size 1,000 / 2,430 / 6,000 rows | 27 datasets, fresh seeds | 558/6, 688/1, 825/3 | 3.04, 1.05, 1.37 % |
 | Multiclass (K = 7-10) | 5 new datasets | 197 / 0 | 2.11 % |
+| Multiclass, balanced accuracy / macro-F1 (MINI-54) | 8 multiclass datasets of (D) and (E) | 253 / 1, 248 / 0 | 2.93 %, 1.68 % |
 | Feature selection + threshold, KNN | 11 new datasets | 225 / 1 | 3.45 % |
 | Union policy, confirmation | 34 datasets | 878 / 5 | 1.69 % |
 

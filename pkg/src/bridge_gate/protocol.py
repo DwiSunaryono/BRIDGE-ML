@@ -38,7 +38,7 @@ MODEL_SEED = 42                               # random_state used by every learn
 THRESHOLDS = [round(t, 2) for t in np.arange(.05, .96, .05)]
 SIMPLEX = [w for w in itertools.product((0, .25, .5, .75, 1), repeat=3) if abs(sum(w) - 1) < 1e-9 and w != (1, 0, 0)]
 SCALES = (.5, .7, 1.4, 2)
-METRICS_BINARY = ("wF1", "bacc", "macroF1")   # validated for two classes (MINI-16, MINI-21); more classes: wF1
+METRICS_BINARY = ("wF1", "bacc", "macroF1")   # validated for two classes (MINI-16, MINI-21); more classes: core.METRICS_MULTI (MINI-54)
 CONFIRMED_K = (7, 10)                         # numbers of classes in the multiclass confirmation run (MINI-22)
 DEVELOPMENT_K = 26                            # largest number of classes in the multiclass development run (MINI-18)
 VALIDATED_MAX_ROWS = 6000                     # largest training size in the development runs (MINI-17)
@@ -207,8 +207,9 @@ def conditions(n_rows, K, metric):
     if K > 2 and not CONFIRMED_K[0] <= K <= CONFIRMED_K[1]:
         c.append(f"{K} classes: the multiclass confirmation covers {CONFIRMED_K[0]}-{CONFIRMED_K[1]} classes "
                  f"(the development runs went up to {DEVELOPMENT_K})")
-    if (K == 2 and metric not in METRICS_BINARY) or (K > 2 and metric != "wF1"):
-        c.append(f"metric {metric}: validated metrics are {', '.join(METRICS_BINARY)} (two classes) and wF1 (more classes)")
+    if (K == 2 and metric not in METRICS_BINARY) or (K > 2 and metric not in core.METRICS_MULTI):
+        c.append(f"metric {metric}: validated metrics are {', '.join(METRICS_BINARY)} (two classes) and "
+                 f"{', '.join(core.METRICS_MULTI)} (more classes)")
     return c
 
 
@@ -221,8 +222,12 @@ def run(X, y, seed, metric="wF1", X_ref=None, y_ref=None, K=None, progress=None)
     from it.
     progress(done, total, what): optional callback while fitting.
     """
+    return run_metrics(X, y, seed, (metric,), X_ref, y_ref, K, progress)[metric]
+
+
+def run_metrics(X, y, seed, metrics, X_ref=None, y_ref=None, K=None, progress=None):
+    """The decisions of `run` for several metrics, with the models fitted once; returns {metric: Result}."""
     y = np.asarray(y, int); K = int(y.max()) + 1 if K is None else int(K); K = max(K, 2)
-    cond = conditions(len(y), K, metric)
     if len(y) >= TOTAL_TRAIN + 50:
         TOT, SS = TOTAL_TRAIN, SEARCH_SIZE
     elif len(y) >= SMALL_TOTAL + 50:
@@ -262,26 +267,32 @@ def run(X, y, seed, metric="wF1", X_ref=None, y_ref=None, K=None, progress=None)
         return {m: sum(f.proba(Xe) for f in fs) / len(fs) for m, fs in fitted.items()}
     P = avg(Xp)
     base = (P["HGB"] >= .5).astype(int) if K == 2 else P["HGB"].argmax(1)
-    C = candidates(K); cnt = np.zeros(K ** 3, int)
-    for a, b in StratifiedKFold(3, shuffle=True, random_state=seed % (2**32 - 1)).split(yp, yp):
-        cfg = _pick(yp, base, P, a, C, K, metric)
-        cnt += core.counts(yp[b], base[b], base[b] if cfg is None else labels(P, cfg, K, b), K)
-    boot_seed = seed + (BOOT_SEED_OFFSET_BIN + METRICS_BINARY.index(metric) if K == 2 else BOOT_SEED_OFFSET_MC)
-    lb = core.lower_bound(cnt, K, metric, boot_seed)
-    cfg = _pick(yp, base, P, np.arange(len(yp)), C, K, metric)
-    g = 0.0 if cfg is None else float(core.delta(core.counts(yp, base, labels(P, cfg, K), K), K, metric))
-    res = Result(accept=bool(lb > core.MARGIN) and cfg is not None, lower_bound=float(lb), chosen=cfg, gain_pool=g, K=K,
-                 metric=metric, total=TOT, search=SS, pool=TOT - SS, bags=len(bags), validated=not cond, conditions=cond,
-                 counts=cnt, models=fitted, pool_labels=yp, pool_current=base,
-                 pool_chosen=None if cfg is None else labels(P, cfg, K))
+    C = candidates(K)
     if X_ref is not None:
         Pr = avg(X_ref.reset_index(drop=True)); yr = np.asarray(y_ref, int)
         br = (Pr["HGB"] >= .5).astype(int) if K == 2 else Pr["HGB"].argmax(1)
-        cr = core.counts(yr, br, br if cfg is None else labels(Pr, cfg, K), K)
-        res.gain_ref = float(core.delta(cr, K, metric))
-        lo, hi = _dirichlet_interval(cr, K, metric, seed + REF_SEED_OFFSET)
-        res.ref_interval = (lo, hi); res.ref_class = "better" if lo > 0 else "worse" if hi < 0 else "uncertain"
-    return res
+    out = {}
+    for metric in metrics:
+        cond = conditions(len(y), K, metric); cnt = np.zeros(K ** 3, int)
+        for a, b in StratifiedKFold(3, shuffle=True, random_state=seed % (2**32 - 1)).split(yp, yp):
+            cfg = _pick(yp, base, P, a, C, K, metric)
+            cnt += core.counts(yp[b], base[b], base[b] if cfg is None else labels(P, cfg, K, b), K)
+        boot_seed = seed + (BOOT_SEED_OFFSET_BIN + METRICS_BINARY.index(metric) if K == 2
+                            else BOOT_SEED_OFFSET_MC + core.METRICS_MULTI.index(metric))
+        lb = core.lower_bound(cnt, K, metric, boot_seed)
+        cfg = _pick(yp, base, P, np.arange(len(yp)), C, K, metric)
+        g = 0.0 if cfg is None else float(core.delta(core.counts(yp, base, labels(P, cfg, K), K), K, metric))
+        res = Result(accept=bool(lb > core.MARGIN) and cfg is not None, lower_bound=float(lb), chosen=cfg, gain_pool=g, K=K,
+                     metric=metric, total=TOT, search=SS, pool=TOT - SS, bags=len(bags), validated=not cond, conditions=cond,
+                     counts=cnt, models=fitted, pool_labels=yp, pool_current=base,
+                     pool_chosen=None if cfg is None else labels(P, cfg, K))
+        if X_ref is not None:
+            cr = core.counts(yr, br, br if cfg is None else labels(Pr, cfg, K), K)
+            res.gain_ref = float(core.delta(cr, K, metric))
+            lo, hi = _dirichlet_interval(cr, K, metric, seed + REF_SEED_OFFSET)
+            res.ref_interval = (lo, hi); res.ref_class = "better" if lo > 0 else "worse" if hi < 0 else "uncertain"
+        out[metric] = res
+    return out
 
 
 class Model:

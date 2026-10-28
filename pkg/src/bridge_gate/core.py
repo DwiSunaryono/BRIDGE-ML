@@ -54,16 +54,33 @@ def _multi_wf1(M):
     return (row * f1).sum(-1) / np.maximum(row.sum(-1), 1e-300)
 
 
+METRICS_MULTI = ("wF1", "bacc", "macroF1")
+
+
+def _multi_metric(M, name):
+    """Metric of K x K confusion tables (true class on axis -2). Classes absent from a table are left out of the mean."""
+    if name == "wF1":
+        return _multi_wf1(M)
+    tp = np.diagonal(M, axis1=-2, axis2=-1); row = M.sum(-1); col = M.sum(-2)
+    if name == "macroF1":
+        seen = (row + col) > 0
+        f1 = np.divide(2 * tp, row + col, out=np.zeros_like(tp), where=seen)
+        return f1.sum(-1) / np.maximum(seen.sum(-1), 1)
+    if name == "bacc":
+        seen = row > 0
+        rec = np.divide(tp, row, out=np.zeros_like(tp), where=seen)
+        return rec.sum(-1) / np.maximum(seen.sum(-1), 1)
+    raise NotImplementedError(f"for more than two classes the metrics are {', '.join(METRICS_MULTI)}")
+
+
 def delta(c, K=2, metric="wF1"):
     """Gain of the candidate over the current model, computed from counts. Extra leading axes are vectorized."""
     c = np.asarray(c, dtype=float)
     if K == 2:
         t = c.reshape(c.shape[:-1] + (2, 2, 2))
         return _binary_metric(t.sum(axis=-2), metric) - _binary_metric(t.sum(axis=-1), metric)
-    if metric != "wF1":
-        raise NotImplementedError("for more than two classes the validated metric is weighted-F1 ('wF1')")
     T = c.reshape(c.shape[:-1] + (K, K, K))
-    return _multi_wf1(T.sum(-2)) - _multi_wf1(T.sum(-1))
+    return _multi_metric(T.sum(-2), metric) - _multi_metric(T.sum(-1), metric)
 
 
 def score(y, pred, metric="wF1", K=None):
@@ -72,9 +89,7 @@ def score(y, pred, metric="wF1", K=None):
     c = counts(y, p, p, K).astype(float)
     if K == 2:
         return float(_binary_metric(c.reshape(2, 2, 2).sum(-1), metric))
-    if metric != "wF1":
-        raise NotImplementedError("for more than two classes the validated metric is weighted-F1 ('wF1')")
-    return float(_multi_wf1(c.reshape(K, K, K).sum(-1)))
+    return float(_multi_metric(c.reshape(K, K, K).sum(-1), metric))
 
 
 def lower_bound(c, K=2, metric="wF1", seed=0, replicates=REPLICATES, quantile=QUANTILE):
