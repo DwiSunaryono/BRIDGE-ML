@@ -1,6 +1,6 @@
 # Table map: paper table → file → how it was produced → script and output that recompute its numbers
 
-The files in this folder are the final tables of the manuscript and its Supplementary Material. Table numbers 1–13
+The files in this folder are the final tables of the preprint and its Supplementary Material. Table numbers 1–13
 are in the manuscript; numbers with a letter are appendix tables (B, C in the manuscript; D–H in the Supplementary
 Material).
 
@@ -15,7 +15,26 @@ byte. The numbers in the final tables come from the analysis scripts and CSVs li
 `experiments/reproduce_paper.sh` reruns those scripts on the stored per-trial outputs. All paths are relative to
 `experiments/`.
 
-## Manuscript
+## Journal version (Machine Learning with Applications)
+
+The journal version is a condensed form of the preprint arXiv:2610.29515. Each of its tables is mapped below to the
+preprint tables that hold the same numbers; the scripts for those tables are listed in the next sections.
+`reproduce_paper.sh` reruns the scripts behind Tables 4 to 6 and 9b and prints Table 4 through `paper_summary.py`.
+
+| Table | Content | Preprint tables | Numbers recomputed by |
+|---|---|---|---|
+| 1 | Positioning against related methods | 1 | descriptive |
+| 2 | Models, candidate space, gate components | 2, 3, D2 | frozen settings (see preprint Table 2); the candidate space is `mini12_optuna.union`: 173 entries, 152 distinct configurations (the HGB–DT mixtures recur in the three-model grid with an SVC weight of zero; ties go to the earlier entry) |
+| 3 | The five collections | B1, H1 | `dataset_splits.py`; decisions per collection as for Table 4 |
+| 4 | Main results per collection | 7, H1, H2, H4 | counts: `summarize_paper.py` (A, B), `analysis_mini48.py` (C, D), `analysis_setting_e.py` (E); rejected share: `analysis_selectivity.py`, `analysis_settingE_selectivity.py` (E); reduction interval and Holm p from the same resamples: `analysis_paired_ci.py` → `out/paired_ci.csv` (A, B), `analysis_mini48.py` → `out/analysis_mini48_rules.csv` (C, D), `analysis_setting_e.py` and `analysis_settingE_paired_p.py` (E); bound: `analysis_margin_lodo.py` (A, B), `analysis_mini48.py` (C, D), `analysis_setting_e.py` (E) |
+| 5 | Acceptance rules on the same decisions | 9, 10, H3, H5 | as for those tables; updates on which BRIDGE and nested resampling disagree: `analysis_nested_disagreement.py` → `out/analysis_nested_disagreement.csv` |
+| 6 | Hypothesis tests and the bound on (B) | 8, 11, H2 | as for those tables |
+| 7 | Clinical evaluation (C) | 12, H14, F2 | as for those tables |
+| 8 | Component analysis | 13, H7 | as for those tables |
+| 9 | Conditions of use | H6, H8–H11, H13 | as for those tables; multiclass row of panel (b): `analysis_mini54.py` → `out/analysis_mini54.csv` (run MINI-54, not in the preprint) |
+| B.1 | Datasets and clinical tasks | B1 | `dataset_splits.py` |
+
+## Preprint (arXiv:2610.29515)
 
 | Table | File | Produced | Numbers recomputed by → output |
 |---|---|---|---|

@@ -12,7 +12,7 @@ from pathlib import Path
 import pandas as pd
 
 OUT = Path(__file__).resolve().parent / "out"
-COLLECTIONS = [  # label in the paper, row of analysis_selectivity.csv
+COLLECTIONS = [  # label in the paper, row of analysis_selectivity.csv (counts)
     ("(A) 11 held-out datasets", "11 new datasets"),
     ("(B) synthetic population", "Synthetic population Q"),
     ("(C) 12 clinical tasks", "Clinical, net benefit"),
@@ -27,10 +27,19 @@ def rows():
     kl = rules[rules.rule == "bridge"].set_index("setting")["kl"]
     bound = {"11 new datasets": lodo.loc["new wF1", "bridge_bound"], "Synthetic population Q": lodo.loc["Q wF1", "bridge_bound"],
              "Clinical, net benefit": kl["C"], "39 supporting datasets": kl["D"]}
+    # the interval of the reduction comes from the analysis that also gives its Holm-adjusted p value:
+    # analysis_paired_ci.py for (A) and (B), analysis_mini48.py for (C) and (D)
+    pc = pd.read_csv(OUT / "paired_ci.csv")
+    pc = pc[(pc.analysis == "operating point") & (pc.comparator == "naive")].set_index("data")
+    nv = rules[rules.rule == "naive"].set_index("setting")
+    ci = {"11 new datasets": tuple(pc.loc["real", ["diff_pp", "ci95_lo", "ci95_hi"]]),
+          "Synthetic population Q": tuple(pc.loc["Q", ["diff_pp", "ci95_lo", "ci95_hi"]]),
+          "Clinical, net benefit": tuple(nv.loc["C", ["bridge_minus_pp", "lo", "hi"]]),
+          "39 supporting datasets": tuple(nv.loc["D", ["bridge_minus_pp", "lo", "hi"]])}
     for label, key in COLLECTIONS:
-        r = s.loc[key]
+        r = s.loc[key]; d, lo, hi = ci[key]
         yield (label, r.decisions, r.naive_accepted, r.naive_harmful, r.bridge_accepted, r.bridge_harmful,
-               -r.diff_pp, -r.diff_hi, -r.diff_lo, float(bound[key]))
+               -d, -hi, -lo, float(bound[key]))
     e = pd.read_csv(OUT / "analysis_settingE.csv").set_index("group").loc["E_all"]
     yield ("(E) 14 OpenML datasets", e.decisions, e.naive_accepted, e.naive_harmful, e.bridge_accepted, e.bridge_harmful,
            -e.bridge_minus_naive_pp, -e.bmn_hi, -e.bmn_lo, e.bridge_kl)

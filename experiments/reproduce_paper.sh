@@ -22,18 +22,21 @@ step() {   # step "title" <python> <script>
     fi
     if [ "${VERBOSE:-0}" = 1 ]; then sed 's/^/    /' "$file"; fi
 }
-echo "Recomputing the paper's numbers from the stored outputs (about 3 minutes; no model is trained)."
+echo "Recomputing the paper's numbers from the stored outputs (about 5 minutes; no model is trained)."
 echo
 step "Code identity: every run manifest against the released scripts" $PY verify_manifests.py
 step "Number of trials per run" $PY count_trials.py
-step "Main results and holdout comparison (arXiv Tables 7, 11, H1-H3)" $PY summarize_paper.py
-step "Comparison rules on collections (C) and (D)" $PY analysis_mini48.py
-step "OpenML collection (E) (arXiv Tables 7, H1, H3)" $PY analysis_setting_e.py
+step "Main results and holdout comparison (MLWA 4-6; arXiv 7, 11, H1-H3)" $PY summarize_paper.py
+step "Paired intervals and Holm p on (A), (B) (MLWA 4, 6; arXiv E2, H2)" $PY analysis_paired_ci.py
+step "Comparison rules on collections (C) and (D) (MLWA 4-8)" $PY analysis_mini48.py
+step "Disagreements of BRIDGE and nested resampling (MLWA 5)" $PY analysis_nested_disagreement.py
+step "OpenML collection (E) (MLWA 4, 5; arXiv 7, H1, H3)" $PY analysis_setting_e.py
 step "OpenML collection (E2) and Volkert (arXiv Table G1)" $PY analysis_setting_e2.py
-step "Random control, false improvements removed (arXiv Table H4)" $PY analysis_selectivity.py
-step "Accepted updates below/above the margin (arXiv Tables H5, 10)" $PY analysis_false_improvement.py
-step "Fixed margin chosen without the dataset (arXiv Table 10)" $PY analysis_margin_lodo.py
+step "Random control, false improvements removed (MLWA 4; arXiv H4)" $PY analysis_selectivity.py
+step "Accepted updates below/above the margin (MLWA 5; arXiv H5, 10)" $PY analysis_false_improvement.py
+step "Fixed margin chosen without the dataset (MLWA 4, 5; arXiv 10)" $PY analysis_margin_lodo.py
 step "Cross-fit lower bound vs the deployed configuration" $PY analysis_transfer.py
+step "Multiclass, three metrics, eight datasets (MLWA 9b)" $PY analysis_mini54.py
 step "Random control and leave-one-setting-out fixed margin" $PY analysis_traceable_controls.py
 echo
 if grep -q "all entries accounted for" "$LOG"/01_verify_manifests.txt; then

@@ -33,7 +33,7 @@ For the same data and `--seed`, the decision matches the reference trial code.
 | training rows | 2,430 rows drawn from the data (630 SEARCH, 1,800 POOL); 1,000 (259 / 741) when fewer than 2,480 rows are given |
 | models | 32 bags of 80% of SEARCH; HGB, DT and SVC with fixed settings; probabilities averaged per learner |
 | current model | HGB at threshold 0.5 (two classes) or argmax (more classes) |
-| candidates | two classes: HGB threshold, HGB+DT weights and HGB+DT+SVC weights, each with a threshold (173 configurations); more classes: HGB/DT/SVC weights and class scales of HGB or HGB+DT |
+| candidates | two classes: HGB threshold, HGB+DT weights and HGB+DT+SVC weights, each with a threshold (173 entries, 152 distinct configurations; ties go to the earlier entry); more classes: HGB/DT/SVC weights and class scales of HGB or HGB+DT |
 | decision | BRIDGE with its frozen settings (section 9) |
 
 Conditions covered by the reference procedure:

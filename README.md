@@ -6,7 +6,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23523984.svg)](https://doi.org/10.5281/zenodo.23523984)
 
-Code and experimental data for the BRIDGE paper, available as a preprint at [arXiv:2610.29515](https://arxiv.org/abs/2610.29515). Releases are archived on Zenodo under the concept DOI [10.5281/zenodo.23523984](https://doi.org/10.5281/zenodo.23523984), which resolves to the latest release (tag `paper-v1.4`); the first release, `paper-v1`, is doi:10.5281/zenodo.23523985.
+Code and experimental data for the BRIDGE paper, available as a preprint at [arXiv:2610.29515](https://arxiv.org/abs/2610.29515). Releases are archived on Zenodo under the concept DOI [10.5281/zenodo.23523984](https://doi.org/10.5281/zenodo.23523984), which resolves to the latest release (tag `paper-v1.5`); the first release, `paper-v1`, is doi:10.5281/zenodo.23523985.
 
 ## Quick start
 
@@ -183,7 +183,7 @@ fetch_uci.py                        # downloads the two UCI datasets (Rice, Dry 
 experiments/
   exp41_gate_confirm.py             # data loading, locked reference split, counts, bagged models (+ import chain exp01..exp22)
   mini01_threshold_crossfit.py      # bootstrap quantiles of the gate statistic
-  mini12_optuna.py                  # candidate space (union, 173 configurations), labelling, selection
+  mini12_optuna.py                  # candidate space (union, 173 entries, 152 distinct), labelling, selection
   bridge_metrics.py                 # metric difference from 8 counts
   mini21_final.py                   # final validation on 11 new datasets (5 policies)
   mini24_standar.py                 # BRIDGE vs standard acceptance rules on identical decisions
@@ -304,7 +304,8 @@ cd experiments && bash reproduce_paper.sh
 ```
 
 The script checks every run manifest, counts the trials, and recomputes the main tables from the stored per-trial
-outputs, without training any model (about 3 minutes on one CPU). The screen shows one line per step and then the
+outputs, without training any model (about 5 minutes on one CPU). The other tables are recomputed by the analysis
+scripts named for each table in `paper_assets/TABLE_MAP.md`, which also gives the table numbers of the journal version. The screen shows one line per step and then the
 main result table, one row per collection: accepted updates and false improvements for the naive rule and for BRIDGE,
 the reduction with its 95% interval, and the upper bound on the BRIDGE rate. The detailed tables of each step are
 written to `out/reproduce_log/`; `VERBOSE=1 bash reproduce_paper.sh` also prints them. In those tables an empty cell
